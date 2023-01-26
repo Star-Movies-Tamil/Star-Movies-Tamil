@@ -16,9 +16,9 @@ import asyncio
 async def start(client, message):
     await message.reply(
     id = m.from_user.id
-    user_name = '@' + m.from_user.username if message.from_user.username else None
+    user_name = '@' + message.from_user.username if message.from_user.username else None
     await add_user(id, user_name)
-    await message.reply_text(Translation.START.format(m.from_user.mention(),
+    await message.reply_text(Translation.START.format(message.from_user.mention(),
                        photo="https://telegra.ph/file/8bfb25704003a8b181400.jpg",
                        quote=True
                        )

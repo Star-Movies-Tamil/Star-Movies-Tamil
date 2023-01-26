@@ -14,7 +14,7 @@ import asyncio
 @channelforward.on_message(filters.command("start") & filters.private & filters.incoming)
 async def start(client, message):
     await message.reply_photo(
-            text = Translation.START.message(
+            text = Translation.START.format(
                 first = message.from_user.first_name,
                 last = message.from_user.last_name,
                 username = None if not message.from_user.username else '@' + message.from_user.username,
@@ -25,7 +25,7 @@ async def start(client, message):
         caption=Translation.START,
         reply_markup = reply_markup,
         quote = True
-        )
+    )
 
 ################################################################################################################################################################################################################################################
 # help command

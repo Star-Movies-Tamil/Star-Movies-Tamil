@@ -11,7 +11,7 @@ import random
 # Start Command
 
 @channelforward.on_message(filters.command("start") & filters.private & filters.incoming)
-        await message.reply_text(
+        await message.reply_photo(
             text = Translation.START.format(
                 first = message.from_user.first_name,
                 last = message.from_user.last_name,

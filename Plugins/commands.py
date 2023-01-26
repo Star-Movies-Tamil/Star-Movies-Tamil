@@ -8,15 +8,22 @@ from translation import Translation
 import random
 
 ################################################################################################################################################################################################################################################
-# start command
+# Start Command
 
 @channelforward.on_message(filters.command("start") & filters.private & filters.incoming)
-async def start(client, message):
-    await message.reply_photo(
-        photo="https://telegra.ph/file/bfbb76083b53fc50b1337.jpg",
-        caption=Translation.START,
-        quote=True
-    )
+        await message.reply_text(
+            text = Translation.START.format(
+                first = message.from_user.first_name,
+                last = message.from_user.last_name,
+                username = None if not message.from_user.username else '@' + message.from_user.username,
+                mention = message.from_user.mention,
+                id = message.from_user.id
+            ),
+            photo="https://telegra.ph/file/bfbb76083b53fc50b1337.jpg",
+            caption=Translation.START,
+            reply_markup = reply_markup,
+            quote = True
+        )
 
 ################################################################################################################################################################################################################################################
 # help command

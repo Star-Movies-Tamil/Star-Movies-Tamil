@@ -12,9 +12,11 @@ import random
 
 @channelforward.on_message(filters.command("start") & filters.private & filters.incoming)
 async def start(client, message):
-    await message.reply_photo(message.from_user.mention,
-        photo="https://telegra.ph/file/bfbb76083b53fc50b1337.jpg",
-        caption=Translation.START,
+    await message.reply_photo(
+        caption = Translation.START.format(
+                mention = message.from_user.mention
+            ),
+        photo="https://telegra.ph/file/8bfb25704003a8b181400.jpg",
         quote=True
     )
 
@@ -48,7 +50,7 @@ async def about(client, message):
 #Alien Covenant (2017)
 
 @channelforward.on_message(filters.command("alien_covenant") & filters.private & filters.incoming)
-async def start(client, message):
+async def alien_covenant(client, message):
     await message.reply_photo(
         caption = Translation.ALIEN_COVENANT.format(
                 mention = message.from_user.mention

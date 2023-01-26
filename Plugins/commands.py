@@ -20,8 +20,7 @@ async def start(client, message):
                 mention = message.from_user.mention,
                 id = message.from_user.id
             ),
-        photo = "https://telegra.ph/file/bfbb76083b53fc50b1337.jpg",
-        caption = Translation.START,
+        photo="https://telegra.ph/file/bfbb76083b53fc50b1337.jpg",
         quote = True
     )
 
@@ -61,7 +60,7 @@ async def start(client, message):
                 mention = message.from_user.mention
             ),
         photo="https://telegra.ph/file/206f9013802376b39ad03.jpg",
-        quote=True,
+        quote=True
     )
 
 ################################################################################################################################################################################################################################################

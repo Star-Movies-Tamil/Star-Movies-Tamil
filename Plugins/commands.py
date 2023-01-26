@@ -6,6 +6,8 @@ from bot import channelforward
 from config import Config
 from translation import Translation
 import random
+import os
+import asyncio
 
 ################################################################################################################################################################################################################################################
 # Start Command
@@ -13,15 +15,13 @@ import random
 @channelforward.on_message(filters.command("start") & filters.private & filters.incoming)
 async def start(client, message):
     await message.reply(
-        text=Translation.START,
-        first = message.from_user.first_name,
-        last = message.from_user.last_name,
-        username = None if not message.from_user.username else '@' + message.from_user.username,
-        mention = message.from_user.mention,
-        id = message.from_user.id,
-        photo="https://telegra.ph/file/8bfb25704003a8b181400.jpg",
-        quote=True
-    )
+    id = m.from_user.id
+    user_name = '@' + m.from_user.username if message.from_user.username else None
+    await add_user(id, user_name)
+    await message.reply_text(Translation.START.format(m.from_user.mention(),
+                       photo="https://telegra.ph/file/8bfb25704003a8b181400.jpg",
+                       quote=True
+                       )
 
 ################################################################################################################################################################################################################################################
 # Help Command

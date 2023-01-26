@@ -20,7 +20,7 @@ async def start(client, message):
                 username = None if not message.from_user.username else '@' + message.from_user.username,
                 mention = message.from_user.mention,
                 id = message.from_user.id
-            ),
+            ),(
         photo="https://telegra.ph/file/bfbb76083b53fc50b1337.jpg",
         caption=Translation.START,
         quote = True

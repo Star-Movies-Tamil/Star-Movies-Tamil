@@ -23,7 +23,6 @@ async def start(client, message):
             ),
         photo="https://telegra.ph/file/bfbb76083b53fc50b1337.jpg",
         caption=Translation.START,
-        reply_markup = reply_markup,
         quote = True
     )
 

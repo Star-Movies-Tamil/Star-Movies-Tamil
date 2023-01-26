@@ -21,7 +21,7 @@ async def start(client, message):
                 mention = message.from_user.mention,
                 id = message.from_user.id
             ),
-        photo = "https://telegra.ph/file/bfbb76083b53fc50b1337.jpg",
+        photo="https://telegra.ph/file/bfbb76083b53fc50b1337.jpg",
         caption=Translation.START,
         reply_markup = reply_markup,
         quote = True

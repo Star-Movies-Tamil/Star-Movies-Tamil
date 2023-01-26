@@ -27,3 +27,8 @@ Maintained By : [Karthik](https://t.me/HMTD_Karthik)</b>"""
 📢 Updates Channel : [UK Movies Zone (Updates)](https://t.me/UK_Movies_Zone_Updates)
 
 🌐 Website : [www.HMTDMovies.tk](https://www.HMTDMovies.tk)</b>"""
+
+      # Alien Covenant Movie
+      ALIEN_COVENANT = """<b>Alien Covenant (2017) (BluRay + Original Audios) - [1080p & 720p - x264 - [Tamil + Telugu + Hindi + English] - (DD5.1 - 448Kbps) - 3GB & 1.5GB - 1.4GB | x264 - [Tamil + Telugu + Hindi] - 450MB] - ESub]
+📢 Updates Channel : [Star Movies Tamil](https://t.me/Star_Moviess_Tamil)</b>"""
+

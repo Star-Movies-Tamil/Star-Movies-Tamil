@@ -5,6 +5,7 @@ from pyrogram import filters
 from bot import channelforward
 from config import Config
 from translation import Translation
+import random
 
 ################################################################################################################################################################################################################################################
 # Start Command

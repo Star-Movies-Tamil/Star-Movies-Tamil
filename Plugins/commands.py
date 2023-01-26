@@ -14,11 +14,14 @@ import asyncio
 
 @channelforward.on_message(filters.command("start") & filters.private & filters.incoming)
 async def start(client, message):
-    await message.reply(
-        text=Translation.START,
-        disable_web_page_preview=True,
+    await message.reply_photo(
+        caption = Translation.START.format(
+                mention = message.from_user.mention
+            ),
+        photo="https://telegra.ph/file/8bfb25704003a8b181400.jpg",
         quote=True
     )
+
 
 ################################################################################################################################################################################################################################################
 # Help Command

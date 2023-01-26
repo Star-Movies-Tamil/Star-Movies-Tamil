@@ -15,13 +15,10 @@ import asyncio
 @channelforward.on_message(filters.command("start") & filters.private & filters.incoming)
 async def start(client, message):
     await message.reply(
-    id = m.from_user.id
-    user_name = '@' + message.from_user.username if message.from_user.username else None
-    await add_user(id, user_name)
-    await message.reply_text(Translation.START.format(message.from_user.mention(),
-                       photo="https://telegra.ph/file/8bfb25704003a8b181400.jpg",
-                       quote=True
-                       )
+        text=Translation.START,
+        disable_web_page_preview=True,
+        quote=True
+    )
 
 ################################################################################################################################################################################################################################################
 # Help Command

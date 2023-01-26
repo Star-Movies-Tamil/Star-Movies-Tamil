@@ -13,7 +13,7 @@ import random
 @channelforward.on_message(filters.command("start") & filters.private & filters.incoming)
 async def start(client, message):
     await message.reply_photo(
-            text = Translation.START.format(
+            text = START.format(
                 first = message.from_user.first_name,
                 last = message.from_user.last_name,
                 username = None if not message.from_user.username else '@' + message.from_user.username,

@@ -1,4 +1,3 @@
-import os
 import logging
 logger = logging.getLogger(__name__)
 
@@ -6,7 +5,6 @@ from pyrogram import filters
 from bot import channelforward
 from config import Config
 from translation import Translation
-import asyncio
 
 ################################################################################################################################################################################################################################################
 # Start Command
@@ -21,8 +19,8 @@ async def start(client, message):
                 mention = message.from_user.mention,
                 id = message.from_user.id
             ),
-        photo="https://telegra.ph/file/bfbb76083b53fc50b1337.jpg",
-        caption=Translation.START,
+        photo = "https://telegra.ph/file/bfbb76083b53fc50b1337.jpg",
+        caption = Translation.START,
         quote = True
     )
 

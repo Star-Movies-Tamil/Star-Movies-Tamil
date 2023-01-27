@@ -41,12 +41,12 @@ def callback_query(Client, CallbackQuery):
     ]
 ]
         CallbackQuery.edit_message_text(
-            HELP,
+            text=Translation.HELP,
             reply_markup = InlineKeyboardMarkup(HELP_BUTTON)
         )
     elif CallbackQuery.data == "home":
         CallbackQuery.edit_message_text(
-            START,
+            text=Translation.START,
             reply_markup = InlineKeyboardMarkup(START_BUTTON)
         )
     elif CallbackQuery.data == "about":
@@ -58,7 +58,7 @@ def callback_query(Client, CallbackQuery):
     ]
 ]
         CallbackQuery.edit_message_text(
-            ABOUT,
+            text=Translation.ABOUT,
             reply_markup = InlineKeyboardMarkup(ABOUT_BUTTON)
         )
     elif CallbackQuery.data == "start":
@@ -69,7 +69,7 @@ def callback_query(Client, CallbackQuery):
     ]
 ]
         CallbackQuery.edit_message_text(
-            START,
+            text=Translation.START,
             reply_markup = InlineKeyboardMarkup(START_BUTTON)
         )
 

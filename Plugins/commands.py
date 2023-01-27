@@ -45,7 +45,7 @@ def callback_query(Client, CallbackQuery):
             reply_markup = InlineKeyboardMarkup(HELP_BUTTON)
         )
     elif CallbackQuery.data == "home":
-        CallbackQuery.edit_message_text(
+        CallbackQuery.message.reply(
             START,
             reply_markup = InlineKeyboardMarkup(START_BUTTON)
         )

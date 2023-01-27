@@ -4,6 +4,7 @@ logger = logging.getLogger(__name__)
 from pyrogram import filters
 from bot import channelforward
 from config import Config
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 from translation import Translation
 import random
 import os
@@ -12,6 +13,11 @@ import asyncio
 ################################################################################################################################################################################################################################################
 # Start Command
 
+START = Translation.START
+START_BUTTON = [
+    [
+        InlineKeyboardButton('😁 Help', callback_data="help")
+    ]
 @channelforward.on_message(filters.command("start") & filters.private & filters.incoming)
 async def start(client, message):
     await message.reply_photo(
@@ -19,9 +25,14 @@ async def start(client, message):
                 mention = message.from_user.mention
             ),
         photo="https://telegra.ph/file/8bfb25704003a8b181400.jpg",
-        quote=True
+        quote=True,
+        reply_markup = InlineKeyboardMarkup(START_BUTTON)
     )
-
+@channelforward.on_callback_query()
+def callback_query(Client, CallbackQuery):
+    if CallbackQuery.data == "START_BUTTON":
+        CallbackQuery.edit_message_text(
+            HELP
 
 ################################################################################################################################################################################################################################################
 # Help Command

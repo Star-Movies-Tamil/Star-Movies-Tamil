@@ -13,11 +13,12 @@ import asyncio
 ################################################################################################################################################################################################################################################
 # Start Command
 
-START = Translation.START
+START = "Translation.START"
 START_BUTTON = [
     [
         InlineKeyboardButton('😁 Help', callback_data="help")
     ]
+]
 @channelforward.on_message(filters.command("start") & filters.private & filters.incoming)
 async def start(client, message):
     await message.reply_photo(
@@ -30,9 +31,47 @@ async def start(client, message):
     )
 @channelforward.on_callback_query()
 def callback_query(Client, CallbackQuery):
-    if CallbackQuery.data == "START_BUTTON":
+    if CallbackQuery.data == "help":
+
+         HELP = "Translation.HELP"
+         HELP_BUTTON = [
+    [
+        InlineKeyboardButton('🏠 Home', callback_data="home")
+        InlineKeyboardButton('😎 About', callback_data="about")
+    ]
+]
         CallbackQuery.edit_message_text(
-            HELP
+            HELP,
+            reply_markup = InlineKeyboardMarkup(HELP_BUTTON)
+        )
+    elif CallbackQuery.data == "home":
+        CallbackQuery.edit_message_text(
+            START,
+            reply_markup = InlineKeyboardMarkup(START_BUTTON)
+        )
+    elif CallbackQuery.data == "about":
+         ABOUT = "Translation.ABOUT"
+         ABOUT_BUTTON = [
+    [
+        InlineKeyboardButton('🏠 Home', callback_data="home")
+        InlineKeyboardButton('😁 Help', callback_data="help")
+    ]
+]
+        CallbackQuery.edit_message_text(
+            ABOUT,
+            reply_markup = InlineKeyboardMarkup(ABOUT_BUTTON)
+        )
+    elif CallbackQuery.data == "start":
+         START = "Translation.START"
+         START_BUTTON = [
+    [
+        InlineKeyboardButton('😎 About', callback_data="about")
+    ]
+]
+        CallbackQuery.edit_message_text(
+            START,
+            reply_markup = InlineKeyboardMarkup(START_BUTTON)
+        )
 
 ################################################################################################################################################################################################################################################
 # Help Command

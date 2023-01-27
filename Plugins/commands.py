@@ -36,8 +36,8 @@ def callback_query(Client, CallbackQuery):
          HELP = "Translation.HELP"
          HELP_BUTTON = [
     [
-        InlineKeyboardButton('🏠 Home', callback_data="home")
-        InlineKeyboardButton('😎 About', callback_data="about")
+        InlineKeyboardButton("🏠 Home", callback_data="home")
+        InlineKeyboardButton("😎 About", callback_data="about")
     ]
 ]
         CallbackQuery.edit_message_text(
@@ -53,8 +53,8 @@ def callback_query(Client, CallbackQuery):
          ABOUT = "Translation.ABOUT"
          ABOUT_BUTTON = [
     [
-        InlineKeyboardButton('🏠 Home', callback_data="home")
-        InlineKeyboardButton('😁 Help', callback_data="help")
+        InlineKeyboardButton("🏠 Home", callback_data="home")
+        InlineKeyboardButton("😁 Help", callback_data="help")
     ]
 ]
         CallbackQuery.edit_message_text(

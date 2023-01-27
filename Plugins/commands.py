@@ -41,6 +41,7 @@ def callback_query(Client, CallbackQuery):
     ]
 ]
         CallbackQuery.edit_message_text(
+            text=reply_text,
             HELP,
             reply_markup = InlineKeyboardMarkup(HELP_BUTTON)
         )
@@ -58,6 +59,7 @@ def callback_query(Client, CallbackQuery):
     ]
 ]
         CallbackQuery.edit_message_text(
+            text=reply_text,
             ABOUT,
             reply_markup = InlineKeyboardMarkup(ABOUT_BUTTON)
         )
@@ -69,6 +71,7 @@ def callback_query(Client, CallbackQuery):
     ]
 ]
         CallbackQuery.edit_message_text(
+            text=reply_text,
             START,
             reply_markup = InlineKeyboardMarkup(START_BUTTON)
         )

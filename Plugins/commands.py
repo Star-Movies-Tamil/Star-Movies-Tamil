@@ -44,7 +44,14 @@ CallbackQuery.edit_message_text(
             HELP,
             reply_markup = InlineKeyboardMarkup(HELP_BUTTON)
         )
-    elif CallbackQuery.data == "start":
+    elif CallbackQuery.data == "home":
+         START = "Translation.START"
+         START_BUTTON = [
+    [
+        InlineKeyboardButton('😎 About', callback_data="about"),
+        InlineKeyboardButton('😁 Help', callback_data="help")
+    ]
+]
 CallbackQuery.edit_message_text(
             START,
             reply_markup = InlineKeyboardMarkup(START_BUTTON)

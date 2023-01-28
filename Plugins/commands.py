@@ -44,7 +44,7 @@ CallbackQuery.edit_message_text(
             HELP,
             reply_markup = InlineKeyboardMarkup(HELP_BUTTON)
         )
-    elif (CallbackQuery.data == "home")
+if (CallbackQuery.data == "home")
 CallbackQuery.edit_message_text(
             START,
             reply_markup = InlineKeyboardMarkup(START_BUTTON)

@@ -2,12 +2,12 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyb
 
 # Callback Query
 
-START = "<b>Hi 👋🏻 {mention},
+START = """<b>Hi 👋🏻 {mention},
 I'm UK Studios Official a Bot to Maintain Your Channels. I am very useful for the Channel Admin who have many Channels.
 
 See /help for More Details.
 
-Maintained By : [Karthik](https://t.me/HMTD_Karthik)</b>"
+Maintained By : [Karthik](https://t.me/HMTD_Karthik)</b>"""
 
 START_BUTTON = [
     [

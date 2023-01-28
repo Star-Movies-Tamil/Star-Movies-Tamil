@@ -10,7 +10,7 @@ import uvloop
 uvloop.install()
 from config import Config
 from pyrogram import Client 
-
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 
 class channelforward(Client, Config):
     def __init__(self):
@@ -26,11 +26,11 @@ class channelforward(Client, Config):
     async def start(self):
         await super().start()
         me = await self.get_me()
-        print(f"New session started for {me.first_name}({me.username})")
+        print(f"Bot Started for {me.first_name}")
 
     async def stop(self):
         await super().stop()
-        print("Session stopped. Bye!!")
+        print("Bot Stopped. Bye!!")
 
 
 if __name__ == "__main__" :

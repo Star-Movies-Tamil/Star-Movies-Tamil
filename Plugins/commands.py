@@ -40,7 +40,7 @@ def callback_query(Client, CallbackQuery):
         InlineKeyboardButton('😎 About', callback_data="about")
     ]
 ]
-        CallbackQuery.editmessagetext(
+        CallbackQuery.edit.message.text(
             HELP,
             reply_markup = InlineKeyboardMarkup(HELP_BUTTON)
         )

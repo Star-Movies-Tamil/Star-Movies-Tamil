@@ -45,7 +45,7 @@ CallbackQuery.edit_message_text(
             reply_markup = InlineKeyboardMarkup(HELP_BUTTON)
         )
     elif CallbackQuery.data == "home":
-        CallbackQuery.edit_message_text(
+CallbackQuery.edit_message_text(
             START,
             reply_markup = InlineKeyboardMarkup(START_BUTTON)
         )
@@ -57,7 +57,7 @@ CallbackQuery.edit_message_text(
         InlineKeyboardButton('😁 Help', callback_data="help")
     ]
 ]
-        CallbackQuery.edit_message_text(
+CallbackQuery.edit_message_text(
             ABOUT,
             reply_markup = InlineKeyboardMarkup(ABOUT_BUTTON)
         )
@@ -68,7 +68,7 @@ CallbackQuery.edit_message_text(
         InlineKeyboardButton('😎 About', callback_data="about")
     ]
 ]
-        CallbackQuery.edit_message_text(
+CallbackQuery.edit_message_text(
             START,
             reply_markup = InlineKeyboardMarkup(START_BUTTON)
         )

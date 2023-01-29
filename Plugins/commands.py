@@ -116,7 +116,7 @@ async def callback_query(client: Client, query: CallbackQuery):
         try:
             await query.edit_message_text(
                 caption = Translation.ALIEN_COVENANT.format(
-                        mention = message.from_user.mention
+                        mention = query.from_user.mention
                     ),
                 disable_web_page_preview=True,
                 reply_markup=reply_markup

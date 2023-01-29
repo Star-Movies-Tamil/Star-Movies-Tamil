@@ -128,12 +128,23 @@ async def callback_query(client: Client, query: CallbackQuery):
 ################################################################################################################################################################################################################################################
 # Help Command
 
+HELP = "Translation.HELP"
+
+HELP_BUTTONS = [
+            [
+                InlineKeyboardButton('👨‍💻 Creator', url='https://t.me/Star_Movies_Karthik'),
+                InlineKeyboardButton('📣 Update Channel', url='https://t.me/Star_Moviess_Tamil')
+            ]
+        ]
+
 @channelforward.on_message(filters.command("help") & filters.private & filters.incoming)
 async def help(client, message):
-    await message.reply(
-        text=Translation.HELP,
-        disable_web_page_preview=True,
-        quote=True
+    text = Translation.HELP
+    reply_markup = InlineKeyboardMarkup(HELP_BUTTONS)
+    message.reply(
+        text=text,
+        reply_markup=reply_markup,
+        disable_web_page_preview=True
     )
 
 ################################################################################################################################################################################################################################################

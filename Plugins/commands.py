@@ -142,7 +142,7 @@ async def help(client, message):
     text = Translation.HELP
     reply_markup = InlineKeyboardMarkup(HELP_BUTTONS)
     await message.reply_text(
-        text = Translation.START.format(
+        text = Translation.HELP.format(
                 mention = message.from_user.mention
             ),
         reply_markup=reply_markup,

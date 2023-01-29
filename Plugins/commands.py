@@ -35,7 +35,7 @@ async def start(client, message):
     reply_markup = InlineKeyboardMarkup(TELETIPS_MAIN_MENU_BUTTONS)
     await message.reply(
         text=text,
-        mention = message.from_user.mention,
+        mention=message.from_user.mention,
         quote=True,
         reply_markup=reply_markup,
         disable_web_page_preview=True

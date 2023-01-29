@@ -10,10 +10,18 @@ See /help for More Details.
 Maintained By : [Karthik](https://t.me/HMTD_Karthik)</b>"""
 
 START_BUTTON = [
-    [
-        InlineKeyboardButton('START READING', callback_data="START READING")
-    ]
-]
+            [
+                InlineKeyboardButton('❓ HELP', callback_data="HELP_CALLBACK")
+            ],
+            [
+                InlineKeyboardButton('👥 SUPPORT', callback_data="GROUP_CALLBACK"),
+                InlineKeyboardButton('📣 CHANNEL', url='https://t.me/teletipsofficialchannel'),
+                InlineKeyboardButton('👨‍💻 CREATOR', url='https://t.me/teIetips')
+            ],
+            [
+                InlineKeyboardButton('➕ CREATE YOUR BOT ➕', callback_data="TUTORIAL_CALLBACK")
+            ]
+        ]
 
 @bot.on_message(filters.command("start") & filters.private)
 def start(bot, message):

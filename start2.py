@@ -5,25 +5,25 @@ bot=Client(
     bot_token = os.environ["BOT_TOKEN"]
 )
 
-footer_message = os.environ["FOOTER_MESSAGE"]
+START = "Translation.START"
 
 TELETIPS_MAIN_MENU_BUTTONS = [
             [
-                InlineKeyboardButton('❓ HELP', callback_data="HELP_CALLBACK")
+                InlineKeyboardButton('👨‍💻 Creator', url='https://t.me/Star_Movies_Karthik')
             ],
             [
-                InlineKeyboardButton('👥 SUPPORT', callback_data="GROUP_CALLBACK"),
-                InlineKeyboardButton('📣 CHANNEL', url='https://t.me/teletipsofficialchannel'),
-                InlineKeyboardButton('👨‍💻 CREATOR', url='https://t.me/teIetips')
+                InlineKeyboardButton('😎 About', callback_data="TUTORIAL_CALLBACK"),
+                InlineKeyboardButton('👥 Support', callback_data="GROUP_CALLBACK"),
+                InlineKeyboardButton('😁 Help', callback_data="HELP_CALLBACK")
             ],
             [
-                InlineKeyboardButton('➕ CREATE YOUR BOT ➕', callback_data="TUTORIAL_CALLBACK")
+                InlineKeyboardButton('📣 Update Channel', url='https://t.me/Star_Moviess_Tamil')
             ]
         ]
 
 @bot.on_message(filters.command(['start','help']) & filters.private)
 async def start(client, message):
-    text = START_TEXT
+    text = Translation.START
     reply_markup = InlineKeyboardMarkup(TELETIPS_MAIN_MENU_BUTTONS)
     await message.reply(
         text=text,
@@ -42,7 +42,7 @@ async def callback_query(client: Client, query: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(TELETIPS_HELP_BUTTONS)
         try:
             await query.edit_message_text(
-                HELP_TEXT,
+                Translation.HELP,
                 reply_markup=reply_markup
             )
         except MessageNotModified:

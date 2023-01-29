@@ -141,7 +141,7 @@ HELP_BUTTONS = [
 async def help(client, message):
     text = Translation.HELP
     reply_markup = InlineKeyboardMarkup(HELP_BUTTONS)
-    message.reply(
+    await message.reply(
         text=text,
         reply_markup=reply_markup,
         disable_web_page_preview=True

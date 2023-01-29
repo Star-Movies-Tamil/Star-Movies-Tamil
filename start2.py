@@ -1,10 +1,3 @@
-bot=Client(
-    "Countdown-TeLeTiPs",
-    api_id = int(os.environ["API_ID"]),
-    api_hash = os.environ["API_HASH"],
-    bot_token = os.environ["BOT_TOKEN"]
-)
-
 START = "Translation.START"
 
 TELETIPS_MAIN_MENU_BUTTONS = [
@@ -51,7 +44,7 @@ async def callback_query(client: Client, query: CallbackQuery):
     elif query.data=="GROUP_CALLBACK":
         TELETIPS_GROUP_BUTTONS = [
             [
-                InlineKeyboardButton("TeLe TiPs Chat [EN]", url="https://t.me/teletipsofficialontopicchat")
+                InlineKeyboardButton("Star Movies Feedback", url="https://t.me/Star_Movies_Feedback_Bot")
             ],
             [
                 InlineKeyboardButton("⬅️ BACK", callback_data="START_CALLBACK"),
@@ -60,7 +53,7 @@ async def callback_query(client: Client, query: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(TELETIPS_GROUP_BUTTONS)
         try:
             await query.edit_message_text(
-                GROUP_TEXT,
+                Translation.SUPPORT,
                 reply_markup=reply_markup
             )
         except MessageNotModified:
@@ -69,7 +62,7 @@ async def callback_query(client: Client, query: CallbackQuery):
     elif query.data=="TUTORIAL_CALLBACK":
         TELETIPS_TUTORIAL_BUTTONS = [
             [
-                InlineKeyboardButton("🎥 Video", url="https://youtu.be/nYSrgdIYdTw")
+                InlineKeyboardButton("🤵 Admin", url="https://t.me/Star_Movies_Karthik")
             ],
             [
                 InlineKeyboardButton("⬅️ BACK", callback_data="START_CALLBACK"),
@@ -78,7 +71,7 @@ async def callback_query(client: Client, query: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(TELETIPS_TUTORIAL_BUTTONS)
         try:
             await query.edit_message_text(
-                TUTORIAL_TEXT,
+                Translation.ABOUT,
                 reply_markup=reply_markup
             )
         except MessageNotModified:
@@ -87,21 +80,22 @@ async def callback_query(client: Client, query: CallbackQuery):
     elif query.data=="START_CALLBACK":
         TELETIPS_START_BUTTONS = [
             [
-                InlineKeyboardButton('❓ HELP', callback_data="HELP_CALLBACK")
+                InlineKeyboardButton('👨‍💻 Creator', url='https://t.me/Star_Movies_Karthik')
             ],
             [
-                InlineKeyboardButton('👥 SUPPORT', callback_data="GROUP_CALLBACK"),
-                InlineKeyboardButton('📣 CHANNEL', url='https://t.me/teletipsofficialchannel'),
-                InlineKeyboardButton('👨‍💻 CREATOR', url='https://t.me/teIetips')
+                InlineKeyboardButton('😎 About', callback_data="TUTORIAL_CALLBACK"),
+                InlineKeyboardButton('👥 Support', callback_data="GROUP_CALLBACK"),
+                InlineKeyboardButton('😁 Help', callback_data="HELP_CALLBACK")
             ],
             [
-                InlineKeyboardButton('➕ CREATE YOUR BOT ➕', callback_data="TUTORIAL_CALLBACK")
+                InlineKeyboardButton('📣 Update Channel', url='https://t.me/Star_Moviess_Tamil')
             ]
         ]
+
         reply_markup = InlineKeyboardMarkup(TELETIPS_START_BUTTONS)
         try:
             await query.edit_message_text(
-                START_TEXT,
+                Translation.START,
                 reply_markup=reply_markup
             )
         except MessageNotModified:

@@ -1,7 +1,7 @@
 class Translation(object):
 
       # Start Text
-      START = """<b>Hi 👋🏻 {},
+      START = """<b>Hi 👋🏻 {mention},
 
 I'm UK Studios Official a Bot to Maintain Your Channels. I am very useful for the Channel Admin who have many Channels.
 
@@ -29,7 +29,7 @@ Maintained By : [Karthik](https://t.me/HMTD_Karthik)</b>"""
 🌐 Website : [www.HMTDMovies.tk](https://www.HMTDMovies.tk)</b>"""
 
       #Support Text
-      SUPPORT = """Hi {},"""
+      SUPPORT = """Hi {mention},"""
 
       # Alien Covenant Movie
       ALIEN_COVENANT = """<b> Hi {mention},

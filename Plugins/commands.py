@@ -115,7 +115,9 @@ async def callback_query(client: Client, query: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(TELETIPS_START_BUTTONS)
         try:
             await query.edit_message_text(
-                Translation.START,
+                caption = Translation.ALIEN_COVENANT.format(
+                        mention = message.from_user.mention
+                    ),
                 disable_web_page_preview=True,
                 reply_markup=reply_markup
             )

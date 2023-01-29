@@ -34,12 +34,12 @@ async def start(client, message):
     text = Translation.START
     reply_markup = InlineKeyboardMarkup(TELETIPS_MAIN_MENU_BUTTONS)
     await message.reply(
-                mention = message.from_user.mention
-            ),
         text=text,
         reply_markup=reply_markup,
         disable_web_page_preview=True
-    )
+    ),
+                mention = message.from_user.mention
+            )
 
 @channelforward.on_callback_query()
 async def callback_query(client: Client, query: CallbackQuery):

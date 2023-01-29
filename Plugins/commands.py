@@ -36,7 +36,7 @@ async def start(client, message):
     await message.reply(
         text=text,
         reply_markup=reply_markup,
-        mention = message.from_user.mention,
+        mention = query.from_user.mention,
         disable_web_page_preview=True
     )
 

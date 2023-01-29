@@ -29,7 +29,7 @@ TELETIPS_MAIN_MENU_BUTTONS = [
             ]
         ]
 
-@bot.on_message(filters.command(['start','help']) & filters.private)
+@channelforward.on_message(filters.command(['start','help']) & filters.private)
 async def start(client, message):
     text = Translation.START
     reply_markup = InlineKeyboardMarkup(TELETIPS_MAIN_MENU_BUTTONS)
@@ -39,7 +39,7 @@ async def start(client, message):
         disable_web_page_preview=True
     )
 
-@bot.on_callback_query()
+@channelforward.on_callback_query()
 async def callback_query(client: Client, query: CallbackQuery):
     if query.data=="HELP_CALLBACK":
         TELETIPS_HELP_BUTTONS = [

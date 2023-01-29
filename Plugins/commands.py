@@ -31,8 +31,8 @@ TELETIPS_MAIN_MENU_BUTTONS = [
 
 @channelforward.on_message(filters.command('start') & filters.private)
 async def start(client, message):
-    text = Translation.START
-        mention=message.from_user.mention
+    text = Translation.START,
+        mention=message.from_user.mention,
     reply_markup = InlineKeyboardMarkup(TELETIPS_MAIN_MENU_BUTTONS)
     await message.reply(
         text=text,

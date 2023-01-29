@@ -30,13 +30,13 @@ TELETIPS_MAIN_MENU_BUTTONS = [
         ]
 
 @channelforward.on_message(filters.command('start') & filters.private)
-async def start(client, query, message):
+async def start(client, message):
     text = Translation.START
     reply_markup = InlineKeyboardMarkup(TELETIPS_MAIN_MENU_BUTTONS)
     await message.reply(
         text=text,
         reply_markup=reply_markup,
-        mention = query.from_user.mention,
+        mention = message.from_user.mention,
         disable_web_page_preview=True
     )
 

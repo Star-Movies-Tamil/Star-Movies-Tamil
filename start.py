@@ -1,5 +1,3 @@
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup, CallbackQuery
-
 # Callback Query
 
 START = """<b>Hi 👋🏻 {mention},

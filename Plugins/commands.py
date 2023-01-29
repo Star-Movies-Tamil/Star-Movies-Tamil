@@ -6,6 +6,7 @@ from bot import channelforward
 from config import Config
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup, CallbackQuery
 from translation import Translation
+from pyrogram.errors import MessageNotModified
 import random
 import os
 import asyncio
@@ -31,12 +32,11 @@ TELETIPS_MAIN_MENU_BUTTONS = [
 
 @channelforward.on_message(filters.command('start') & filters.private)
 async def start(client, message):
-    id = message.from_user.id
-    user_name = '@' + message.from_user.username if message.from_user.username else None
-    text = Translation.START
     reply_markup = InlineKeyboardMarkup(TELETIPS_MAIN_MENU_BUTTONS)
     await message.reply_text(
-        text=text,
+        caption = Translation.START.format(
+                mention = message.from_user.mention
+            ),
         reply_markup=reply_markup,
         disable_web_page_preview=True
     )
@@ -73,6 +73,8 @@ async def callback_query(client: Client, query: CallbackQuery):
         try:
             await query.edit_message_text(
                 Translation.SUPPORT,
+                disable_web_page_preview=True,
+                quote=True,
                 reply_markup=reply_markup
             )
         except MessageNotModified:
@@ -91,6 +93,8 @@ async def callback_query(client: Client, query: CallbackQuery):
         try:
             await query.edit_message_text(
                 Translation.ABOUT,
+                disable_web_page_preview=True,
+                quote=True,
                 reply_markup=reply_markup
             )
         except MessageNotModified:
@@ -115,6 +119,9 @@ async def callback_query(client: Client, query: CallbackQuery):
         try:
             await query.edit_message_text(
                 Translation.START,
+                mention = message.from_user.mention,
+                disable_web_page_preview=True,
+                quote=True,
                 reply_markup=reply_markup
             )
         except MessageNotModified:

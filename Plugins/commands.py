@@ -14,71 +14,108 @@ import asyncio
 # Start Command
 
 START = "Translation.START"
-START_BUTTON = [
-    [
-        InlineKeyboardButton('😁 Help', callback_data="help")
-    ]
-]
-@channelforward.on_message(filters.command("start") & filters.private & filters.incoming)
-async def start(client, message):
-    await message.reply_photo(
-        caption = Translation.START.format(
-                mention = message.from_user.mention
-            ),
-        photo="https://telegra.ph/file/8bfb25704003a8b181400.jpg",
-        quote=True,
-        reply_markup = InlineKeyboardMarkup(START_BUTTON)
-    )
-@channelforward.on_callback_query()
-def callback_query(Client, CallbackQuery):
-    if CallbackQuery.data == "help":
 
-         HELP = "Translation.HELP"
-         HELP_BUTTON = [
-    [
-        InlineKeyboardButton('🏠 Home', callback_data="home"),
-        InlineKeyboardButton('😎 About', callback_data="about")
-    ]
-]
-CallbackQuery.edit_message_text(
-            HELP,
-            reply_markup = InlineKeyboardMarkup(HELP_BUTTON)
-        )
-    elif CallbackQuery.data == "home":
-         START = "Translation.START"
-         START_BUTTON = [
-    [
-        InlineKeyboardButton('😎 About', callback_data="about"),
-        InlineKeyboardButton('😁 Help', callback_data="help")
-    ]
-]
-CallbackQuery.edit_message_text(
-            START,
-            reply_markup = InlineKeyboardMarkup(START_BUTTON)
-        )
-    elif CallbackQuery.data == "about":
-         ABOUT = "Translation.ABOUT"
-         ABOUT_BUTTON = [
-    [
-        InlineKeyboardButton('🏠 Home', callback_data="home"),
-        InlineKeyboardButton('😁 Help', callback_data="help")
-    ]
-]
-CallbackQuery.edit_message_text(
-            ABOUT,
-            reply_markup = InlineKeyboardMarkup(ABOUT_BUTTON)
-        )
-    elif CallbackQuery.data == "start":
-         START = "Translation.START"
-         START_BUTTON = [
-    [
-        InlineKeyboardButton('😎 About', callback_data="about")
-    ]
-]
-CallbackQuery.edit_message_text(
-            START,
-            reply_markup = InlineKeyboardMarkup(START_BUTTON)
-        )
+TELETIPS_MAIN_MENU_BUTTONS = [
+            [
+                InlineKeyboardButton('👨‍💻 Creator', url='https://t.me/Star_Movies_Karthik')
+            ],
+            [
+                InlineKeyboardButton('😎 About', callback_data="TUTORIAL_CALLBACK"),
+                InlineKeyboardButton('👥 Support', callback_data="GROUP_CALLBACK"),
+                InlineKeyboardButton('😁 Help', callback_data="HELP_CALLBACK")
+            ],
+            [
+                InlineKeyboardButton('📣 Update Channel', url='https://t.me/Star_Moviess_Tamil')
+            ]
+        ]
+
+@bot.on_message(filters.command(['start','help']) & filters.private)
+async def start(client, message):
+    text = Translation.START
+    reply_markup = InlineKeyboardMarkup(TELETIPS_MAIN_MENU_BUTTONS)
+    await message.reply(
+        text=text,
+        reply_markup=reply_markup,
+        disable_web_page_preview=True
+    )
+
+@bot.on_callback_query()
+async def callback_query(client: Client, query: CallbackQuery):
+    if query.data=="HELP_CALLBACK":
+        TELETIPS_HELP_BUTTONS = [
+            [
+                InlineKeyboardButton("⬅️ BACK", callback_data="START_CALLBACK")
+            ]
+            ]
+        reply_markup = InlineKeyboardMarkup(TELETIPS_HELP_BUTTONS)
+        try:
+            await query.edit_message_text(
+                Translation.HELP,
+                reply_markup=reply_markup
+            )
+        except MessageNotModified:
+            pass
+
+    elif query.data=="GROUP_CALLBACK":
+        TELETIPS_GROUP_BUTTONS = [
+            [
+                InlineKeyboardButton("Star Movies Feedback", url="https://t.me/Star_Movies_Feedback_Bot")
+            ],
+            [
+                InlineKeyboardButton("⬅️ BACK", callback_data="START_CALLBACK"),
+            ]
+            ]
+        reply_markup = InlineKeyboardMarkup(TELETIPS_GROUP_BUTTONS)
+        try:
+            await query.edit_message_text(
+                Translation.SUPPORT,
+                reply_markup=reply_markup
+            )
+        except MessageNotModified:
+            pass    
+
+    elif query.data=="TUTORIAL_CALLBACK":
+        TELETIPS_TUTORIAL_BUTTONS = [
+            [
+                InlineKeyboardButton("🤵 Admin", url="https://t.me/Star_Movies_Karthik")
+            ],
+            [
+                InlineKeyboardButton("⬅️ BACK", callback_data="START_CALLBACK"),
+            ]
+            ]
+        reply_markup = InlineKeyboardMarkup(TELETIPS_TUTORIAL_BUTTONS)
+        try:
+            await query.edit_message_text(
+                Translation.ABOUT,
+                reply_markup=reply_markup
+            )
+        except MessageNotModified:
+            pass      
+          
+    elif query.data=="START_CALLBACK":
+        TELETIPS_START_BUTTONS = [
+            [
+                InlineKeyboardButton('👨‍💻 Creator', url='https://t.me/Star_Movies_Karthik')
+            ],
+            [
+                InlineKeyboardButton('😎 About', callback_data="TUTORIAL_CALLBACK"),
+                InlineKeyboardButton('👥 Support', callback_data="GROUP_CALLBACK"),
+                InlineKeyboardButton('😁 Help', callback_data="HELP_CALLBACK")
+            ],
+            [
+                InlineKeyboardButton('📣 Update Channel', url='https://t.me/Star_Moviess_Tamil')
+            ]
+        ]
+
+        reply_markup = InlineKeyboardMarkup(TELETIPS_START_BUTTONS)
+        try:
+            await query.edit_message_text(
+                Translation.START,
+                reply_markup=reply_markup
+            )
+        except MessageNotModified:
+            pass    
+
 
 ################################################################################################################################################################################################################################################
 # Help Command

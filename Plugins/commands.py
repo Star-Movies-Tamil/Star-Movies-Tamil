@@ -36,10 +36,9 @@ async def start(client, message):
     await message.reply(
         text=text,
         reply_markup=reply_markup,
+        mention = message.from_user.mention,
         disable_web_page_preview=True
-    ),
-                mention = message.from_user.mention
-            )
+    )
 
 @channelforward.on_callback_query()
 async def callback_query(client: Client, query: CallbackQuery):

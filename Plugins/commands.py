@@ -29,12 +29,14 @@ TELETIPS_MAIN_MENU_BUTTONS = [
             ]
         ]
 
-@channelforward.on_message(filters.command(['start','help']) & filters.private)
+@channelforward.on_message(filters.command('start') & filters.private)
 async def start(client, message):
     text = Translation.START
     reply_markup = InlineKeyboardMarkup(TELETIPS_MAIN_MENU_BUTTONS)
     await message.reply(
         text=text,
+        mention = message.from_user.mention,
+        quote=True,
         reply_markup=reply_markup,
         disable_web_page_preview=True
     )
@@ -51,6 +53,8 @@ async def callback_query(client: Client, query: CallbackQuery):
         try:
             await query.edit_message_text(
                 Translation.HELP,
+                disable_web_page_preview=True,
+                quote=True,
                 reply_markup=reply_markup
             )
         except MessageNotModified:

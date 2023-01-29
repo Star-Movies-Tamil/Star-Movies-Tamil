@@ -1,7 +1,7 @@
 import logging
 logger = logging.getLogger(__name__)
 
-from pyrogram import filters
+from pyrogram import Client, filters
 from bot import channelforward
 from config import Config
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup, CallbackQuery

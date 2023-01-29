@@ -34,7 +34,7 @@ TELETIPS_MAIN_MENU_BUTTONS = [
 async def start(client, message):
     reply_markup = InlineKeyboardMarkup(TELETIPS_MAIN_MENU_BUTTONS)
     await message.reply_text(
-        caption = Translation.START.format(
+        text = Translation.START.format(
                 mention = message.from_user.mention
             ),
         reply_markup=reply_markup,

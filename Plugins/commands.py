@@ -4,7 +4,7 @@ logger = logging.getLogger(__name__)
 from pyrogram import Client, filters
 from bot import channelforward
 from config import Config
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup, CallbackQuery
+from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup, CallbackQuery
 from translation import Translation
 import random
 import os
@@ -31,12 +31,14 @@ TELETIPS_MAIN_MENU_BUTTONS = [
 
 @channelforward.on_message(filters.command('start') & filters.private)
 async def start(client, message):
+    id = message.from_user.id
+    user_name = '@' + message.from_user.username if message.from_user.username else None
+    await add_user(id, user_name)
     text = Translation.START
     reply_markup = InlineKeyboardMarkup(TELETIPS_MAIN_MENU_BUTTONS)
     await message.reply_text(
         text=text,
         reply_markup=reply_markup,
-        mention=message.from_user.mention,
         disable_web_page_preview=True
     )
 

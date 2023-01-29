@@ -62,3 +62,71 @@ def callback_query(Client, CallbackQuery):
 ]
 
 
+# Callback Quary
+
+START = "Translation.START"
+START_BUTTON = [
+    [
+        InlineKeyboardButton('😁 Help', callback_data="help")
+    ]
+]
+@channelforward.on_message(filters.command("start") & filters.private & filters.incoming)
+async def start(client, message):
+    await message.reply_photo(
+        caption = Translation.START.format(
+                mention = message.from_user.mention
+            ),
+        photo="https://telegra.ph/file/8bfb25704003a8b181400.jpg",
+        quote=True,
+        reply_markup = InlineKeyboardMarkup(START_BUTTON)
+    )
+@channelforward.on_callback_query()
+def callback_query(Client, CallbackQuery):
+    if CallbackQuery.data == "help":
+
+         HELP = "Translation.HELP"
+         HELP_BUTTON = [
+    [
+        InlineKeyboardButton('🏠 Home', callback_data="home"),
+        InlineKeyboardButton('😎 About', callback_data="about")
+    ]
+]
+CallbackQuery.edit_message_text(
+            HELP,
+            reply_markup = InlineKeyboardMarkup(HELP_BUTTON)
+        )
+    elif CallbackQuery.data == "home":
+         START = "Translation.START"
+         START_BUTTON = [
+    [
+        InlineKeyboardButton('😎 About', callback_data="about"),
+        InlineKeyboardButton('😁 Help', callback_data="help")
+    ]
+]
+CallbackQuery.edit_message_text(
+            START,
+            reply_markup = InlineKeyboardMarkup(START_BUTTON)
+        )
+    elif CallbackQuery.data == "about":
+         ABOUT = "Translation.ABOUT"
+         ABOUT_BUTTON = [
+    [
+        InlineKeyboardButton('🏠 Home', callback_data="home"),
+        InlineKeyboardButton('😁 Help', callback_data="help")
+    ]
+]
+CallbackQuery.edit_message_text(
+            ABOUT,
+            reply_markup = InlineKeyboardMarkup(ABOUT_BUTTON)
+        )
+    elif CallbackQuery.data == "start":
+         START = "Translation.START"
+         START_BUTTON = [
+    [
+        InlineKeyboardButton('😎 About', callback_data="about")
+    ]
+]
+CallbackQuery.edit_message_text(
+            START,
+            reply_markup = InlineKeyboardMarkup(START_BUTTON)
+        )

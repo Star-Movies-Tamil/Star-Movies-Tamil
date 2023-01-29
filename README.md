@@ -1,4 +1,4 @@
-# CHANNEL AUTO FORWARD
+# Star Movies Tamil
 A Simple telegram bot written in python to forward your files from one channel to other channel when a new post is available. What you need to do is just deploy this code. 
 
 [![Open Source? Yes!](https://badgen.net/badge/Open%20Source%20%3F/Yes%21/blue?icon=github)](https://github.com/Ns-AnoNymouS/TG-CONVERT-BOT/tree/main)

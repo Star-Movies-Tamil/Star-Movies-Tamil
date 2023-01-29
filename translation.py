@@ -1,22 +1,34 @@
 class Translation(object):
 
       # Start Text
-      START = """<b>Hi 👋🏻 {mention},
+      START = """<b>Hi 👋🏻 {mention} ♥️,
 
-I'm UK Studios Official a Bot to Maintain Your Channels. I am very useful for the Channel Admin who have many Channels.
+I'm an Star Movies Tamil's Official Movie Search Bot.
 
-See /help for more Details.
+See /help for More Details.
 
-Maintained By : [Karthik](https://t.me/HMTD_Karthik)</b>"""             
+Maintained By : [Karthik](https://t.me/Star_Movies_Karthik)</b>"""             
 
       # Help Text
-      HELP = """<b>The Ultimate Tool to Automate Custom Telegram Message Forwarding. Live Syncer, Auto Poster, Backup Bot, Cloner, Chat Forwarder, Duplicator, ... Call it whatever you like! tgcf can fulfill Your Custom Needs.</b>"""
+      HELP = """<b>Hi 👋🏻 {mention} ♥️,
+
+You Can Get Movies 🎥 with Commends and Our Bot will Support Upto 4GB Files 📂.
+
+Movie Commends
+🎭 /genre
+📆 /year
+♦️ /tamil_movies
+♦️ /hollywood_movies
+♦️ /web_series
+♦️ /collection_movies
+♦️ /cartoon_movies
+♦️ /tv_shows</b>"""
 
       #About Text
       ABOUT = """
-<b>🤖 My Name : [UK Auto Forward Bot](https://t.me/UK_Auto_Forward_Bot)
+<b>🤖 My Name : [Star Movies Tamil](https://t.me/Star_Moviess_Tamil_Bot)
 
-🧑🏻‍💻 Developer : [Karthik](https://t.me/HMTD_Karthik)
+🧑🏻‍💻 Developer : [Karthik](https://t.me/Star_Movies_Karthik)
 
 📝 Language : Pyrogram
 
@@ -24,15 +36,13 @@ Maintained By : [Karthik](https://t.me/HMTD_Karthik)</b>"""
 
 📡 Hosted on : VPS
 
-📢 Updates Channel : [UK Movies Zone (Updates)](https://t.me/UK_Movies_Zone_Updates)
-
-🌐 Website : [www.HMTDMovies.tk](https://www.HMTDMovies.tk)</b>"""
+📢 Updates Channel : [Star Movies Tamil](https://t.me/Star_Moviess_Tamil)</b>"""
 
       #Support Text
-      SUPPORT = """Hi {mention},"""
+      SUPPORT = """I'm Star Movies Official Feedback Bot. You Want Any Help or Of You Need Any Movie Links Massage us Me and Get Solution to Admins"""
 
       # Alien Covenant Movie
-      ALIEN_COVENANT = """<b> Hi {mention},
+      ALIEN_COVENANT = """<b> Hi 👋🏻 {mention} ♥️,
 
 Alien Covenant (2017) (BluRay + Original Audios) - [1080p & 720p - x264 - [Tamil + Telugu + Hindi + English] - (DD5.1 - 448Kbps) - 3GB & 1.5GB - 1.4GB | x264 - [Tamil + Telugu + Hindi] - 450MB] - ESub]
 

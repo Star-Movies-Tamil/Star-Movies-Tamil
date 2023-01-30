@@ -152,12 +152,25 @@ async def help(client, message):
 ################################################################################################################################################################################################################################################
 # About Command
 
+ABOUT = "Translation.ABOUT"
+
+ABOUT_BUTTONS = [
+            [
+                InlineKeyboardButton('👨‍💻 Creator', url='https://t.me/Star_Movies_Karthik'),
+                InlineKeyboardButton('📣 Update Channel', url='https://t.me/Star_Moviess_Tamil')
+            ]
+        ]
+
 @channelforward.on_message(filters.command("about") & filters.private & filters.incoming)
 async def about(client, message):
-    await message.reply(
-        text=Translation.ABOUT,
-        disable_web_page_preview=True,
-        quote=True
+    text = Translation.ABOUT
+    reply_markup = InlineKeyboardMarkup(ABOUT_BUTTONS)
+    await message.reply_text(
+        text = Translation.ABOUT.format(
+                mention = message.from_user.mention
+            ),
+        reply_markup=reply_markup,
+        disable_web_page_preview=True
     )
 
 ################################################################################################################################################################################################################################################

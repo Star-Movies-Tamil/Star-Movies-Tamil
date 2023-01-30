@@ -18,3 +18,4 @@ try:
         ADMINS.append(int(x))
 except ValueError:
         raise Exception("Your Admins list does not contain valid integers.")
+OWNER_ID = int(os.environ.get("OWNER_ID", "1391556668"))

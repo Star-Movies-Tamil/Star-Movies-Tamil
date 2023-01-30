@@ -1,4 +1,5 @@
 # ------- For Bot Working ------- #
+uvloop
 Pyromod
 tgcrypto
 pyrogram~=2.0.59

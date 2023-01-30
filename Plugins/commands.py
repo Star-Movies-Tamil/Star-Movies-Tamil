@@ -6,7 +6,7 @@ from bot import channelforward
 from config import ADMINS
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup, CallbackQuery
 from translation import Translation
-from pyrogram.errors import MessageNotModified, UserIsBlocked, InputUserDeactivated
+from pyrogram.errors import MessageNotModified, UserIsBlocked, InputUserDeactivated, FloodWait
 from database.database import add_user, del_user, full_userbase, present_user
 import random
 import os

@@ -10,9 +10,9 @@
     "success_url": "https://telegram.dog/UK_Auto_Forward_Bot",
     "repository": "https://github.com/KarthikTamil7/UK-Auto-Forward-Bot",
     "env": {
-        "AS_COPY": {
-            "description": "set this to true to forward message as copy",
-            "value": "True" 
+        "ADMINS": {
+            "description": "A space separated list of user_ids of Admins, they can only create links",
+            "value": "" 
         },
         "API_HASH": {
             "description": "Get this value from https://my.telegram.org",
@@ -26,9 +26,13 @@
             "description": "Your bot token, as a string. Get this from @BotFather",
             "value": ""
         },
-        "CHANNEL_ID": {
-            "description": "your channel id in format -10023352648:-100655379 (from channel id:to channel id) if you want to give more channels seperate them with white space",
+        "DB_URI": {
+            "description": "MongoDB URI. Get this value from MongoDB.",
             "value": ""
+        },
+        "DB_NAME": {
+            "description": "Name of the database in MongoDB.",
+            "value": "Cluster0"
         }
     },
     "buildpacks": [{"url": "heroku/python"}]

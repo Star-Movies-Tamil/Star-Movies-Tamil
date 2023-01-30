@@ -8,7 +8,7 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 import uvloop
 uvloop.install()
-from config import Config
+from config import Config, ADMINS
 from pyrogram import Client 
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 

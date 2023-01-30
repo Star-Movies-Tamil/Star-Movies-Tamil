@@ -3,7 +3,7 @@ logger = logging.getLogger(__name__)
 
 from pyrogram import Client, filters
 from bot import channelforward
-from config import Config
+from config import ADMINS
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup, CallbackQuery
 from translation import Translation
 from pyrogram.errors import MessageNotModified, UserIsBlocked, InputUserDeactivated
@@ -203,7 +203,7 @@ async def send_text(client: Bot, message: Message):
         deleted = 0
         unsuccessful = 0
         
-        pls_wait = await message.reply("<i>Broadcasting Message.. This will Take Some Time</i>")
+        pls_wait = await message.reply("<b>Broadcasting Message.. This will Take Some Time</b>")
         for chat_id in query:
             try:
                 await broadcast_msg.copy(chat_id)

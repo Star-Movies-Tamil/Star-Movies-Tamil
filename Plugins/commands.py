@@ -187,7 +187,7 @@ REPLY_ERROR = """<b>Use this command as a replay to any telegram message with ou
 async def get_users(client, message):
     msg = await client.send_message(chat_id=message.chat.id, text=WAIT_MSG)
     users = await full_userbase()
-    await msg.edit(f"{len(users)} users are using this bot")
+    await msg.edit(f"<b>{len(users)} users are using this Bot</b>")
 
 ################################################################################################################################################################################################################################################
 # Broadcast Message 

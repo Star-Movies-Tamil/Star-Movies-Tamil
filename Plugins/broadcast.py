@@ -5,13 +5,13 @@ from database.users_db import db
 from config import ADMINS
 import asyncio
 
-@Client.on_message(filters.command("broadcast") & filters.user(ADMINS) & filters.reply)
+@channelforward.on_message(filters.command("broadcast") & filters.user(ADMINS) & filters.reply)
 # https://t.me/GetTGLink/4178
 async def verupikkals(client, message):
     users = await db.get_all_users()
     b_msg = message.reply_to_message
     sts = await message.reply_text(
-        text='Broadcasting your messages...'
+        text='<b>Broadcasting your messages...</b>'
     )
     start_time = time.time()
     total_users = await db.total_users_count()

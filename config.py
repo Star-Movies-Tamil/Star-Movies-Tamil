@@ -10,8 +10,7 @@ class Config(object):
       CHANNEL = list(x for x in getenv("CHANNEL_ID", "-1001861300920:-1001811940117 -1001786688631 -1001436081117 -1001780758150 -1001721348234 -1001780697340 -1001698854544 -1001593574364 -1001519485548").replace("\n", " ").split(' '))
 DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://KarthikMovies:KarthikUK007@cluster0.4l5byki.mongodb.net/?retryWrites=true&w=majority")
 DB_NAME = os.environ.get("DATABASE_NAME", "Cluster0")
-ADMINS.append(OWNER_ID)
-ADMINS.append(1391556668)
+ADMINS.append(OWNER_ID)ADMINS.append(1391556668)
 try:
     ADMINS=[]
     for x in (os.environ.get("ADMINS", "1391556668").split()):

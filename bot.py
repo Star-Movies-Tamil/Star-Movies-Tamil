@@ -23,16 +23,16 @@ class channelforward(Client, Config):
             workers=20,
             plugins={'root': 'Plugins'}
         )
-
-    async def start(self):
-        await super().start()
-        me = await self.get_me()
-        print(f"Bot Started for {me.first_name}")
         try:
             db_channel = await self.get_chat(CHANNEL_ID)
             self.db_channel = db_channel
             test = await self.send_message(chat_id = db_channel.id, text = "Test Message")
             await test.delete()
+
+    async def start(self):
+        await super().start()
+        me = await self.get_me()
+        print(f"Bot Started for {me.first_name}")
 
     async def stop(self):
         await super().stop()

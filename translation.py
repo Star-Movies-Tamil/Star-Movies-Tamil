@@ -15,8 +15,6 @@ Maintained By : [Karthik](https://t.me/Star_Movies_Karthik)</b>"""
 You Can Get Movies 🎥 with Commends and Our Bot will Support Upto 4GB Files 📂.
 
 Movie Commends
-🎭 /genre
-📆 /year
 ♦️ /tamil_movies
 ♦️ /hollywood_movies
 ♦️ /web_series

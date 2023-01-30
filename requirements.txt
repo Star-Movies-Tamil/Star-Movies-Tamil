@@ -1,7 +1,8 @@
 # ------- For Bot Working ------- #
-uvloop
+Pyromod
 tgcrypto
 pyrogram~=2.0.59
 # --------- For Database -------- #
-pymongo
-dnspython
+sqlalchemy~=1.3.23
+psycopg2-binary
+feedparser

@@ -1,5 +1,12 @@
 import pymongo, os
 from config import DB_URL, DB_NAME
+import threading
+from sqlalchemy import create_engine
+from sqlalchemy import Column, TEXT, Numeric
+from sqlalchemy.ext.declarative import declarative_base
+from config import DB_URL
+from sqlalchemy.orm import sessionmaker, scoped_session
+
 
 
 dbclient = pymongo.MongoClient(DB_URL)

@@ -6,7 +6,7 @@ from bot import channelforward
 from config import Config
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup, CallbackQuery
 from translation import Translation
-from pyrogram.errors import MessageNotModified
+from pyrogram.errors import MessageNotModified, UserIsBlocked, InputUserDeactivated
 from database.database import add_user, del_user, full_userbase, present_user
 import random
 import os
@@ -175,9 +175,15 @@ async def about(client, message):
     )
 
 ################################################################################################################################################################################################################################################
+
+WAIT_MSG = """"<b>Processing ...</b>"""
+
+REPLY_ERROR = """<b>Use this command as a replay to any telegram message with out any spaces.</b>"""
+
+################################################################################################################################################################################################################################################
 # Total Users
 
-@Bot.on_message(filters.command('users') & filters.private & filters.user(ADMINS))
+@channelforward.on_message(filters.command('users') & filters.private & filters.user(ADMINS))
 async def get_users(client: Bot, message: Message):
     msg = await client.send_message(chat_id=message.chat.id, text=WAIT_MSG)
     users = await full_userbase()
@@ -186,7 +192,7 @@ async def get_users(client: Bot, message: Message):
 ################################################################################################################################################################################################################################################
 # Broadcast Message 
 
-@Bot.on_message(filters.private & filters.command('broadcast') & filters.user(ADMINS))
+@channelforward.on_message(filters.private & filters.command('broadcast') & filters.user(ADMINS))
 async def send_text(client: Bot, message: Message):
     if message.reply_to_message:
         query = await full_userbase()

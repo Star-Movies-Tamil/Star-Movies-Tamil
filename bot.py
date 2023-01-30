@@ -7,7 +7,8 @@ logging.getLogger().setLevel(logging.INFO)
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 from config import Config
-from pyrogram import Client 
+from pyrogram import Client
+import asyncio
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 
 class channelforward(Client, Config):

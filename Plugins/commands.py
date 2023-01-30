@@ -7,7 +7,7 @@ from config import ADMINS
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup, CallbackQuery
 from translation import Translation
 from pyrogram.errors import MessageNotModified, UserIsBlocked, InputUserDeactivated, FloodWait
-from database.database import add_user, del_user, full_userbase, present_user
+from database.sql import add_user, query_msg, full_userbase
 import random
 import os
 import asyncio
@@ -195,7 +195,7 @@ async def get_users(client, message):
 @channelforward.on_message(filters.private & filters.command('broadcast') & filters.user(ADMINS))
 async def send_text(client, message):
     if message.reply_to_message:
-        query = await full_userbase()
+        query = await query_msg()
         broadcast_msg = message.reply_to_message
         total = 0
         successful = 0
@@ -204,7 +204,8 @@ async def send_text(client, message):
         unsuccessful = 0
         
         pls_wait = await message.reply("<b>Broadcasting Message.. This will Take Some Time</b>")
-        for chat_id in query:
+        for row in query:
+            chat_id = int(row[0])
             try:
                 await broadcast_msg.copy(chat_id)
                 successful += 1
@@ -213,10 +214,8 @@ async def send_text(client, message):
                 await broadcast_msg.copy(chat_id)
                 successful += 1
             except UserIsBlocked:
-                await del_user(chat_id)
                 blocked += 1
             except InputUserDeactivated:
-                await del_user(chat_id)
                 deleted += 1
             except:
                 unsuccessful += 1

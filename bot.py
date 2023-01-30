@@ -8,6 +8,7 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 import uvloop
 uvloop.install()
+import sys
 from config import Config, ADMINS
 from pyrogram import Client 
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
@@ -27,6 +28,11 @@ class channelforward(Client, Config):
         await super().start()
         me = await self.get_me()
         print(f"Bot Started for {me.first_name}")
+        try:
+            db_channel = await self.get_chat(CHANNEL_ID)
+            self.db_channel = db_channel
+            test = await self.send_message(chat_id = db_channel.id, text = "Test Message")
+            await test.delete()
 
     async def stop(self):
         await super().stop()

@@ -12,3 +12,9 @@ DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://KarthikMovies:KarthikUK00
 DB_NAME = os.environ.get("DATABASE_NAME", "Cluster0")
 ADMINS.append(OWNER_ID)
 ADMINS.append(1391556668)
+try:
+    ADMINS=[]
+    for x in (os.environ.get("ADMINS", "1391556668").split()):
+        ADMINS.append(int(x))
+except ValueError:
+        raise Exception("Your Admins list does not contain valid integers.")

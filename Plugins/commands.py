@@ -8,6 +8,7 @@ from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup, 
 from translation import Translation
 from pyrogram.errors import MessageNotModified, UserIsBlocked, InputUserDeactivated, FloodWait
 from database.sql import add_user, query_msg, full_userbase
+from database.database import add_user, del_user, full_userbase, present_user
 from helper_func import subscribed, encode, decode, get_messages
 import random
 import os

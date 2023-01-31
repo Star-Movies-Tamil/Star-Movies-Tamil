@@ -10,7 +10,7 @@ import asyncio
 @Client.on_message(filters.command("broadcast1") & filters.user(ADMINS) & filters.reply)
 # https://telegram.me/UK_Studios_Official
 async def verupikkals(bot, message):
-    users = await dbclient.get_all_users()
+    users = await db.get_all_users()
     b_msg = message.reply_to_message
     sts = await message.reply_text(
         text='<b>Broadcasting your Messages...😁</b>'

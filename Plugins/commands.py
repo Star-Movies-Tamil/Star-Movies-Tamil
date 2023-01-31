@@ -268,13 +268,13 @@ async def alien_covenant(client, message):
 
 ################################################################################################################################################################################################################################################
 
-@channelforward.on_message(filters.private & filters.command('stats') & filters.admins)
+@channelforward.on_message(filters.private & filters.command('stats') & filters.user(ADMINS))
 async def getstatus(client: CodeXBotz, message: Message):
     sts_msg = await message.reply('Getting Details..')
     stats = await get_status()
     await sts_msg.edit(stats)
     
-@channelforward.on_message(filters.private & filters.command('broadcast') & filters.admins & filters.reply)
+@channelforward.on_message(filters.private & filters.command('broadcast') & filters.user(ADMINS) & filters.reply)
 async def broadcast(client: CodeXBotz, message: Message):
     broadcast_msg = message.reply_to_message
     broadcast_msg = await broadcast_msg.copy(

@@ -2,7 +2,7 @@ from pyrogram import Client, filters
 import datetime
 import time
 from bot import channelforward
-from database.database import add_user, del_user, full_userbase, present_user, user_data, dbclient, database
+from database.database import db, database
 from config import ADMINS
 from utils import broadcast_messages
 import asyncio

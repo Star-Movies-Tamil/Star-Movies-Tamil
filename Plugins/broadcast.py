@@ -2,7 +2,7 @@ from pyrogram import Client, filters
 import datetime
 import time
 from bot import channelforward
-from database.database import add_user, del_user, full_userbase, present_user
+from database.database import add_user, del_user, full_userbase, present_user, user_data, dbclient, database
 from config import ADMINS
 from utils import broadcast_messages
 import asyncio
@@ -10,7 +10,7 @@ import asyncio
 @Client.on_message(filters.command("broadcast1") & filters.user(ADMINS) & filters.reply)
 # https://telegram.me/UK_Studios_Official
 async def verupikkals(bot, message):
-    users = await database.get_all_users()
+    users = await dbclient.get_all_users()
     b_msg = message.reply_to_message
     sts = await message.reply_text(
         text='<b>Broadcasting your Messages...😁</b>'

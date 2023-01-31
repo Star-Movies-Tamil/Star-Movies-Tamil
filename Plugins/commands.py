@@ -196,7 +196,7 @@ async def get_users(client, message):
 @channelforward.on_message(filters.private & filters.command('broadcast') & filters.user(ADMINS))
 async def send_text(client, message):
     if message.reply_to_message:
-        query = await query_msg()
+        query = await full_userbase()
         broadcast_msg = message.reply_to_message
         total = 0
         successful = 0

@@ -282,7 +282,7 @@ async def broadcast(client, message):
         reply_to_message_id = broadcast_msg.message_id
     )
     await broadcast_msg.reply(
-        text = 'Are you sure you want Broadcast this..',
+        text = '<b>Are you sure you want Broadcast this..</b>',
         quote = True,
         reply_markup = InlineKeyboardMarkup(
             [
@@ -295,7 +295,7 @@ async def broadcast(client, message):
     )
     return
 
-@channelforward.on_callback_query(filters.admins & filters.regex('^bdcast_cnfrm$'))
+@channelforward.on_callback_query(filters.user(ADMINS) & filters.regex('^bdcast_cnfrm$'))
 async def broadcast_confrm(client, query):
     if not query.message.reply_to_message:
         await query.answer(
@@ -313,7 +313,7 @@ async def broadcast_confrm(client, query):
     blocked = 0
     peerid = 0
     
-    await query.message.edit(text = 'Broadcasting message, Please wait', reply_markup = None)
+    await query.message.edit(text = '<b>Broadcasting message, Please wait</b>', reply_markup = None)
     
     for user_id in user_ids:
         try:
@@ -335,7 +335,7 @@ async def broadcast_confrm(client, query):
     
 Total users: {str(len(user_ids))}
 Blocked users: {str(blocked)}
-Deleted accounts: {str(deleted)} (<i>Deleted from Database</i>)
+Deleted accounts: {str(deleted)} (<b>Deleted from Database</b>)
 Failed : {str(peerid)}"""
 
     await query.message.reply(text)

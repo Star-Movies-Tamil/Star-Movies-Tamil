@@ -12,7 +12,7 @@ import random
 import os
 import asyncio
 
-from database import (
+from Database import (
     get_users,
     del_from_userbase
 )

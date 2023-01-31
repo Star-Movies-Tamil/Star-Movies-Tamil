@@ -7,9 +7,7 @@ from config import ADMINS
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup, CallbackQuery
 from translation import Translation
 from pyrogram.errors import MessageNotModified, UserIsBlocked, InputUserDeactivated, FloodWait
-from database.sql import add_user, query_msg, full_userbase
 from database.database import add_user, del_user, full_userbase, present_user
-from helper_func import subscribed, encode, decode, get_messages
 import random
 import os
 import asyncio
@@ -127,40 +125,6 @@ async def callback_query(client: Client, query: CallbackQuery):
         except MessageNotModified:
             pass    
         return
-
-@channelforward.on_message(filters.command('start') & filters.private)
-async def not_joined(client, message):
-    buttons = [
-        [
-            InlineKeyboardButton(
-                "Join Channel",
-                url = client.invitelink)
-        ]
-    ]
-    try:
-        buttons.append(
-            [
-                InlineKeyboardButton(
-                    text = 'Try Again',
-                    url = f"https://t.me/{client.username}?start={message.command[1]}"
-                )
-            ]
-        )
-    except IndexError:
-        pass
-
-    await message.reply(
-        text = FORCE_MSG.format(
-                first = message.from_user.first_name,
-                last = message.from_user.last_name,
-                username = None if not message.from_user.username else '@' + message.from_user.username,
-                mention = message.from_user.mention,
-                id = message.from_user.id
-            ),
-        reply_markup = InlineKeyboardMarkup(buttons),
-        quote = True,
-        disable_web_page_preview = True
-    )
 
 
 ################################################################################################################################################################################################################################################

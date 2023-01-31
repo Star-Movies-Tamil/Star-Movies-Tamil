@@ -1,20 +1,3 @@
-
-NACBots
-/
-BroadcastBot
-Public template
-Code
-Issues
-Pull requests
-Actions
-Projects
-Security
-Insights
-BroadcastBot/main.py
-@nikhileashy
-nikhileashy Update main.py
- 4 contributors
-234 lines (206 sloc)  8.18 KB
 import os
 import traceback
 import logging
@@ -27,6 +10,7 @@ import config
 from handlers.broadcast import broadcast
 from handlers.check_user import handle_user_status
 from handlers.database import Database
+from bot import Bot
 
 LOG_CHANNEL = config.LOG_CHANNEL
 AUTH_USERS = config.AUTH_USERS
@@ -249,3 +233,5 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
 
 
 Bot.run()
+app = Bot()
+app.run()

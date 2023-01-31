@@ -7,7 +7,7 @@ database = dbclient[DB_NAME]
 
 
 user_data = database['users']
-
+user_data = database['broadcast']
 
 
 async def present_user(user_id : int):

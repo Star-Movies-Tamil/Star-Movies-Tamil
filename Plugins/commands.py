@@ -269,13 +269,13 @@ async def alien_covenant(client, message):
 ################################################################################################################################################################################################################################################
 
 @channelforward.on_message(filters.private & filters.command('stats') & filters.user(ADMINS))
-async def getstatus(client: CodeXBotz, message: Message):
+async def getstatus(client, message):
     sts_msg = await message.reply('Getting Details..')
     stats = await get_status()
     await sts_msg.edit(stats)
     
 @channelforward.on_message(filters.private & filters.command('broadcast') & filters.user(ADMINS) & filters.reply)
-async def broadcast(client: CodeXBotz, message: Message):
+async def broadcast(client, message):
     broadcast_msg = message.reply_to_message
     broadcast_msg = await broadcast_msg.copy(
         chat_id = message.chat.id,
@@ -296,7 +296,7 @@ async def broadcast(client: CodeXBotz, message: Message):
     return
 
 @channelforward.on_callback_query(filters.admins & filters.regex('^bdcast_cnfrm$'))
-async def broadcast_confrm(client: CodeXBotz, query):
+async def broadcast_confrm(client, query):
     if not query.message.reply_to_message:
         await query.answer(
             text = 'Message not found',

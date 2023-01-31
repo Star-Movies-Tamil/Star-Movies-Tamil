@@ -205,8 +205,7 @@ async def send_text(client, message):
         unsuccessful = 0
         
         pls_wait = await message.reply("<b>Broadcasting Message.. This will Take Some Time</b>")
-        for row in query:
-            chat_id = int(row[0])
+        for chat_id in query:
             try:
                 await broadcast_msg.copy(chat_id)
                 successful += 1
@@ -215,8 +214,10 @@ async def send_text(client, message):
                 await broadcast_msg.copy(chat_id)
                 successful += 1
             except UserIsBlocked:
+                await del_user(chat_id)
                 blocked += 1
             except InputUserDeactivated:
+                await del_user(chat_id)
                 deleted += 1
             except:
                 unsuccessful += 1

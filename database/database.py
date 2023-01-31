@@ -30,4 +30,4 @@ async def del_user(user_id: int):
     user_data.delete_one({'_id': user_id})
     return
 
-db = Database(DB_URI, DB_NAME)
+db = database(DB_URI, DB_NAME)

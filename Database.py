@@ -28,3 +28,58 @@ async def get_users():
 async def del_from_userbase(user_id: int):
     user_collection.delete_one({'_id': user_id})
     return
+
+async def get_status():
+    filters = filter_collection.find()
+    filters_no = 0
+    text = 0
+    photo = 0
+    video = 0
+    audio = 0
+    document = 0
+    animation = 0
+    sticker = 0
+    voice = 0 
+    videonote = 0 
+    
+    for filter in filters:
+        type = filter['type']
+        if type == 'Text':
+            text += 1 
+        elif type == 'Photo':
+            photo += 1 
+        elif type == 'Video':
+            video += 1 
+        elif type == 'Audio':
+            audio += 1 
+        elif type == 'Document':
+            document += 1
+        elif type == 'Animation':
+            animation += 1
+        elif type == 'Sticker':
+            sticker += 1 
+        elif type == 'Voice':
+            voice += 1
+        elif type == 'Video Note':
+            videonote += 1 
+
+        filters_no += 1
+    
+    user_collection = database['users']
+    no_users = user_collection.find().count()
+    
+    stats_text = f"""<b>Statistics</b>
+    
+Total users: {no_users}
+Total filters: {filters_no}
+Text filters: {text}
+Photo filters: {photo}
+Video filters: {video}
+Audio filters: {audio}
+Document filters: {document}
+Animation filters: {animation}
+Sticker filters: {sticker}
+Voice filters: {voice}
+Video Note filters: {videonote}"""
+
+    return stats_text

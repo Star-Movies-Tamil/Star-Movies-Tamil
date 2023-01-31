@@ -13,6 +13,7 @@ import os
 import asyncio
 
 from Database import (
+    get_status,
     get_users,
     del_from_userbase
 )

@@ -2,11 +2,6 @@
 Pyromod
 tgcrypto
 pyrogram~=2.0.59
-datetime
-motor==2.5.1
 # --------- For Database -------- #
-sqlalchemy~=1.3.23
-psycopg2-binary
-feedparser
 pymongo
 dnspython

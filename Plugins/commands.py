@@ -13,7 +13,6 @@ import os
 import asyncio
 from bot import (
     channelforward,
-    filters,
     Message,
     InlineKeyboardMarkup,
     InlineKeyboardButton

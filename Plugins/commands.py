@@ -11,12 +11,7 @@ from database.database import add_user, del_user, full_userbase, present_user
 import random
 import os
 import asyncio
-from bot import (
-    channelforward,
-    Message,
-    InlineKeyboardMarkup,
-    InlineKeyboardButton
-)
+
 from database import (
     get_status,
     get_users,

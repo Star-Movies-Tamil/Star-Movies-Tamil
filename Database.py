@@ -1,12 +1,12 @@
 import pymongo
-from . import DB_URI, DB_NAME
+from config import DB_URI, DB_NAME
 
 dbclient = pymongo.MongoClient(DB_URI)
 database = dbclient[DB_NAME]
 
 user_collection = database['users']
 
-async def present_in_userbase(user_id : int):
+async def present_in_usconfigerbase(user_id : int):
     found = user_collection.find_one({'_id': user_id})
     if found:
         return True

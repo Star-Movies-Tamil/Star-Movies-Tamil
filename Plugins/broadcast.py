@@ -7,7 +7,7 @@ from config import ADMINS
 from utils import broadcast_messages
 import asyncio
         
-@channelforward.on_message(filters.command("broadcast1") & filters.user(ADMINS) & filters.reply)
+@Client.on_message(filters.command("broadcast1") & filters.user(ADMINS) & filters.reply)
 # https://telegram.me/UK_Studios_Official
 async def verupikkals(bot, message):
     users = await database.get_all_users()
@@ -16,7 +16,7 @@ async def verupikkals(bot, message):
         text='<b>Broadcasting your Messages...😁</b>'
     )
     start_time = time.time()
-    total_users = await db.total_users_count()
+    total_users = await database.total_users_count()
     done = 0
     blocked = 0
     deleted = 0

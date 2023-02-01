@@ -6,6 +6,8 @@ logging.basicConfig(
 logging.getLogger().setLevel(logging.INFO)
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
+import uvloop
+uvloop.install()
 from config import Config
 from pyrogram import Client
 import asyncio
@@ -21,7 +23,7 @@ import config
 from handlers.broadcast import broadcast
 from handlers.check_user import handle_user_status
 from handlers.database import Database
-from bot import channelforward
+
 
 LOG_CHANNEL = config.LOG_CHANNEL
 AUTH_USERS = config.AUTH_USERS

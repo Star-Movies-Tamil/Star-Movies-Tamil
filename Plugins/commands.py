@@ -71,7 +71,7 @@ async def _(bot, cmd):
 
 @channelforward.on_message(filters.command('start') & filters.private)
 async def start(client, message):
-    reply_markup=joinButton,
+    reply_markup = InlineKeyboardMarkup(joinButton),
     reply_markup = InlineKeyboardMarkup(TELETIPS_MAIN_MENU_BUTTONS)
     await message.reply_text(
         text = Translation.START.format(

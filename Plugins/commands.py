@@ -58,20 +58,9 @@ async def _(bot, cmd):
             )
         else:
             logging.info(f"#NewUser :- Name : {message.from_user.first_name} ID : {message.from_user.id}")
-    joinButton = InlineKeyboardMarkup(
-        [
-            [
-                InlineKeyboardButton("CHANNEL", url="https://t.me/nacbots"),
-                InlineKeyboardButton(
-                    "SUPPORT GROUP", url="https://t.me/n_a_c_bot_developers"
-                ),
-            ]
-        ]
-    )
 
 @channelforward.on_message(filters.command('start') & filters.private)
 async def start(client, message):
-    reply_markup = InlineKeyboardMarkup(joinButton),
     reply_markup = InlineKeyboardMarkup(TELETIPS_MAIN_MENU_BUTTONS)
     await message.reply_text(
         text = Translation.START.format(

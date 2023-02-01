@@ -11,6 +11,16 @@ from database.database import add_user, del_user, full_userbase, present_user
 import random
 import os
 import asyncio
+import traceback
+
+from pyrogram import Client
+from pyrogram import StopPropagation, filters
+from pyrogram.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup
+
+import config
+from handlers.broadcast import broadcast
+from handlers.check_user import handle_user_status
+from handlers.database import Database
 
 
 ################################################################################################################################################################################################################################################
@@ -32,8 +42,36 @@ TELETIPS_MAIN_MENU_BUTTONS = [
             ]
         ]
 
+@channelforward.on_message(filters.private)
+async def _(bot, cmd):
+    await handle_user_status(bot, cmd)
+
+    chat_id = message.from_user.id
+    if not await db.is_user_exist(chat_id):
+        data = await client.get_me()
+        BOT_USERNAME = data.username
+        await db.add_user(chat_id)
+        if LOG_CHANNEL:
+            await client.send_message(
+                LOG_CHANNEL,
+                f"#NEWUSER: \n\nNew User [{message.from_user.first_name}](tg://user?id={message.from_user.id}) started @{BOT_USERNAME} !!",
+            )
+        else:
+            logging.info(f"#NewUser :- Name : {message.from_user.first_name} ID : {message.from_user.id}")
+    joinButton = InlineKeyboardMarkup(
+        [
+            [
+                InlineKeyboardButton("CHANNEL", url="https://t.me/nacbots"),
+                InlineKeyboardButton(
+                    "SUPPORT GROUP", url="https://t.me/n_a_c_bot_developers"
+                ),
+            ]
+        ]
+    )
+
 @channelforward.on_message(filters.command('start') & filters.private)
 async def start(client, message):
+    reply_markup=joinButton,
     reply_markup = InlineKeyboardMarkup(TELETIPS_MAIN_MENU_BUTTONS)
     await message.reply_text(
         text = Translation.START.format(
@@ -42,6 +80,7 @@ async def start(client, message):
         reply_markup=reply_markup,
         disable_web_page_preview=True
     )
+    raise StopPropagation
 
 @channelforward.on_callback_query()
 async def callback_query(client: Client, query: CallbackQuery):
@@ -175,6 +214,29 @@ async def about(client, message):
         reply_markup=reply_markup,
         disable_web_page_preview=True
     )
+
+################################################################################################################################################################################################################################################
+# Bot Settings
+
+@channelforward.on_message(filters.command("settings"))
+async def opensettings(bot, cmd):
+    user_id = cmd.from_user.id
+    await cmd.reply_text(
+        f"`Here You Can Set Your Settings:`\n\nSuccessfully setted notifications to **{await db.get_notif(user_id)}**",
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        f"NOTIFICATION  {'🔔' if ((await db.get_notif(user_id)) is True) else '🔕'}",
+                        callback_data="notifon",
+                    )
+                ],
+                [InlineKeyboardButton("❎", callback_data="closeMeh")],
+            ]
+        ),
+    )
+
+
 
 ################################################################################################################################################################################################################################################
 

@@ -218,7 +218,7 @@ async def about(client, message):
 ################################################################################################################################################################################################################################################
 # Bot Settings
 
-@channelforward.on_message(filters.command("settings") & filters.user(AUTH_USERS))
+@channelforward.on_message(filters.command("settings"))
 async def opensettings(bot, cmd):
     user_id = cmd.from_user.id
     await cmd.reply_text(
@@ -256,7 +256,7 @@ async def get_users(client, message):
 ################################################################################################################################################################################################################################################
 # Broadcast Message 
 
-@channelforward@Bot.on_message(filters.private & filters.command("broadcast") & filters.user(AUTH_USERS))
+@channelforward@Bot.on_message(filters.private & filters.command("broadcast"))
 async def broadcast_handler_open(_, m):
     if m.from_user.id not in AUTH_USERS:
         await m.delete()
@@ -271,7 +271,7 @@ async def broadcast_handler_open(_, m):
 ################################################################################################################################################################################################################################################
 # Total Users in Database 📂
 
-@channelforward.on_message(filters.private & filters.command("stats") & filters.user(AUTH_USERS))
+@channelforward.on_message(filters.private & filters.command("stats"))
 async def sts(c, m):
     if m.from_user.id not in AUTH_USERS:
         await m.delete()
@@ -284,7 +284,7 @@ async def sts(c, m):
 ################################################################################################################################################################################################################################################
 # Ban The User
 
-@channelforward.on_message(filters.private & filters.command("ban_user") & filters.user(AUTH_USERS))
+@channelforward.on_message(filters.private & filters.command("ban_user"))
 async def ban(c, m):
     if m.from_user.id not in AUTH_USERS:
         await m.delete()
@@ -326,7 +326,7 @@ async def ban(c, m):
 ################################################################################################################################################################################################################################################
 # Unban User
 
-@channelforward.on_message(filters.private & filters.command("unban_user") & filters.user(AUTH_USERS))
+@channelforward.on_message(filters.private & filters.command("unban_user"))
 async def unban(c, m):
     if m.from_user.id not in AUTH_USERS:
         await m.delete()
@@ -363,7 +363,7 @@ async def unban(c, m):
 ################################################################################################################################################################################################################################################
 # Banned Users
 
-@channelforward.on_message(filters.private & filters.command("banned_users") & filters.user(AUTH_USERS))
+@channelforward.on_message(filters.private & filters.command("banned_users"))
 async def _banned_usrs(c, m):
     if m.from_user.id not in AUTH_USERS:
         await m.delete()

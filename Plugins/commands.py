@@ -256,6 +256,7 @@ async def broadcast_handler_open(_, m):
     if m.from_user.id not in AUTH_USERS:
         return
     if m.reply_to_message is None:
+        await m.delete()
     else:
         await broadcast(m, db)
         msg = await m.reply(REPLY_ERROR)

@@ -256,14 +256,14 @@ async def broadcast_handler_open(_, m):
     if m.from_user.id not in AUTH_USERS:
         return
         query = await full_userbase()
-        broadcast_msg = message.reply_to_message
+        broadcast_msg = m.reply_to_message
         total = 0
         successful = 0
         blocked = 0
         deleted = 0
         unsuccessful = 0
         
-        pls_wait = await message.reply("<i>Broadcasting Message.. This will Take Some Time</i>")
+        pls_wait = await m.reply("<i>Broadcasting Message.. This will Take Some Time</i>")
         for chat_id in query:
             try:
                 await broadcast_msg.copy(chat_id)
@@ -293,7 +293,7 @@ Unsuccessful: <code>{unsuccessful}</code></b>"""
         await m.delete()
     else:
         await broadcast(m, db)
-        msg = await message.reply(REPLY_ERROR)
+        msg = await m.reply(REPLY_ERROR)
         await asyncio.sleep(8)
 
 ################################################################################################################################################################################################################################################

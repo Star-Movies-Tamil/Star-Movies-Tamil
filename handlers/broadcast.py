@@ -88,7 +88,7 @@ async def broadcast(m, db):
             quote=True,
         )
     else:
-        msg = await message.reply(REPLY_ERROR)
+        msg = await m.reply(REPLY_ERROR)
         await asyncio.sleep(8)
         await m.reply_status(
             status=f"**broadcast completed in `{completed_in}`\n\nTotal users {total_users}.\nTotal done {done}, {success} success and {failed} failed.**",

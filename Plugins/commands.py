@@ -254,13 +254,11 @@ async def get_users(client, message):
 @channelforward.on_message(filters.private & filters.command("broadcast"))
 async def broadcast_handler_open(_, m):
     if m.from_user.id not in AUTH_USERS:
-        await m.delete()
         return
     if m.reply_to_message is None:
-        await m.delete()
     else:
         await broadcast(m, db)
-        msg = await message.reply(REPLY_ERROR)
+        msg = await m.reply(REPLY_ERROR)
         await asyncio.sleep(8)
 
 ################################################################################################################################################################################################################################################

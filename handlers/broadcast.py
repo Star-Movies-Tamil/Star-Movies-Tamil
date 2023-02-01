@@ -88,9 +88,13 @@ async def broadcast(m, db):
             quote=True,
         )
     else:
-        await m.reply_document(
-            document="broadcast.txt",
-            caption=f"broadcast completed in `{completed_in}`\n\nTotal users {total_users}.\nTotal done {done}, {success} success and {failed} failed.",
+        await m.reply_status(
+            status=f"broadcast completed in `{completed_in}`\n\nTotal users {total_users}.\nTotal done {done}, {success} success and {failed} failed.",
             quote=True,
         )
-    os.remove("broadcast.txt")
+
+        return await pls_wait.edit(status)
+
+    else:
+        msg = await message.reply(REPLY_ERROR)
+        await asyncio.sleep(8)

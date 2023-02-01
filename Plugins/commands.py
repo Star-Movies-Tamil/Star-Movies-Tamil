@@ -22,6 +22,7 @@ from handlers.broadcast import broadcast
 from handlers.check_user import handle_user_status
 from handlers.database import Database
 
+db = Database(DB_URL, DB_NAME)
 
 ################################################################################################################################################################################################################################################
 # Start Command

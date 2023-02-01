@@ -256,7 +256,7 @@ async def get_users(client, message):
 ################################################################################################################################################################################################################################################
 # Broadcast Message 
 
-@channelforward@Bot.on_message(filters.private & filters.command("broadcast"))
+@channelforward.on_message(filters.private & filters.command("broadcast"))
 async def broadcast_handler_open(_, m):
     if m.from_user.id not in AUTH_USERS:
         await m.delete()

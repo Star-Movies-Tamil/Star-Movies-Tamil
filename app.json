@@ -26,7 +26,7 @@
             "description": "Your bot token, as a string. Get this from @BotFather",
             "value": ""
         },
-        "DB_URI": {
+        "DB_URL": {
             "description": "MongoDB URI. Get this value from MongoDB.",
             "value": ""
         },

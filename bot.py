@@ -32,10 +32,10 @@ DB_NAME = config.DB_NAME
 
 db = Database(DB_URL, DB_NAME)
 
-class channelforward(Client, Config):
+class Star_Moviess_Tamil(Client, Config):
     def __init__(self):
         super().__init__(
-            name="CHANNELFORWARD",
+            name="STAR_MOVIESS_TAMIL",
             bot_token=self.BOT_TOKEN,
             api_id=self.API_ID,
             api_hash=self.API_HASH,

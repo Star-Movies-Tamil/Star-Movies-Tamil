@@ -54,4 +54,4 @@ class Star_Moviess_Tamil(Client, Config):
 
 
 if __name__ == "__main__" :
-    channelforward().run()
+    Star_Moviess_Tamil().run()

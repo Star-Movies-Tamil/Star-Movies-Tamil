@@ -81,21 +81,19 @@ async def broadcast(m, db):
         broadcast_ids.pop(broadcast_id)
     completed_in = datetime.timedelta(seconds=int(time.time() - start_time))
     await asyncio.sleep(3)
-    await out.delete()
+    msg = await message.reply(REPLY_ERROR)
     if failed == 0:
         await m.reply_text(
-            text=f"broadcast completed in `{completed_in}`\n\nTotal users {total_users}.\nTotal done {done}, {success} success and {failed} failed.",
+            text=f"<b>broadcast completed in `{completed_in}`\n\nTotal users {total_users}.\nTotal done {done}, {success} success\n{failed} failed.</b>",
             quote=True,
         )
     else:
-        msg = await m.reply(REPLY_ERROR)
-        await asyncio.sleep(8)
-        await m.reply_status(
-            status=f"**broadcast completed in `{completed_in}`\n\nTotal users {total_users}.\nTotal done {done}, {success} success and {failed} failed.**",
+        await m.reply_text(
+            text=f"<b>broadcast completed in `{completed_in}`\n\nTotal users {total_users}.\nTotal done {done}, {success} success\n{failed} failed.</b>",
             quote=True,
         )
 
-        return await pls_wait.edit(status)
+        return await pls_wait.edit(text)
 
     
 REPLY_ERROR = """<b>Use this command as a replay to any telegram message with out any spaces.</b>"""

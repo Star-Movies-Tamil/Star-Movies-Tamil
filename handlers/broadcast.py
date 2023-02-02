@@ -88,8 +88,3 @@ async def broadcast(m, db):
             quote=True,
         )
 
-        return await pls_wait.edit(text)
-
-    
-REPLY_ERROR = """<b>Use this command as a replay to any telegram message with out any spaces.</b>"""
-

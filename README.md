@@ -37,11 +37,15 @@ You can deploy this code any where you want but we provided heroku and railway d
 ## COMMANDS
 ### AVAILABLE COMMANDS 
 ```
-start - check whether bot is alive 
-
-help - How to Use?
-
-about - to know about me
+start - Check if 😊 I'm Alive
+help - How to Use❓
+about - to Know About Me 😌
+stats - Total Users 📊
+settings - Change Bot Settings ⚙️
+ban_user - Ban This User 🚫
+unban_user - Unban a User 😁
+banned_users - Total Banned Users 🤕
+broadcast - to Broadcast 💌 a Message to All Users
 ```
 
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)

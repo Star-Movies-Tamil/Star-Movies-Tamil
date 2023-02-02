@@ -357,7 +357,7 @@ async def _banned_usrs(c, m):
         ban_reason = banned_user["ban_status"]["ban_reason"]
         banned_usr_count += 1
         text += f"> **User ID :- `{user_id}`, Ban Duration :- `{ban_duration}`, Banned on :- `{banned_on}`, Reason :- `{ban_reason}`\n\n**"
-    reply_text = f"Total banned user(s) 🤭: `{banned_usr_count}`\n\n{text}"
+    reply_text = f"**Total banned user(s) 🤭: `{banned_usr_count}`\n\n{text}**"
     if len(reply_text) > 4096:
         with open("banned-users.txt", "w") as f:
             f.write(reply_text)

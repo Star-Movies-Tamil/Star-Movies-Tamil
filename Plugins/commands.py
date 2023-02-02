@@ -211,7 +211,7 @@ async def about(client, message):
 
 ################################################################################################################################################################################################################################################
 
-REPLY_ERROR = """<b>Use this command as a replay to any telegram message with out any spaces.</b>"""
+REPLY_ERROR = """<b>Use This Command as a Reply to any Telegram Message Without any Spaces.</b>"""
 
 ################################################################################################################################################################################################################################################
 # Bot Settings
@@ -220,7 +220,7 @@ REPLY_ERROR = """<b>Use this command as a replay to any telegram message with ou
 async def opensettings(bot, cmd):
     user_id = cmd.from_user.id
     await cmd.reply_text(
-        f"`Here You Can Set Your Settings:`\n\nSuccessfully setted notifications to **{await db.get_notif(user_id)}**",
+        f"**Here You Can Set Your Settings :-\n\nSuccessfully setted Notifications to {await db.get_notif(user_id)}**",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -256,7 +256,7 @@ async def sts(c, m):
         await m.delete()
         return
     await m.reply_text(
-        text=f"**Total Users in Database 📂:** `{await db.total_users_count()}`\n\n**Total Users with Notification Enabled 🔔 :** `{await db.total_notif_users_count()}`",
+        text=f"**Total Users in Database 📂 :- {await db.total_users_count()}\n\nTotal Users with Notification Enabled 🔔 :- {await db.total_notif_users_count()}**",
         quote=True
     )
 
@@ -270,7 +270,7 @@ async def ban(c, m):
         return
     if len(m.command) == 1:
         await m.reply_text(
-            f"**Use this command to ban 🛑 any user from the bot 🤖.\n\nUsage:\n\n`/ban_user user_id ban_duration ban_reason`\n\nEg: `/ban_user 1234567 28 You misused me.`\n This will ban user with id `1234567` for `28` days for the reason `You misused me`.**",
+            f"**Use This Command to Ban 🛑 any User From the Bot 🤖.\n\nUsage:-\n\n/ban_user user_id ban_duration ban_reason\n\n Example :- /ban_user 1234567 28 You Misused me.\n This Will Ban User with ID `1234567` for `28` Days for the Reason `You Misused me`.**",
             quote=True,
         )
         return

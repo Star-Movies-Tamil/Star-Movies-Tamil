@@ -2,7 +2,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 from pyrogram import Client, filters
-from bot import channelforward
+from bot import Star_Moviess_Tamil
 from config import ADMINS, AUTH_USERS
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup, CallbackQuery
 from translation import Translation
@@ -47,7 +47,7 @@ TELETIPS_MAIN_MENU_BUTTONS = [
             ]
         ]
 
-@channelforward.on_message(filters.private)
+@Star_Moviess_Tamil.on_message(filters.private)
 async def _(bot, cmd):
     await handle_user_status(bot, cmd)
 
@@ -64,7 +64,7 @@ async def _(bot, cmd):
         else:
             logging.info(f"#NewUser :- Name : {message.from_user.first_name} ID : {message.from_user.id}")
 
-@channelforward.on_message(filters.command('start') & filters.private)
+@Star_Moviess_Tamil.on_message(filters.command('start') & filters.private)
 async def start(client, message):
     reply_markup = InlineKeyboardMarkup(TELETIPS_MAIN_MENU_BUTTONS)
     await message.reply_text(
@@ -76,7 +76,7 @@ async def start(client, message):
     )
     raise StopPropagation
 
-@channelforward.on_callback_query()
+@Star_Moviess_Tamil.on_callback_query()
 async def callback_query(client: Client, query: CallbackQuery):
     if query.data=="HELP_CALLBACK":
         TELETIPS_HELP_BUTTONS = [
@@ -173,7 +173,7 @@ HELP_BUTTONS = [
             ]
         ]
 
-@channelforward.on_message(filters.command("help") & filters.private & filters.incoming)
+@Star_Moviess_Tamil.on_message(filters.command("help") & filters.private & filters.incoming)
 async def help(client, message):
     text = Translation.HELP
     reply_markup = InlineKeyboardMarkup(HELP_BUTTONS)
@@ -197,7 +197,7 @@ ABOUT_BUTTONS = [
             ]
         ]
 
-@channelforward.on_message(filters.command("about") & filters.private & filters.incoming)
+@Star_Moviess_Tamil.on_message(filters.command("about") & filters.private & filters.incoming)
 async def about(client, message):
     text = Translation.ABOUT
     reply_markup = InlineKeyboardMarkup(ABOUT_BUTTONS)
@@ -216,7 +216,7 @@ REPLY_ERROR = """<b>Use This Command as a Reply to any Telegram Message Without 
 ################################################################################################################################################################################################################################################
 # Bot Settings
 
-@channelforward.on_message(filters.command("settings"))
+@Star_Moviess_Tamil.on_message(filters.command("settings"))
 async def opensettings(bot, cmd):
     user_id = cmd.from_user.id
     await cmd.reply_text(
@@ -237,7 +237,7 @@ async def opensettings(bot, cmd):
 ################################################################################################################################################################################################################################################
 # Broadcast Message 
 
-@channelforward.on_message(filters.private & filters.command("broadcast"))
+@Star_Moviess_Tamil.on_message(filters.private & filters.command("broadcast"))
 async def broadcast_handler_open(_, m):
     if m.from_user.id not in AUTH_USERS:
         await m.delete()
@@ -250,7 +250,7 @@ async def broadcast_handler_open(_, m):
 ################################################################################################################################################################################################################################################
 # Total Users in Database 📂
 
-@channelforward.on_message(filters.private & filters.command("stats"))
+@Star_Moviess_Tamil.on_message(filters.private & filters.command("stats"))
 async def sts(c, m):
     if m.from_user.id not in AUTH_USERS:
         await m.delete()
@@ -263,7 +263,7 @@ async def sts(c, m):
 ################################################################################################################################################################################################################################################
 # Ban The User
 
-@channelforward.on_message(filters.private & filters.command("ban_user"))
+@Star_Moviess_Tamil.on_message(filters.private & filters.command("ban_user"))
 async def ban(c, m):
     if m.from_user.id not in AUTH_USERS:
         await m.delete()
@@ -305,7 +305,7 @@ async def ban(c, m):
 ################################################################################################################################################################################################################################################
 # Unban User
 
-@channelforward.on_message(filters.private & filters.command("unban_user"))
+@Star_Moviess_Tamil.on_message(filters.private & filters.command("unban_user"))
 async def unban(c, m):
     if m.from_user.id not in AUTH_USERS:
         await m.delete()
@@ -342,7 +342,7 @@ async def unban(c, m):
 ################################################################################################################################################################################################################################################
 # Banned Users
 
-@channelforward.on_message(filters.private & filters.command("banned_users"))
+@Star_Moviess_Tamil.on_message(filters.private & filters.command("banned_users"))
 async def _banned_usrs(c, m):
     if m.from_user.id not in AUTH_USERS:
         await m.delete()
@@ -367,7 +367,7 @@ async def _banned_usrs(c, m):
     await m.reply_text(reply_text, True)
 
 
-@channelforward.on_callback_query()
+@Star_Moviess_Tamil.on_callback_query()
 async def callback_handlers(bot: Client, cb: CallbackQuery):
     user_id = cb.from_user.id
     if cb.data == "notifon":

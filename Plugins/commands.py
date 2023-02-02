@@ -271,7 +271,7 @@ async def ban(c, m):
         return
     if len(m.command) == 1:
         await m.reply_text(
-            f"Use this command to ban 🛑 any user from the bot 🤖.\n\nUsage:\n\n`/ban_user user_id ban_duration ban_reason`\n\nEg: `/ban_user 1234567 28 You misused me.`\n This will ban user with id `1234567` for `28` days for the reason `You misused me`.",
+            f"**Use this command to ban 🛑 any user from the bot 🤖.\n\nUsage:\n\n`/ban_user user_id ban_duration ban_reason`\n\nEg: `/ban_user 1234567 28 You misused me.`\n This will ban user with id `1234567` for `28` days for the reason `You misused me`.**",
             quote=True,
         )
         return
@@ -280,18 +280,18 @@ async def ban(c, m):
         user_id = int(m.command[1])
         ban_duration = int(m.command[2])
         ban_reason = " ".join(m.command[3:])
-        ban_log_text = f"Banning user {user_id} for {ban_duration} days for the reason {ban_reason}."
+        ban_log_text = f"**Banning user {user_id} for {ban_duration} Days for the Reason {ban_reason}.**"
 
         try:
             await c.send_message(
                 user_id,
-                f"You are Banned 🚫 to use this bot for **{ban_duration}** day(s) for the reason __{ban_reason}__ \n\n**Message from the admin 🤠**",
+                f"**You are Banned 🚫 to Use This Bot for {ban_duration} day(s) for the reason __{ban_reason}__ \n\nMessage from the Admin 🤠**",
             )
-            ban_log_text += "\n\nUser notified successfully!"
+            ban_log_text += "**\n\nUser Notified Successfully!!**"
         except BaseException:
             traceback.print_exc()
             ban_log_text += (
-                f"\n\n ⚠️ User notification failed! ⚠️ \n\n`{traceback.format_exc()}`"
+                f"**\n\n ⚠️ User Notification Failed! ⚠️ \n\n`{traceback.format_exc()}`**"
             )
         await db.ban_user(user_id, ban_duration, ban_reason)
         print(ban_log_text)
@@ -299,7 +299,7 @@ async def ban(c, m):
     except BaseException:
         traceback.print_exc()
         await m.reply_text(
-            f"Error occoured ⚠️! Traceback given below\n\n`{traceback.format_exc()}`",
+            f"**Error Occurred ⚠️! Traceback Given below\n\n`{traceback.format_exc()}`**",
             quote=True
         )
 
@@ -313,7 +313,7 @@ async def unban(c, m):
         return
     if len(m.command) == 1:
         await m.reply_text(
-            f"Use this command to unban 😃 any user.\n\nUsage:\n\n`/unban_user user_id`\n\nEg: `/unban_user 1234567`\n This will unban user with id `1234567`.",
+            f"**Use this Command to Unban 😃 Any user.\n\nUsage:\n\n`/unban_user user_id`\n\nEg: `/unban_user 1234567`\n This will unban user with id `1234567`.**",
             quote=True,
         )
         return
@@ -324,11 +324,11 @@ async def unban(c, m):
 
         try:
             await c.send_message(user_id, f"Your ban was lifted!")
-            unban_log_text += "\n\n✅ User notified successfully! ✅"
+            unban_log_text += "**\n\n✅ User Notified Successfully!! ✅**"
         except BaseException:
             traceback.print_exc()
             unban_log_text += (
-                f"\n\n⚠️ User notification failed! ⚠️\n\n`{traceback.format_exc()}`"
+                f"**\n\n⚠️ User Notification Failed! ⚠️\n\n`{traceback.format_exc()}`**"
             )
         await db.remove_ban(user_id)
         print(unban_log_text)
@@ -336,7 +336,7 @@ async def unban(c, m):
     except BaseException:
         traceback.print_exc()
         await m.reply_text(
-            f"⚠️ Error occoured ⚠️! Traceback given below\n\n`{traceback.format_exc()}`",
+            f"**⚠️ Error Occurred ⚠️! Traceback Given below\n\n`{traceback.format_exc()}`**",
             quote=True,
         )
 
@@ -357,7 +357,7 @@ async def _banned_usrs(c, m):
         banned_on = banned_user["ban_status"]["banned_on"]
         ban_reason = banned_user["ban_status"]["ban_reason"]
         banned_usr_count += 1
-        text += f"> **User_id**: `{user_id}`, **Ban Duration**: `{ban_duration}`, **Banned on**: `{banned_on}`, **Reason**: `{ban_reason}`\n\n"
+        text += f"> **User ID :- `{user_id}`, Ban Duration :- `{ban_duration}`, Banned on :- `{banned_on}`, Reason :- `{ban_reason}`\n\n**"
     reply_text = f"Total banned user(s) 🤭: `{banned_usr_count}`\n\n{text}"
     if len(reply_text) > 4096:
         with open("banned-users.txt", "w") as f:
@@ -378,7 +378,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
         else:
             await db.set_notif(user_id, notif=True)
         await cb.message.edit(
-            f"`Here You Can Set Your Settings:`\n\nSuccessfully setted notifications to **{await db.get_notif(user_id)}**",
+            f"**Here You Can Set Your Settings :-\n\nSuccessfully setted Notifications to {await db.get_notif(user_id)}**",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
@@ -392,7 +392,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
             ),
         )
         await cb.answer(
-            f"Successfully setted notifications to {await db.get_notif(user_id)}"
+            f"**Successfully setted Notifications to {await db.get_notif(user_id)}**"
         )
     else:
         await cb.message.delete(True)

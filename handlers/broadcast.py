@@ -81,13 +81,8 @@ async def broadcast(m, db):
         broadcast_ids.pop(broadcast_id)
     completed_in = datetime.timedelta(seconds=int(time.time() - start_time))
     await asyncio.sleep(3)
-    msg = await message.reply(REPLY_ERROR)
+    await out.delete()
     if failed == 0:
-        await m.reply_text(
-            text=f"<b>broadcast completed in `{completed_in}`\n\nTotal users {total_users}.\nTotal done {done}, {success} success\n{failed} failed.</b>",
-            quote=True,
-        )
-    else:
         await m.reply_text(
             text=f"<b>broadcast completed in `{completed_in}`\n\nTotal users {total_users}.\nTotal done {done}, {success} success\n{failed} failed.</b>",
             quote=True,

@@ -21,6 +21,22 @@ Click here to Download 👇
 
 3.1GB (1080p) :- [Click here](https://link.tnlink.in/LmLw)
 
+🔗 Download Links 👇
+
+450MB :- [Click here](https://link.tnlink.in/zgkIuuL9)
+
+450MB :- [Click here](https://link.tnlink.in/5eDR)
+
+1.4GB (720p) :- [Click here](https://link.tnlink.in/coQfIDny)
+
+1.5GB (720p) :- [Click here](https://link.tnlink.in/j8eBSk8)
+
+3GB (1080p) :- [Click here](https://link.tnlink.in/CLlNT)
+
+3.1GB (1080p) :- [Click here](https://link.tnlink.in/qhTHbd)
+
 ❗Note :- We're Recommend Brave Browser
+
+✨ You Can Get This Movie in This Command /alien_covenant
 
 📢 Updates Channel :- [Star Movies Tamil](https://t.me/Star_Moviess_Tamil)</b>"""

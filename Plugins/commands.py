@@ -72,7 +72,8 @@ async def start(client, message):
                 mention = message.from_user.mention
             ),
         reply_markup=reply_markup,
-        disable_web_page_preview=True
+        disable_web_page_preview=True,
+        quote=True
     )
     raise StopPropagation
 
@@ -91,7 +92,8 @@ async def callback_query(client: Client, query: CallbackQuery):
                         mention = query.from_user.mention
                     ),
                 disable_web_page_preview=True,
-                reply_markup=reply_markup
+                reply_markup=reply_markup,
+                quote=True
             )
         except MessageNotModified:
             pass
@@ -112,7 +114,8 @@ async def callback_query(client: Client, query: CallbackQuery):
                         mention = query.from_user.mention
                     ),
                 disable_web_page_preview=True,
-                reply_markup=reply_markup
+                reply_markup=reply_markup,
+                quote=True
             )
         except MessageNotModified:
             pass    
@@ -133,7 +136,8 @@ async def callback_query(client: Client, query: CallbackQuery):
                         mention = query.from_user.mention
                     ),
                 disable_web_page_preview=True,
-                reply_markup=reply_markup
+                reply_markup=reply_markup,
+                quote=True
             )
         except MessageNotModified:
             pass      
@@ -160,7 +164,8 @@ async def callback_query(client: Client, query: CallbackQuery):
                         mention = query.from_user.mention
                     ),
                 disable_web_page_preview=True,
-                reply_markup=reply_markup
+                reply_markup=reply_markup,
+                quote=True
             )
         except MessageNotModified:
             pass    
@@ -188,7 +193,8 @@ async def help(client, message):
                 mention = message.from_user.mention
             ),
         reply_markup=reply_markup,
-        disable_web_page_preview=True
+        disable_web_page_preview=True,
+        quote=True
     )
 
 ################################################################################################################################################################################################################################################
@@ -212,7 +218,8 @@ async def about(client, message):
                 mention = message.from_user.mention
             ),
         reply_markup=reply_markup,
-        disable_web_page_preview=True
+        disable_web_page_preview=True,
+        quote=True
     )
 
 ################################################################################################################################################################################################################################################

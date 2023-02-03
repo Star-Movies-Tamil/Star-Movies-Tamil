@@ -18,7 +18,7 @@ Movie Commends
 ♦️ /tamil_movies
 ♦️ /hollywood_movies
 ♦️ /web_series
-♦️ /collection_movies
+♦️ /movie_collection
 ♦️ /cartoon_movies
 ♦️ /tv_shows</b>"""
 

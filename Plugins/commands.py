@@ -108,7 +108,9 @@ async def callback_query(client: Client, query: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(TELETIPS_GROUP_BUTTONS)
         try:
             await query.edit_message_text(
-                Translation.SUPPORT,
+                text = Translation.SUPPORT.format(
+                        mention = query.from_user.mention
+                    ),
                 disable_web_page_preview=True,
                 reply_markup=reply_markup
             )
@@ -127,7 +129,9 @@ async def callback_query(client: Client, query: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(TELETIPS_TUTORIAL_BUTTONS)
         try:
             await query.edit_message_text(
-                Translation.ABOUT,
+                text = Translation.ABOUT.format(
+                        mention = query.from_user.mention
+                    ),
                 disable_web_page_preview=True,
                 reply_markup=reply_markup
             )

@@ -37,4 +37,6 @@ Movie Commends
 📢 Updates Channel : [Star Movies Tamil](https://t.me/Star_Moviess_Tamil)</b>"""
 
       #Support Text
-      SUPPORT = """<b>I'm Star Movies Official Feedback Bot. You Want Any Help or Of You Need Any Movie Links Massage us Me and Get Solution to Admins</b>"""
+      SUPPORT = """<b>Hi 👋🏻 {mention} ♥️,
+
+I'm Star Movies Official Feedback Bot. You Want Any Help or Of You Need Any Movie Links Massage us Me and Get Solution to Admins</b>"""

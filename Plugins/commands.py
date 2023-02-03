@@ -92,8 +92,7 @@ async def callback_query(client: Client, query: CallbackQuery):
                         mention = query.from_user.mention
                     ),
                 disable_web_page_preview=True,
-                reply_markup=reply_markup,
-                quote=True
+                reply_markup=reply_markup
             )
         except MessageNotModified:
             pass
@@ -114,8 +113,7 @@ async def callback_query(client: Client, query: CallbackQuery):
                         mention = query.from_user.mention
                     ),
                 disable_web_page_preview=True,
-                reply_markup=reply_markup,
-                quote=True
+                reply_markup=reply_markup
             )
         except MessageNotModified:
             pass    
@@ -136,8 +134,7 @@ async def callback_query(client: Client, query: CallbackQuery):
                         mention = query.from_user.mention
                     ),
                 disable_web_page_preview=True,
-                reply_markup=reply_markup,
-                quote=True
+                reply_markup=reply_markup
             )
         except MessageNotModified:
             pass      
@@ -164,8 +161,7 @@ async def callback_query(client: Client, query: CallbackQuery):
                         mention = query.from_user.mention
                     ),
                 disable_web_page_preview=True,
-                reply_markup=reply_markup,
-                quote=True
+                reply_markup=reply_markup
             )
         except MessageNotModified:
             pass    
@@ -234,6 +230,7 @@ async def opensettings(bot, cmd):
     user_id = cmd.from_user.id
     await cmd.reply_text(
         f"**Here You Can Set Your Settings :-\n\nSuccessfully setted Notifications to {await db.get_notif(user_id)}**",
+        quote=True,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -256,7 +253,8 @@ async def broadcast_handler_open(_, m):
         await m.delete()
         return
     if m.reply_to_message is None:
-        await m.reply(REPLY_ERROR)
+        await m.reply(REPLY_ERROR),
+        quote=True
     else:
         await broadcast(m, db)
 

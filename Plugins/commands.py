@@ -244,6 +244,36 @@ async def opensettings(bot, cmd):
         ),
     )
 
+@Star_Moviess_Tamil.on_callback_query()
+async def callback_handlers(bot: Client, cb: CallbackQuery):
+    user_id = cb.from_user.id
+    if cb.data == "notifon":
+        notif = await db.get_notif(cb.from_user.id)
+        if notif is True:
+            await db.set_notif(user_id, notif=False)
+        else:
+            await db.set_notif(user_id, notif=True)
+        await cb.message.edit(
+            f"**Here You Can Set Your Settings :-\n\nSuccessfully setted Notifications to {await db.get_notif(user_id)}**",
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton(
+                            f"NOTIFICATION  {'🔔' if ((await db.get_notif(user_id)) is True) else '🔕'}",
+                            callback_data="notifon",
+                        )
+                    ],
+                    [InlineKeyboardButton("❎", callback_data="closeMeh")],
+                ]
+            ),
+        )
+        await cb.answer(
+            f"Successfully setted notifications to {await db.get_notif(user_id)}"
+        )
+    else:
+        await cb.message.delete(True)
+
+
 ################################################################################################################################################################################################################################################
 # Broadcast Message 
 
@@ -253,8 +283,7 @@ async def broadcast_handler_open(_, m):
         await m.delete()
         return
     if m.reply_to_message is None:
-        await m.reply(REPLY_ERROR),
-        quote=True
+        await m.reply(REPLY_ERROR, quote=True)
     else:
         await broadcast(m, db)
 

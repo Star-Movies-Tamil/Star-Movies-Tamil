@@ -22,6 +22,7 @@ import config
                   # Movies Categories
 
 ################################################################################################################################################################################################################################################
+# Tamil Movies
 
 @Star_Moviess_Tamil.on_message(filters.command("tamil_movies") & filters.private & filters.incoming)
 async def tamil_movies(client, message):
@@ -34,3 +35,69 @@ async def tamil_movies(client, message):
     )
 
 ################################################################################################################################################################################################################################################
+# Hollywood Movies
+
+@Star_Moviess_Tamil.on_message(filters.command("hollywood_movies") & filters.private & filters.incoming)
+async def hollywood_movies(client, message):
+    await message.reply(
+        text = Categories.HOLLYWOOD_MOVIES.format(
+                mention = message.from_user.mention
+            ),
+        disable_web_page_preview=True,
+        quote=True
+    )
+
+################################################################################################################################################################################################################################################
+# Web Series
+
+@Star_Moviess_Tamil.on_message(filters.command("web_series") & filters.private & filters.incoming)
+async def web_series(client, message):
+    await message.reply(
+        text = Categories.WEB_SERIES.format(
+                mention = message.from_user.mention
+            ),
+        disable_web_page_preview=True,
+        quote=True
+    )
+
+################################################################################################################################################################################################################################################
+# Movie Collection
+
+@Star_Moviess_Tamil.on_message(filters.command("movie_collection") & filters.private & filters.incoming)
+async def movie_collection(client, message):
+    await message.reply(
+        text = Categories.MOVIE_COLLECTION.format(
+                mention = message.from_user.mention
+            ),
+        disable_web_page_preview=True,
+        quote=True
+    )
+
+################################################################################################################################################################################################################################################
+# Cartoon Movies
+
+@Star_Moviess_Tamil.on_message(filters.command("cartoon_movies") & filters.private & filters.incoming)
+async def cartoon_movies(client, message):
+    await message.reply(
+        text = Categories.CARTOON_MOVIES.format(
+                mention = message.from_user.mention
+            ),
+        disable_web_page_preview=True,
+        quote=True
+    )
+
+################################################################################################################################################################################################################################################
+# TV Shows
+
+@Star_Moviess_Tamil.on_message(filters.command("tv_shows") & filters.private & filters.incoming)
+async def tv_shows(client, message):
+    await message.reply(
+        text = Categories.TV_SHOWS.format(
+                mention = message.from_user.mention
+            ),
+        disable_web_page_preview=True,
+        quote=True
+    )
+
+################################################################################################################################################################################################################################################
+

@@ -5,7 +5,7 @@ from pyrogram import Client, filters
 from bot import Star_Moviess_Tamil
 from config import Config
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup, CallbackQuery
-from movies import Movies
+from poster import Poster
 from pyrogram.errors import MessageNotModified, UserIsBlocked, InputUserDeactivated, FloodWait
 import random
 import os
@@ -27,7 +27,7 @@ import config
 @Star_Moviess_Tamil.on_message(filters.command("alien_covenant") & filters.private & filters.incoming)
 async def alien_covenant(client, message):
     await message.reply_photo(
-        caption = Movies.ALIEN_COVENANT.format(
+        caption = Poster.ALIEN_COVENANT.format(
                 mention = message.from_user.mention
             ),
         photo="https://telegra.ph/file/206f9013802376b39ad03.jpg",

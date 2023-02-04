@@ -35,6 +35,20 @@ Click here to Download 👇
 
 3.1GB (1080p) :- [Click here](https://link.tnlink.in/qhTHbd)
 
+💾 Drive Links 👇
+
+450MB :- [Click here](https://link.tnlink.in/ZxatLhp6)
+
+450MB :- [Click here](https://link.tnlink.in/O5fo)
+
+1.4GB (720p) :- [Click here](https://link.tnlink.in/Z267eJ)
+
+1.5GB (720p) :- [Click here](https://link.tnlink.in/Wtgi2LX)
+
+3GB (1080p) :- [Click here](https://link.tnlink.in/6lJlX)
+
+3.1GB (1080p) :- [Click here](https://link.tnlink.in/7lcF4me)
+
 ❗Note :- We're Recommend Brave Browser
 
 ✨ You Can Get This Movie in This Command /alien_covenant

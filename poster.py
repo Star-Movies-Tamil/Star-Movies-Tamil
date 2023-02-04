@@ -104,6 +104,26 @@ Click here to Download 👇
 
 2.7GB (1080p) :- [Click here](https://link.tnlink.in/cWFx)
 
+💾 Drive Links 👇
+
+250MB :- [Click here](https://link.tnlink.in/Ak7oXTf)
+
+400MB :- [Click here](https://link.tnlink.in/9OhclDXZ)
+
+600MB :- [Click here](https://link.tnlink.in/bKbLkD)
+
+700MB :- [Click here](https://link.tnlink.in/URKZ1H6s)
+
+800MB :- [Click here](https://link.tnlink.in/leVe)
+
+1.4GB (720p) :- [Click here](https://link.tnlink.in/lKIMmXQ)
+
+1.6GB (720p) :- [Click here](https://link.tnlink.in/kseW)
+
+2.7GB (1080p) :- [Click here](https://link.tnlink.in/2ZsyXUD)
+
+2.7GB (1080p) :- [Click here](https://link.tnlink.in/mYx9g)
+
 ❗Note :- We're Recommend Brave Browser
 
 ✨ You Can Get This Movie in This Command /thunivu

@@ -119,7 +119,7 @@ Click here to Download 👇
 
 1.6GB (720p) :- [Click here](https://link.tnlink.in/yZd4ti5e)
 
-1.7GB (1080p) :- [Click here]()https://link.tnlink.in/4C3CP
+1.7GB (1080p) :- [Click here](https://link.tnlink.in/4C3CP)
 
 2.8GB (1080p) :- [Click here](https://link.tnlink.in/B2yMd5nQ)
 

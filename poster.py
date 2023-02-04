@@ -141,6 +141,24 @@ Click here to Download 👇
 
 2.8GB (1080p) :- [Click here](https://link.tnlink.in/ey0j)
 
+💾 Drive Links 👇
+
+250MB :- [Click here](https://link.tnlink.in/LmJwD0)
+
+400MB :- [Click here](https://link.tnlink.in/QLu7m5a6)
+
+700MB :- [Click here](https://link.tnlink.in/iT6O7Vv)
+
+900MB (720p) :- [Click here](https://link.tnlink.in/ZEUA7MYc)
+
+1.5GB (720p) :- [Click here](https://link.tnlink.in/LPwDoKt)
+
+1.6GB (720p) :- [Click here](https://link.tnlink.in/wi9hE)
+
+1.7GB (1080p) :- [Click here](https://link.tnlink.in/TsexRL)
+
+2.8GB (1080p) :- [Click here](https://link.tnlink.in/lOlbX)
+
 ❗Note :- We're Recommend Brave Browser
 
 ✨ You Can Get This Movie in This Command /varisu

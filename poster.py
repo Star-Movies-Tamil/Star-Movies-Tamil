@@ -99,4 +99,52 @@ Click here to Download 👇
 ################################################################################################################################################################################################################################################
 
       # Varisu (2023)
-      VARISU = 
+      VARISU = """<b>Hi 👋🏻 {mention} ♥️,
+
+Varisu (2023) Tamil WEB-DL - Original Audio - [1080p & 720p - AVC / HEVC - AAC - 2.8GB & 1.7GB - 1.6GB - 1.5GB - 900MB] - [x264 - 700MB - 400MB & 250MB] - HC-ESub]
+
+Click here to Download 👇
+
+✅ Telegram Files 📂
+
+250MB :- [Click here](https://link.tnlink.in/8AgAX)
+
+400MB :- [Click here](https://link.tnlink.in/5qbaj)
+
+700MB :- [Click here](https://link.tnlink.in/Fyquv50k)
+
+900MB (720p) :- [Click here](https://link.tnlink.in/LjDbr)
+
+1.5GB (720p) :- [Click here](https://link.tnlink.in/QKFb)
+
+1.6GB (720p) :- [Click here](https://link.tnlink.in/yZd4ti5e)
+
+1.7GB (1080p) :- [Click here]()https://link.tnlink.in/4C3CP
+
+2.8GB (1080p) :- [Click here](https://link.tnlink.in/B2yMd5nQ)
+
+🔗 Download Links 👇
+
+250MB :- [Click here](https://link.tnlink.in/gPJUR)
+
+400MB :- [Click here](https://link.tnlink.in/GrRr)
+
+700MB :- [Click here](https://link.tnlink.in/7gysc5)
+
+900MB (720p) :- [Click here](https://link.tnlink.in/aU9vmIix)
+
+1.5GB (720p) :- [Click here](https://link.tnlink.in/o2DG)
+
+1.6GB (720p) :- [Click here](https://link.tnlink.in/G3nz6K)
+
+1.7GB (1080p) :- [Click here](https://link.tnlink.in/U5e2)
+
+2.8GB (1080p) :- [Click here](https://link.tnlink.in/ey0j)
+
+❗Note :- We're Recommend Brave Browser
+
+✨ You Can Get This Movie in This Command /varisu
+
+📢 Updates Channel :- [Star Movies Tamil](https://t.me/Star_Moviess_Tamil)</b>"""
+
+################################################################################################################################################################################################################################################

@@ -24,8 +24,19 @@ import config
 ################################################################################################################################################################################################################################################
 # Alien Covenant (2017)
 
+ALIEN_COVENANT = "Poster.ALIEN_COVENANT"
+
+ALIEN_COVENANT_BUTTONS = [
+            [
+                InlineKeyboardButton('👨‍💻 Creator', url='https://t.me/Star_Movies_Karthik'),
+                InlineKeyboardButton('📣 Update Channel', url='https://t.me/Star_Moviess_Tamil')
+            ]
+        ]
+
 @Star_Moviess_Tamil.on_message(filters.command("alien_covenant") & filters.private & filters.incoming)
 async def alien_covenant(client, message):
+    text = Poster.ALIEN_COVENANT
+    reply_markup = InlineKeyboardMarkup(ALIEN_COVENANT_BUTTONS)
     await message.reply_photo(
         caption = Poster.ALIEN_COVENANT.format(
                 mention = message.from_user.mention
@@ -37,8 +48,19 @@ async def alien_covenant(client, message):
 ################################################################################################################################################################################################################################################
 # Thunivu (2023)
 
+THUNIVU = "Poster.THUNIVU"
+
+THUNIVU_BUTTONS = [
+            [
+                InlineKeyboardButton('👨‍💻 Creator', url='https://t.me/Star_Movies_Karthik'),
+                InlineKeyboardButton('📣 Update Channel', url='https://t.me/Star_Moviess_Tamil')
+            ]
+        ]
+
 @Star_Moviess_Tamil.on_message(filters.command("thunivu") & filters.private & filters.incoming)
 async def thunivu(client, message):
+    text = Poster.THUNIVU
+    reply_markup = InlineKeyboardMarkup(THUNIVU_BUTTONS)
     await message.reply_photo(
         caption = Poster.THUNIVU.format(
                 mention = message.from_user.mention
@@ -50,8 +72,19 @@ async def thunivu(client, message):
 ################################################################################################################################################################################################################################################
 # Varisu (2023)
 
+VARISU = "Poster.VARISU"
+
+VARISU_BUTTONS = [
+            [
+                InlineKeyboardButton('👨‍💻 Creator', url='https://t.me/Star_Movies_Karthik'),
+                InlineKeyboardButton('📣 Update Channel', url='https://t.me/Star_Moviess_Tamil')
+            ]
+        ]
+
 @Star_Moviess_Tamil.on_message(filters.command("varisu") & filters.private & filters.incoming)
 async def varisu(client, message):
+    text = Poster.VARISU
+    reply_markup = InlineKeyboardMarkup(VARISU_BUTTONS)
     await message.reply_photo(
         caption = Poster.VARISU.format(
                 mention = message.from_user.mention

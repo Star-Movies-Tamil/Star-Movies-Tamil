@@ -268,7 +268,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
             ),
         )
         await cb.answer(
-            f"Successfully setted notifications to {await db.get_notif(user_id)}"
+            f"**Successfully setted Notifications to {await db.get_notif(user_id)}**"
         )
     else:
         await cb.message.delete(True)

@@ -60,7 +60,7 @@ Click here to Download 👇
 
 700MB :- [Click here](https://link.tnlink.in/ZTMLtHco)
 
-800MB :- [Click here](https://link.tnlink.in/ZLSSy)
+800MB (720p) :- [Click here](https://link.tnlink.in/ZLSSy)
 
 1.4GB (720p) :- [Click here](https://link.tnlink.in/5DR7QQ)
 
@@ -80,7 +80,7 @@ Click here to Download 👇
 
 700MB :- [Click here](https://link.tnlink.in/As4Jla)
 
-800MB :- [Click here](https://link.tnlink.in/j5FgT)
+800MB (720p) :- [Click here](https://link.tnlink.in/j5FgT)
 
 1.4GB (720p) :- [Click here](https://link.tnlink.in/YoZZO94)
 

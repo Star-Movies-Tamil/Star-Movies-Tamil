@@ -3,7 +3,11 @@ class Categories(object):
       # Tamil Movies
       TAMIL_MOVIES = """<b>Hi 👋🏻 {mention} ♥️,
 
-You Can Get Tamil Movies 🎥 with Commends and Our Bot will Support Upto 4GB Files 📂.</b>"""
+You Can Get Tamil Movies 🎥 with Commends and Our Bot will Support Upto 4GB Files 📂.
+
+Movies List
+♦️ Thunivu (2023) :- /thunivu
+♦️ Varisu (2023)  :- /varisu</b>"""
 
 
       # Hollywood Movies

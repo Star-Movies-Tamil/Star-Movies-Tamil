@@ -11,6 +11,7 @@ import random
 import os
 import asyncio
 import traceback
+import base64
 
 from pyrogram import Client
 from pyrogram import StopPropagation, filters

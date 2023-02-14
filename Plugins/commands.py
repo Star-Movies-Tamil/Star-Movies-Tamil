@@ -23,7 +23,7 @@ from handlers.check_user import handle_user_status
 from handlers.database import Database
 
 async def allowed(_, __, message):
-    if PUBLIC_FILE_STORE:
+    if FILE_STORE_CHANNEL:
         return True
     if message.from_user and message.from_user.id in ADMINS:
         return True

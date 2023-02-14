@@ -4,12 +4,12 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.errors import FloodWait
 
 from bot import Star_Moviess_Tamil
-from config import ADMINS, CHANNEL_ID, DISABLE_CHANNEL_BUTTON
+from config import ADMINS, FILE_STORE_CHANNEL, DISABLE_CHANNEL_BUTTON
 from helper_func import encode
 
-@Bot.on_message(filters.private & filters.user(ADMINS) & ~filters.command(['start','users','broadcast','batch','genlink','stats']))
+@Star_Moviess_Tamil.on_message(filters.private & filters.user(ADMINS) & ~filters.command(['start','broadcast','link','stats']))
 async def channel_post(client: Client, message: Message):
-    reply_text = await message.reply_text("Please Wait...!", quote = True)
+    reply_text = await message.reply_text("**Please Wait...!**", quote = True)
     try:
         post_message = await message.copy(chat_id = client.db_channel.id, disable_notification=True)
     except FloodWait as e:
@@ -31,7 +31,7 @@ async def channel_post(client: Client, message: Message):
     if not DISABLE_CHANNEL_BUTTON:
         await post_message.edit_reply_markup(reply_markup)
 
-@Bot.on_message(filters.channel & filters.incoming & filters.chat(CHANNEL_ID))
+@Star_Moviess_Tamil.on_message(filters.channel & filters.incoming & filters.chat(FILE_STORE_CHANNEL))
 async def new_post(client: Client, message: Message):
 
     if DISABLE_CHANNEL_BUTTON:

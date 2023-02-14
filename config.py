@@ -14,3 +14,4 @@ LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1001342411240"))
 AUTH_USERS = set(int(x) for x in os.environ.get("AUTH_USERS", "1391556668").split())
 BROADCAST_AS_COPY = bool(os.environ.get("BROADCAST_AS_COPY", True))
 FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '-1001819496419')).split()]
+DISABLE_CHANNEL_BUTTON = os.environ.get("DISABLE_CHANNEL_BUTTON", None) == 'True'

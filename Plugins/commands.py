@@ -435,3 +435,22 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
         )
     else:
         await cb.message.delete(True)
+
+################################################################################################################################################################################################################################################
+
+@Star_Moviess_Tamil.on_message(filters.command('link') & filters.create(allowed))
+async def gen_link_s(client, message):
+    replied = message.reply_to_message
+    if not replied:
+        return await message.reply('**Reply to a Message or a File. I Will Give You a Sharable Permanent Link**')
+    file_type = replied.media
+    if file_type not in [enums.MessageMediaType.VIDEO, enums.MessageMediaType.AUDIO, enums.MessageMediaType.DOCUMENT]:
+        return await message.reply("**Reply to a Support Media")
+    if message.has_protected_content and message.chat.id not in ADMINS:
+        return await message.reply("**Ok Bro**")
+    file_id, ref = unpack_new_file_id((getattr(replied, file_type.value)).file_id)
+    string = 'filep_' if message.text.lower().strip() == "/plink" else 'file_'
+    string += file_id
+    outstr = base64.urlsafe_b64encode(string.encode("ascii")).decode().strip("=")
+    await message.reply(f"<b>⪼ Here is Your File Link :\nhttps://telegram.me/{temp.U_NAME}?start={outstr}</b>")
+    

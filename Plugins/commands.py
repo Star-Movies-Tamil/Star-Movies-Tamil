@@ -6,6 +6,7 @@ from bot import Star_Moviess_Tamil
 from config import ADMINS, AUTH_USERS, FILE_STORE_CHANNEL
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup, CallbackQuery
 from translation import Translation
+from handlers.file_store import unpack_new_file_id
 from pyrogram.errors import MessageNotModified, UserIsBlocked, InputUserDeactivated, FloodWait
 import random
 import os

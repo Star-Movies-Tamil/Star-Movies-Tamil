@@ -459,7 +459,7 @@ async def gen_link_s(client, message):
     if message.has_protected_content and message.chat.id not in ADMINS:
         return await message.reply("**Ok Bro**")
     file_id, ref = unpack_new_file_id((getattr(replied, file_type.value)).file_id)
-    string = 'filep_' if message.text.lower().strip() == "/plink" else 'file_'
+    string = 'filep_' if message.text.lower().strip() == "/link" else 'file_'
     string += file_id
     outstr = base64.urlsafe_b64encode(string.encode("ascii")).decode().strip("=")
     await message.reply(f"<b>⪼ Here is Your File Link :\nhttps://telegram.me/{temp.U_NAME}?start={outstr}</b>")

@@ -22,6 +22,13 @@ from handlers.broadcast import broadcast
 from handlers.check_user import handle_user_status
 from handlers.database import Database
 
+async def allowed(_, __, message):
+    if PUBLIC_FILE_STORE:
+        return True
+    if message.from_user and message.from_user.id in ADMINS:
+        return True
+    return False
+
 LOG_CHANNEL = config.LOG_CHANNEL
 AUTH_USERS = config.AUTH_USERS
 DB_URL = config.DB_URL

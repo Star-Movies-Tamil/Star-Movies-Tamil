@@ -5,7 +5,7 @@ from pyrogram.errors import FloodWait
 
 from bot import Star_Moviess_Tamil
 from config import ADMINS, FILE_STORE_CHANNEL, DISABLE_CHANNEL_BUTTON
-from useless. import encode
+from useless import encode
 
 @Star_Moviess_Tamil.on_message(filters.private & filters.user(ADMINS) & ~filters.command(['start','broadcast','link','stats']))
 async def channel_post(client: Client, message: Message):

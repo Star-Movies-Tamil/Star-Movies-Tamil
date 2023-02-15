@@ -70,10 +70,10 @@ async def thunivu(client, message):
     )
 @Star_Moviess_Tamil.on_message(thunivu_filter)
 async def thunivu_f(client, message):
-    text = Poster.THUNIVU
+    text = Poster.THUNIVU_PAGE2
     reply_markup = InlineKeyboardMarkup(THUNIVU_BUTTONS)
     await message.reply_photo(
-        caption = Poster.THUNIVU.format(
+        caption = Poster.THUNIVU_PAGE2.format(
                 mention = message.from_user.mention
             ),
         photo="https://telegra.ph/file/1919c316d8d742d1fa3ab.jpg",

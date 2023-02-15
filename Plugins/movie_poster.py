@@ -11,7 +11,7 @@ import random
 import os
 import asyncio
 import traceback
-
+from Plugins.varsu import *
 from pyrogram import Client
 from pyrogram import StopPropagation, filters
 from pyrogram.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup
@@ -68,7 +68,6 @@ async def thunivu(client, message):
         photo="https://telegra.ph/file/1919c316d8d742d1fa3ab.jpg",
         quote=True,
     )
-
 ################################################################################################################################################################################################################################################
 # Varisu (2023)
 
@@ -92,7 +91,17 @@ async def varisu(client, message):
         photo="https://telegra.ph/file/76ba5435a2983a6c42c80.jpg",
         quote=True,
     )
-
+@Star_Moviess_Tamil.on_message(varsu_filter)
+async def varisu_f(client, message):
+    text = Poster.VARISU
+    reply_markup = InlineKeyboardMarkup(VARISU_BUTTONS)
+    await message.reply_photo(
+        caption = Poster.VARISU.format(
+                mention = message.from_user.mention
+            ),
+        photo="https://telegra.ph/file/76ba5435a2983a6c42c80.jpg",
+        quote=True,
+    )
 ################################################################################################################################################################################################################################################
 
 

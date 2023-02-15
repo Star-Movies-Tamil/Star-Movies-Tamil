@@ -104,6 +104,19 @@ Click here to Download 👇
 
 2.7GB (1080p) :- [Click here](https://link.tnlink.in/cWFx)
 
+❗Note :- We're Recommend Brave Browser
+
+✨ You Can Get This Movie in This Command /thunivu
+
+📢 Updates Channel :- [Star Movies Tamil](https://t.me/Star_Moviess_Tamil)</b>"""
+
+      # Thunivu (2023) Page 2
+      THUNIVU_PAGE2 = """<b>Hi 👋🏻 {mention} ♥️,
+
+Thunivu (2023) Tamil WEB-DL - Original Audio - [1080p & 720p - AVC / HEVC - AAC - [Tamil + Hindi (HQ Fan Dub)] - 2.7GB & 1.6GB - 1.4GB - 800MB] - [x264 - 700MB - 600MB - 400MB & 250MB] - HC-ESub]
+
+Click here to Download 👇
+
 💾 Drive Links 👇
 
 250MB :- [Click here](https://link.tnlink.in/Ak7oXTf)

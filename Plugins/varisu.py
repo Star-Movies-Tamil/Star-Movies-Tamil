@@ -9,4 +9,4 @@ def ns_filter(_,__,message):
    else:
       return False
 
-not_start_filter = filters.create(ns_filter)
+varsu_filter = filters.create(ns_filter)

@@ -44,6 +44,17 @@ async def alien_covenant(client, message):
         photo="https://telegra.ph/file/206f9013802376b39ad03.jpg",
         quote=True,
     )
+@Star_Moviess_Tamil.on_message(alien_covenant_filter)
+async def alien_covenant(client, message):
+    text = Poster.ALIEN_COVENANT
+    reply_markup = InlineKeyboardMarkup(ALIEN_COVENANT_BUTTONS)
+    await message.reply_photo(
+        caption = Poster.ALIEN_COVENANT.format(
+                mention = message.from_user.mention
+            ),
+        photo="https://telegra.ph/file/206f9013802376b39ad03.jpg",
+        quote=True,
+    )
 
 ################################################################################################################################################################################################################################################
 # Thunivu (2023)

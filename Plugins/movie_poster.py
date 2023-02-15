@@ -68,6 +68,18 @@ async def thunivu(client, message):
         photo="https://telegra.ph/file/1919c316d8d742d1fa3ab.jpg",
         quote=True,
     )
+@Star_Moviess_Tamil.on_message(thunivu_filter)
+async def thunivu_f(client, message):
+    text = Poster.THUNIVU
+    reply_markup = InlineKeyboardMarkup(THUNIVU_BUTTONS)
+    await message.reply_photo(
+        caption = Poster.THUNIVU.format(
+                mention = message.from_user.mention
+            ),
+        photo="https://telegra.ph/file/1919c316d8d742d1fa3ab.jpg",
+        quote=True,
+    )
+
 ################################################################################################################################################################################################################################################
 # Varisu (2023)
 
@@ -102,6 +114,7 @@ async def varisu_f(client, message):
         photo="https://telegra.ph/file/76ba5435a2983a6c42c80.jpg",
         quote=True,
     )
+
 ################################################################################################################################################################################################################################################
 
 

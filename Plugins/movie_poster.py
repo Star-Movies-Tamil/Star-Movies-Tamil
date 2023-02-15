@@ -45,7 +45,7 @@ async def alien_covenant(client, message):
         quote=True,
     )
 @Star_Moviess_Tamil.on_message(alien_covenant_filter)
-async def alien_covenant(client, message):
+async def alien_covenant_f(client, message):
     text = Poster.ALIEN_COVENANT
     reply_markup = InlineKeyboardMarkup(ALIEN_COVENANT_BUTTONS)
     await message.reply_photo(

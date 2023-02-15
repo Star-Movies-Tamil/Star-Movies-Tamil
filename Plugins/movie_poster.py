@@ -91,7 +91,7 @@ async def varisu(client, message):
         photo="https://telegra.ph/file/76ba5435a2983a6c42c80.jpg",
         quote=True,
     )
-@Star_Moviess_Tamil.on_message(varsu_filter)
+@Star_Moviess_Tamil.on_message(varisu_filter)
 async def varisu_f(client, message):
     text = Poster.VARISU
     reply_markup = InlineKeyboardMarkup(VARISU_BUTTONS)

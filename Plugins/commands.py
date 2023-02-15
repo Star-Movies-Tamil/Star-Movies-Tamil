@@ -65,7 +65,7 @@ async def _(bot, cmd):
         else:
             logging.info(f"New User :- Name :- {message.from_user.first_name} ID :- {message.from_user.id}")
 
-@Star_Moviess_Tamil.on_message(s_filter & filters.private)
+@Star_Moviess_Tamil.on_message(s_filter)
 async def start(client, message):
     reply_markup = InlineKeyboardMarkup(TELETIPS_MAIN_MENU_BUTTONS)
     await message.reply_text(

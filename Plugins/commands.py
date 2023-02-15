@@ -21,7 +21,7 @@ import config
 from handlers.broadcast import broadcast
 from handlers.check_user import handle_user_status
 from handlers.database import Database
-
+from Plugins.start_filter import *
 LOG_CHANNEL = config.LOG_CHANNEL
 AUTH_USERS = config.AUTH_USERS
 DB_URL = config.DB_URL
@@ -65,7 +65,7 @@ async def _(bot, cmd):
         else:
             logging.info(f"New User :- Name :- {message.from_user.first_name} ID :- {message.from_user.id}")
 
-@Star_Moviess_Tamil.on_message(filters.command('start') & filters.private)
+@Star_Moviess_Tamil.on_message(s_filter & filters.private)
 async def start(client, message):
     reply_markup = InlineKeyboardMarkup(TELETIPS_MAIN_MENU_BUTTONS)
     await message.reply_text(

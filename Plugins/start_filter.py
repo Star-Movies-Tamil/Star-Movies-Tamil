@@ -1,7 +1,7 @@
 from pyrogram import filters
 
 def s_filter(_,__,message):
-   if str(message.text) == "start":
+   if str(message.text)[1:] == "start":
       return True
    else:
       return False

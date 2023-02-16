@@ -443,35 +443,5 @@ async def _banned_usrs(c, m):
         return
     await m.reply_text(reply_text, True)
 
-
-@Star_Moviess_Tamil.on_callback_query()
-async def callback_handlers(bot: Client, cb: CallbackQuery):
-    user_id = cb.from_user.id
-    if cb.data == "notifon":
-        notif = await db.get_notif(cb.from_user.id)
-        if notif is True:
-            await db.set_notif(user_id, notif=False)
-        else:
-            await db.set_notif(user_id, notif=True)
-        await cb.message.edit(
-            f"**Here You Can Set Your Settings :-\n\nSuccessfully setted Notifications to {await db.get_notif(user_id)}**",
-            reply_markup=InlineKeyboardMarkup(
-                [
-                    [
-                        InlineKeyboardButton(
-                            f"Notification  {'🔔' if ((await db.get_notif(user_id)) is True) else '🔕'}",
-                            callback_data="notifon",
-                        )
-                    ],
-                    [InlineKeyboardButton("🚫 Close", callback_data="closeMeh")],
-                ]
-            ),
-        )
-        await cb.answer(
-            f"**Successfully setted Notifications to {await db.get_notif(user_id)}**"
-        )
-    else:
-        await cb.message.delete(True)
-
 ################################################################################################################################################################################################################################################
 

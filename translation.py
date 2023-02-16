@@ -33,7 +33,7 @@ Example :- Our Bot's Commend and Links Tutorial
 📢 Update Channel : [Star Movies Tamil](https://t.me/Star_Moviess_Tamil)</b>"""
 
       # Get Movies with Links 👇🏻
-      START = """<b>Hi 👋🏻 {mention} ♥️,
+      MOVIES = """<b>Hi 👋🏻 {mention} ♥️,
 
 You Can Get Movies with Links 🔗. Our Bot will Support 4GB Files 📂. But We're Always Not Upload PreDVD Movies and HDRip Movies + HC-ESub Movies. Because it Only Lasts for a Few Days. Maybe Because I Upload PreDVD Until Bluray or TRUE WEB-DL Comes out Value for This Movie. So We Will Not Upload this Bot. Don't worry we will upload it on Star Movies Tamil's PreDVD Movies Channel. Similarly, HDRip + HC-ESub Movies and Bluray or TRUE WEB-DL are the Value for This Movie. We Will Upload on Our Star Movies Tamil's Channel like So PreDVD Movies.
 

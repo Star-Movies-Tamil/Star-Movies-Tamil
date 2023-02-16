@@ -26,6 +26,18 @@
             "description": "Your bot token, as a string. Get this from @BotFather",
             "value": ""
         },
+        "AUTH_USERS": {
+            "description": "A space separated list of user_ids of Auth Users, they can only create links",
+            "value": ""
+        },
+        "LOG_CHANNEL": {
+            "description": "Get User This Bot's Start Log",
+            "value": ""
+        },
+        "BROADCAST_AS_COPY": {
+            "description": "If you value True. Then you can broadcast message to Subscribers without forward tag ",
+            "value": ""
+        },
         "DB_URL": {
             "description": "MongoDB URI. Get this value from MongoDB.",
             "value": ""

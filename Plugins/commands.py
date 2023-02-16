@@ -36,7 +36,7 @@ START = "Translation.START"
 
 TELETIPS_MAIN_MENU_BUTTONS = [
             [
-                InlineKeyboardButton('👨‍💻 Creator', url='https://t.me/Star_Movies_Karthik')
+                InlineKeyboardButton('👨🏻‍💻 Creator', url='https://t.me/Star_Movies_Karthik')
             ],
             [
                 InlineKeyboardButton('😁 Help', callback_data="TUTORIAL_CALLBACK"),
@@ -122,7 +122,7 @@ async def callback_query(client: Client, query: CallbackQuery):
     elif query.data=="TUTORIAL_CALLBACK":
         TELETIPS_TUTORIAL_BUTTONS = [
             [
-                InlineKeyboardButton("🤵 Admin", url="https://t.me/Star_Movies_Karthik")
+                InlineKeyboardButton("👨🏻‍✈️ Admin", url="https://t.me/Star_Movies_Karthik")
             ],
             [
                 InlineKeyboardButton("👈🏻 Back", callback_data="START_CALLBACK"),
@@ -143,7 +143,7 @@ async def callback_query(client: Client, query: CallbackQuery):
     elif query.data=="START_CALLBACK":
         TELETIPS_START_BUTTONS = [
             [
-                InlineKeyboardButton('👨‍💻 Creator', url='https://t.me/Star_Movies_Karthik')
+                InlineKeyboardButton('👨🏻‍💻 Creator', url='https://t.me/Star_Movies_Karthik')
             ],
             [
                 InlineKeyboardButton('😁 Help', callback_data="TUTORIAL_CALLBACK"),
@@ -176,7 +176,7 @@ HELP = "Translation.HELP"
 
 HELP_BUTTONS = [
             [
-                InlineKeyboardButton('👨‍💻 Creator', url='https://t.me/Star_Movies_Karthik'),
+                InlineKeyboardButton('👨🏻‍💻 Creator', url='https://t.me/Star_Movies_Karthik'),
                 InlineKeyboardButton('📢 Update Channel', url='https://t.me/Star_Moviess_Tamil')
             ]
         ]
@@ -201,7 +201,7 @@ ABOUT = "Translation.ABOUT"
 
 ABOUT_BUTTONS = [
             [
-                InlineKeyboardButton('👨‍💻 Creator', url='https://t.me/Star_Movies_Karthik'),
+                InlineKeyboardButton('👨🏻‍💻 Creator', url='https://t.me/Star_Movies_Karthik'),
                 InlineKeyboardButton('📢 Update Channel', url='https://t.me/Star_Moviess_Tamil')
             ]
         ]
@@ -226,16 +226,16 @@ MOVIES = "Translation.MOVIES"
 
 MOVIES_BUTTONS = [
             [
-                InlineKeyboardButton('💿 Tamil Movies', url='https://t.me/Star_Moviess_Tamil_Bot?start=Tamil_Movies'),
-                InlineKeyboardButton('📺 TV Shows', url='https://t.me/Star_Moviess_Tamil_Bot?start=TV_Shows')
+                InlineKeyboardButton('Tamil Movies', url='https://t.me/Star_Moviess_Tamil_Bot?start=Tamil_Movies'),
+                InlineKeyboardButton('TV Shows', url='https://t.me/Star_Moviess_Tamil_Bot?start=TV_Shows')
             ],
             [
-                InlineKeyboardButton('🅰️ Hollywood Movies', url='https://t.me/Star_Moviess_Tamil_Bot?start=Hollywood_Movies'),
-                InlineKeyboardButton('🧮 Collection Movies', url='https://t.me/Star_Moviess_Tamil_Bot?start=Collection_Movies')
+                InlineKeyboardButton('Hollywood Movies', url='https://t.me/Star_Moviess_Tamil_Bot?start=Hollywood_Movies'),
+                InlineKeyboardButton('Collection Movies', url='https://t.me/Star_Moviess_Tamil_Bot?start=Collection_Movies')
             ],
             [
-                InlineKeyboardButton('⛓️ Web Series', url='https://t.me/Star_Moviess_Tamil_Bot?start=Web_Series'),
-                InlineKeyboardButton('💁🏻 Cartoon Movies', url='https://t.me/Star_Moviess_Tamil_Bot?start=Cartoon_Movies')
+                InlineKeyboardButton('Web Series', url='https://t.me/Star_Moviess_Tamil_Bot?start=Web_Series'),
+                InlineKeyboardButton('Cartoon Movies', url='https://t.me/Star_Moviess_Tamil_Bot?start=Cartoon_Movies')
             ],
             [
                 InlineKeyboardButton('📢 Update Channel', url='https://t.me/Star_Moviess_Tamil'),
@@ -272,11 +272,11 @@ async def opensettings(bot, cmd):
             [
                 [
                     InlineKeyboardButton(
-                        f"NOTIFICATION  {'🔔' if ((await db.get_notif(user_id)) is True) else '🔕'}",
+                        f"Notification  {'🔔' if ((await db.get_notif(user_id)) is True) else '🔕'}",
                         callback_data="notifon",
                     )
                 ],
-                [InlineKeyboardButton("❎", callback_data="closeMeh")],
+                [InlineKeyboardButton("🚫 Close", callback_data="closeMeh")],
             ]
         ),
     )
@@ -296,11 +296,11 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
                 [
                     [
                         InlineKeyboardButton(
-                            f"NOTIFICATION  {'🔔' if ((await db.get_notif(user_id)) is True) else '🔕'}",
+                            f"Notification  {'🔔' if ((await db.get_notif(user_id)) is True) else '🔕'}",
                             callback_data="notifon",
                         )
                     ],
-                    [InlineKeyboardButton("❎", callback_data="closeMeh")],
+                    [InlineKeyboardButton("🚫 Close", callback_data="closeMeh")],
                 ]
             ),
         )
@@ -459,11 +459,11 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
                 [
                     [
                         InlineKeyboardButton(
-                            f"NOTIFICATION  {'🔔' if ((await db.get_notif(user_id)) is True) else '🔕'}",
+                            f"Notification  {'🔔' if ((await db.get_notif(user_id)) is True) else '🔕'}",
                             callback_data="notifon",
                         )
                     ],
-                    [InlineKeyboardButton("❎", callback_data="closeMeh")],
+                    [InlineKeyboardButton("🚫 Close", callback_data="closeMeh")],
                 ]
             ),
         )

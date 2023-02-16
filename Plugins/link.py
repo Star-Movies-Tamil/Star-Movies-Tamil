@@ -5,40 +5,40 @@ from pyrogram import filters
 
 def ns_filter(_,__,message):
    if str(message.text)[1:6] == "start":
-     if str(message.text)[7:].lower() == "Varisu":
+     if str(message.text)[7:].lower() == "varisu":
        return True
      else:
        return False
    else:
       return False
 
-Varisu_filter = filters.create(ns_filter)
+varisu_filter = filters.create(ns_filter)
 
 ################################################################################################################################################################################################################################################
 # Thunivu (2023)
 
 def ns_filter(_,__,message):
    if str(message.text)[1:6] == "start":
-     if str(message.text)[7:].lower() == "Thunivu":
+     if str(message.text)[7:].lower() == "thunivu":
        return True
      else:
        return False
    else:
       return False
 
-Thunivu_filter = filters.create(ns_filter)
+thunivu_filter = filters.create(ns_filter)
 
 # Thunivu (2023) Page 2
 def ns_filter(_,__,message):
    if str(message.text)[1:6] == "start":
-     if str(message.text)[7:].lower() == "Thunivu_Page2":
+     if str(message.text)[7:].lower() == "thunivu_page2":
        return True
      else:
        return False
    else:
       return False
 
-Thunivu_Page2_filter = filters.create(ns_filter)
+thunivu_page2_filter = filters.create(ns_filter)
 
 ################################################################################################################################################################################################################################################
 # Alien Covenant (2017)

@@ -5,7 +5,7 @@ from pyrogram import filters
 
 def ns_filter(_,__,message):
    if str(message.text)[1:6] == "start":
-     if str(message.text)[7:] == "varisu":
+     if str(message.text)[7:].lower() == "varisu":
        return True
      else:
        return False
@@ -19,7 +19,7 @@ varisu_filter = filters.create(ns_filter)
 
 def ns_filter(_,__,message):
    if str(message.text)[1:6] == "start":
-     if str(message.text)[7:] == "thunivu":
+     if str(message.text)[7:].lower() == "thunivu":
        return True
      else:
        return False
@@ -31,7 +31,7 @@ thunivu_filter = filters.create(ns_filter)
 # Thunivu (2023) Page 2
 def ns_filter(_,__,message):
    if str(message.text)[1:6] == "start":
-     if str(message.text)[7:] == "thunivu_page2":
+     if str(message.text)[7:].lower() == "thunivu_page2":
        return True
      else:
        return False
@@ -45,7 +45,7 @@ thunivu_page2_filter = filters.create(ns_filter)
 
 def ns_filter(_,__,message):
    if str(message.text)[1:6] == "start":
-     if str(message.text)[7:] == "alien_covenant":
+     if str(message.text)[7:].lower() == "alien_covenant":
        return True
      else:
        return False

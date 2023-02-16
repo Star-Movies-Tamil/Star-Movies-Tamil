@@ -16,7 +16,7 @@ You Can Get Movies 🎥 with Links and Our Bot will Support Upto 4GB Files 📂 
 
 Example :- Our Bot's Commend and Links Tutorial
 
-👉🏻 /movies ᚛› Hollywood Movies (Button) ᚛› Avangers ᚛› You Can Get This Movie's (📂 Telegram Files, 🔗 Download Links, 💾 GDrive Links) Links With Movie Poster"""
+👉🏻 /movies ᚛› Hollywood Movies (Button) ᚛› Avangers ᚛› You Can Get This Movie's (📂 Telegram Files, 🔗 Download Links, 💾 GDrive Links) Links With Movie Poster</b>"""
 
       #About Text
       ABOUT = """
@@ -43,7 +43,7 @@ HC-ESub (Hard Coded English Subtitle) :- In this Movies, English Subtitle is  At
 
 ❗Note :- We're Recommend Brave Browser
 
-Request Your Movies 🎥 in Our Admin :- [👨🏻‍✈️ Karthik](https://t.me/Star_Movies_Karthik)"""
+Request Your Movies 🎥 in Our Admin :- [👨🏻‍✈️ Karthik](https://t.me/Star_Movies_Karthik)</b>"""
 
       #Support Text
       SUPPORT = """<b>Hi 👋🏻 {mention} ♥️,

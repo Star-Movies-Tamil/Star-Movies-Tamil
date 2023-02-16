@@ -29,7 +29,7 @@ ALIEN_COVENANT = "Poster.ALIEN_COVENANT"
 ALIEN_COVENANT_BUTTONS = InlineKeyboardMarkup([
             [
                 InlineKeyboardButton('👨‍💻 Creator', url='https://t.me/Star_Movies_Karthik'),
-                InlineKeyboardButton('📣 Update Channel', url='https://t.me/Star_Moviess_Tamil')
+                InlineKeyboardButton('📢 Update Channel', url='https://t.me/Star_Moviess_Tamil')
             ]
         ])
 @Star_Moviess_Tamil.on_message(alien_covenant_filter)
@@ -53,6 +53,9 @@ THUNIVU_BUTTONS = InlineKeyboardMarkup([
             [
                 InlineKeyboardButton('🎲 Pages 1/2', callback_data="Pages"),
                 InlineKeyboardButton('Next 👉🏻', url='https://t.me/Star_Moviess_Tamil_Bot?start=Thunivu_Page2')
+            ],
+            [
+                InlineKeyboardButton('📢 Update Channel', url='https://t.me/Star_Moviess_Tamil')
             ]
         ])
 @Star_Moviess_Tamil.on_message(thunivu_filter)
@@ -74,6 +77,9 @@ THUNIVU_PAGE2_BUTTONS = InlineKeyboardMarkup([
             [
                 InlineKeyboardButton('👈🏻 Back', url='https://t.me/Star_Moviess_Tamil_Bot?start=Thunivu'),
                 InlineKeyboardButton('🎲 Pages 2/2', callback_data="Pages")
+            ],
+            [
+                InlineKeyboardButton('📢 Update Channel', url='https://t.me/Star_Moviess_Tamil')
             ]
         ])
 @Star_Moviess_Tamil.on_message(thunivu_page2_filter)
@@ -96,7 +102,7 @@ VARISU = "Poster.VARISU"
 VARISU_BUTTONS = InlineKeyboardMarkup([
             [
                 InlineKeyboardButton('👨‍💻 Creator', url='https://t.me/Star_Movies_Karthik'),
-                InlineKeyboardButton('📣 Update Channel', url='https://t.me/Star_Moviess_Tamil')
+                InlineKeyboardButton('📢 Update Channel', url='https://t.me/Star_Moviess_Tamil')
             ]
         ])
 @Star_Moviess_Tamil.on_message(varisu_filter)

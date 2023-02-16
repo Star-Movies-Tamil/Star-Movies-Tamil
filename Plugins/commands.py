@@ -44,7 +44,7 @@ TELETIPS_MAIN_MENU_BUTTONS = [
                 InlineKeyboardButton('😎 About', callback_data="HELP_CALLBACK")
             ],
             [
-                InlineKeyboardButton('📣 Update Channel', url='https://t.me/Star_Moviess_Tamil')
+                InlineKeyboardButton('📢 Update Channel', url='https://t.me/Star_Moviess_Tamil')
             ]
         ]
 
@@ -151,7 +151,7 @@ async def callback_query(client: Client, query: CallbackQuery):
                 InlineKeyboardButton('😎 About', callback_data="HELP_CALLBACK")
             ],
             [
-                InlineKeyboardButton('📣 Update Channel', url='https://t.me/Star_Moviess_Tamil')
+                InlineKeyboardButton('📢 Update Channel', url='https://t.me/Star_Moviess_Tamil')
             ]
         ]
 
@@ -177,7 +177,7 @@ HELP = "Translation.HELP"
 HELP_BUTTONS = [
             [
                 InlineKeyboardButton('👨‍💻 Creator', url='https://t.me/Star_Movies_Karthik'),
-                InlineKeyboardButton('📣 Update Channel', url='https://t.me/Star_Moviess_Tamil')
+                InlineKeyboardButton('📢 Update Channel', url='https://t.me/Star_Moviess_Tamil')
             ]
         ]
 
@@ -202,7 +202,7 @@ ABOUT = "Translation.ABOUT"
 ABOUT_BUTTONS = [
             [
                 InlineKeyboardButton('👨‍💻 Creator', url='https://t.me/Star_Movies_Karthik'),
-                InlineKeyboardButton('📣 Update Channel', url='https://t.me/Star_Moviess_Tamil')
+                InlineKeyboardButton('📢 Update Channel', url='https://t.me/Star_Moviess_Tamil')
             ]
         ]
 
@@ -212,6 +212,42 @@ async def about(client, message):
     reply_markup = InlineKeyboardMarkup(ABOUT_BUTTONS)
     await message.reply_text(
         text = Translation.ABOUT.format(
+                mention = message.from_user.mention
+            ),
+        reply_markup=reply_markup,
+        disable_web_page_preview=True,
+        quote=True
+    )
+
+################################################################################################################################################################################################################################################
+# Get Movies with Links 👇🏻
+
+MOVIES = "Translation.MOVIES"
+
+MOVIES_BUTTONS = [
+            [
+                InlineKeyboardButton('Tamil Movies', url='https://t.me/Star_Moviess_Tamil_Bot?start=Tamil_Movies'),
+                InlineKeyboardButton('TV Shows', url='https://t.me/Star_Moviess_Tamil_Bot?start=TV_Shows')
+            ],
+            [
+                InlineKeyboardButton('Hollywood Movies', url='https://t.me/Star_Moviess_Tamil_Bot?start=Hollywood_Movies'),
+                InlineKeyboardButton('Collection Movies', url='https://t.me/Star_Moviess_Tamil_Bot?start=Collection_Movies')
+            ],
+            [
+                InlineKeyboardButton('Web Series', url='https://t.me/Star_Moviess_Tamil_Bot?start=Web_Series'),
+                InlineKeyboardButton('Cartoon Movies', url='https://t.me/Star_Moviess_Tamil_Bot?start=Cartoon_Movies')
+            ],
+            [
+                InlineKeyboardButton('📢 Update Channel', url='https://t.me/Star_Moviess_Tamil'),
+            ]
+        ]
+
+@Star_Moviess_Tamil.on_message(filters.command("movies") & filters.private & filters.incoming)
+async def help(client, message):
+    text = Translation.MOVIES
+    reply_markup = InlineKeyboardMarkup(MOVIES_BUTTONS)
+    await message.reply_text(
+        text = Translation.MOVIES.format(
                 mention = message.from_user.mention
             ),
         reply_markup=reply_markup,

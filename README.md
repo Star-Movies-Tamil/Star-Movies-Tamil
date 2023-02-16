@@ -40,6 +40,7 @@ You can deploy this code any where you want but we provided heroku and railway d
 start - Check if 😊 I'm Alive
 help - How to Use❓
 about - to Know About Me 😌
+movies - Get Movies Links 🔗
 stats - Total Users 📊
 settings - Change Bot Settings ⚙️
 ban_user - Ban This User 🚫

@@ -34,7 +34,12 @@ Movie Commends
 
 📡 Hosted on : VPS
 
-📢 Updates Channel : [Star Movies Tamil](https://t.me/Star_Moviess_Tamil)</b>"""
+📢 Update Channel : [Star Movies Tamil](https://t.me/Star_Moviess_Tamil)</b>"""
+
+      # Get Movies with Links 👇🏻
+      START = """<b>Hi 👋🏻 {mention} ♥️,
+
+You Can Get Movies with Links 🔗. Our Bot will Support 4GB Files. But We're Always Not Upload PreDVD Movies and HDRip Movies + HC-ESub Movies. 
 
       #Support Text
       SUPPORT = """<b>Hi 👋🏻 {mention} ♥️,

@@ -83,7 +83,7 @@ async def callback_query(client: Client, query: CallbackQuery):
     if query.data=="HELP_CALLBACK":
         TELETIPS_HELP_BUTTONS = [
             [
-                InlineKeyboardButton("⬅️ BACK", callback_data="START_CALLBACK")
+                InlineKeyboardButton("👈🏻 Back", callback_data="START_CALLBACK")
             ]
             ]
         reply_markup = InlineKeyboardMarkup(TELETIPS_HELP_BUTTONS)
@@ -104,7 +104,7 @@ async def callback_query(client: Client, query: CallbackQuery):
                 InlineKeyboardButton("Star Movies Feedback", url="https://t.me/Star_Movies_Feedback_Bot")
             ],
             [
-                InlineKeyboardButton("⬅️ BACK", callback_data="START_CALLBACK"),
+                InlineKeyboardButton("👈🏻 Back", callback_data="START_CALLBACK"),
             ]
             ]
         reply_markup = InlineKeyboardMarkup(TELETIPS_GROUP_BUTTONS)
@@ -125,7 +125,7 @@ async def callback_query(client: Client, query: CallbackQuery):
                 InlineKeyboardButton("🤵 Admin", url="https://t.me/Star_Movies_Karthik")
             ],
             [
-                InlineKeyboardButton("⬅️ BACK", callback_data="START_CALLBACK"),
+                InlineKeyboardButton("👈🏻 Back", callback_data="START_CALLBACK"),
             ]
             ]
         reply_markup = InlineKeyboardMarkup(TELETIPS_TUTORIAL_BUTTONS)
@@ -226,16 +226,16 @@ MOVIES = "Translation.MOVIES"
 
 MOVIES_BUTTONS = [
             [
-                InlineKeyboardButton('Tamil Movies', url='https://t.me/Star_Moviess_Tamil_Bot?start=Tamil_Movies'),
-                InlineKeyboardButton('TV Shows', url='https://t.me/Star_Moviess_Tamil_Bot?start=TV_Shows')
+                InlineKeyboardButton('💿 Tamil Movies', url='https://t.me/Star_Moviess_Tamil_Bot?start=Tamil_Movies'),
+                InlineKeyboardButton('📺 TV Shows', url='https://t.me/Star_Moviess_Tamil_Bot?start=TV_Shows')
             ],
             [
-                InlineKeyboardButton('Hollywood Movies', url='https://t.me/Star_Moviess_Tamil_Bot?start=Hollywood_Movies'),
-                InlineKeyboardButton('Collection Movies', url='https://t.me/Star_Moviess_Tamil_Bot?start=Collection_Movies')
+                InlineKeyboardButton('🅰️ Hollywood Movies', url='https://t.me/Star_Moviess_Tamil_Bot?start=Hollywood_Movies'),
+                InlineKeyboardButton('🧮 Collection Movies', url='https://t.me/Star_Moviess_Tamil_Bot?start=Collection_Movies')
             ],
             [
-                InlineKeyboardButton('Web Series', url='https://t.me/Star_Moviess_Tamil_Bot?start=Web_Series'),
-                InlineKeyboardButton('Cartoon Movies', url='https://t.me/Star_Moviess_Tamil_Bot?start=Cartoon_Movies')
+                InlineKeyboardButton('⛓️ Web Series', url='https://t.me/Star_Moviess_Tamil_Bot?start=Web_Series'),
+                InlineKeyboardButton('💁🏻 Cartoon Movies', url='https://t.me/Star_Moviess_Tamil_Bot?start=Cartoon_Movies')
             ],
             [
                 InlineKeyboardButton('📢 Update Channel', url='https://t.me/Star_Moviess_Tamil'),

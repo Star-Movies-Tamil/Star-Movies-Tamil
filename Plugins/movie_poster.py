@@ -32,7 +32,7 @@ ALIEN_COVENANT_BUTTONS = InlineKeyboardMarkup([
                 InlineKeyboardButton('📣 Update Channel', url='https://t.me/Star_Moviess_Tamil')
             ]
         ])
-@Star_Moviess_Tamil.on_message(Alien_Covenant_filter)
+@Star_Moviess_Tamil.on_message(alien_covenant_filter)
 async def alien_covenant(client, message):
     text = Poster.ALIEN_COVENANT
     reply_markup = InlineKeyboardMarkup(ALIEN_COVENANT_BUTTONS)
@@ -55,7 +55,7 @@ THUNIVU_BUTTONS = InlineKeyboardMarkup([
                 InlineKeyboardButton('📣 Update Channel', url='https://t.me/Star_Moviess_Tamil')
             ]
         ])
-@Star_Moviess_Tamil.on_message(Thunivu_filter)
+@Star_Moviess_Tamil.on_message(thunivu_filter)
 async def thunivu(client, message):
     text = Poster.THUNIVU
     reply_markup = InlineKeyboardMarkup(THUNIVU_BUTTONS)
@@ -67,7 +67,7 @@ async def thunivu(client, message):
         quote=True,reply_markup=THUNIVU_BUTTONS
     )
 # Thunivu (2023) Page 2
-@Star_Moviess_Tamil.on_message(Thunivu_Page2_filter)
+@Star_Moviess_Tamil.on_message(thunivu_page2_filter)
 async def thunivu_page2(client, message):
     text = Poster.THUNIVU_PAGE2
     reply_markup = InlineKeyboardMarkup(THUNIVU_BUTTONS)
@@ -90,7 +90,7 @@ VARISU_BUTTONS = InlineKeyboardMarkup([
                 InlineKeyboardButton('📣 Update Channel', url='https://t.me/Star_Moviess_Tamil')
             ]
         ])
-@Star_Moviess_Tamil.on_message(Varisu_filter)
+@Star_Moviess_Tamil.on_message(varisu_filter)
 async def varisu(client, message):
     text = Poster.VARISU
     reply_markup = InlineKeyboardMarkup(VARISU_BUTTONS)

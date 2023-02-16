@@ -353,7 +353,8 @@ async def callback_query(client: Client, query: CallbackQuery):
         await query.answer(
             f"**Successfully setted Notifications to {await db.get_notif(user_id)}**"
         )
-
+    elif query.data == "closeMeh":
+      query.message.delete(True)
     elif query.data=="HELP_CALLBACK":
         TELETIPS_HELP_BUTTONS = [
             [

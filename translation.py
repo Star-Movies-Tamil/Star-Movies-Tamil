@@ -14,7 +14,9 @@ Maintained By : [Karthik](https://t.me/Star_Movies_Karthik)</b>"""
 
 You Can Get Movies 🎥 with Links and Our Bot will Support Upto 4GB Files 📂 and Also We Sended 📂 Telegram Files, 🔗 Download Links, 💾 GDrive Links.
 
-Example :- Our Bot's Commend and Links"""
+Example :- Our Bot's Commend and Links Tutorial
+
+👉🏻 /movies ᚛› Hollywood Movies (Button) ᚛› Avangers ᚛› You Can Get This Movie's (📂 Telegram Files, 🔗 Download Links, 💾 GDrive Links) Links With Movie Poster"""
 
       #About Text
       ABOUT = """

@@ -282,7 +282,8 @@ async def opensettings(bot, cmd):
     )
 
 @Star_Moviess_Tamil.on_callback_query()
-async def callback_handlers(bot: Client, cb: CallbackQuery):
+async def callback_notify(bot: Client, cb: CallbackQuery):
+    print(0)
     user_id = cb.from_user.id
     if cb.data == "notifon":
         print("1")

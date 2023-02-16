@@ -72,7 +72,7 @@ THUNIVU_PAGE2 = "Poster.THUNIVU_PAGE2"
 
 THUNIVU_PAGE2_BUTTONS = InlineKeyboardMarkup([
             [
-                InlineKeyboardButton('👈🏻 Back', url='https://t.me/Star_Moviess_Tamil_Bot?start=Thunivu),
+                InlineKeyboardButton('👈🏻 Back', url='https://t.me/Star_Moviess_Tamil_Bot?start=Thunivu'),
                 InlineKeyboardButton('🎲 Pages 2/2', callback_data="Pages")
             ]
         ])

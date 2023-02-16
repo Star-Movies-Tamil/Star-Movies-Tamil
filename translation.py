@@ -39,7 +39,7 @@ You Can Get Movies with Links 🔗. Our Bot will Support 4GB Files 📂. But We'
 
 🗣️ Explanation :-
 PreDVD :- Theatre Print With HQ Clean Audio.
-HC-ESub (Hard Coded English Subtitle) :- In this Movies, English Subtitle is  Attached to HDRip 🎥 Video and We Can't Remove it
+HC-ESub (Hard Coded English Subtitle) :- In This Movies, English Subtitle is Attached to HDRip 🎥 Video and We Can't Remove it
 
 ❗Note :- We're Recommend Brave Browser
 

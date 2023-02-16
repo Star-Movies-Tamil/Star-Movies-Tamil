@@ -243,7 +243,7 @@ MOVIES_BUTTONS = [
         ]
 
 @Star_Moviess_Tamil.on_message(filters.command("movies") & filters.private & filters.incoming)
-async def help(client, message):
+async def movies(client, message):
     text = Translation.MOVIES
     reply_markup = InlineKeyboardMarkup(MOVIES_BUTTONS)
     await message.reply_text(

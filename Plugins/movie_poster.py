@@ -26,12 +26,12 @@ import config
 
 ALIEN_COVENANT = "Poster.ALIEN_COVENANT"
 
-ALIEN_COVENANT_BUTTONS = [
+ALIEN_COVENANT_BUTTONS = InlineKeyboardMarkup([
             [
                 InlineKeyboardButton('👨‍💻 Creator', url='https://t.me/Star_Movies_Karthik'),
                 InlineKeyboardButton('📣 Update Channel', url='https://t.me/Star_Moviess_Tamil')
             ]
-        ]
+        ])
 
 @Star_Moviess_Tamil.on_message(filters.command("alien_covenant") & filters.private & filters.incoming)
 async def alien_covenant(client, message):
@@ -61,12 +61,12 @@ async def alien_covenant_f(client, message):
 
 THUNIVU = "Poster.THUNIVU"
 
-THUNIVU_BUTTONS = [
+THUNIVU_BUTTONS = InlineKeyboardMarkup([
             [
                 InlineKeyboardButton('👨‍💻 Creator', url='https://t.me/Star_Movies_Karthik'),
                 InlineKeyboardButton('📣 Update Channel', url='https://t.me/Star_Moviess_Tamil')
             ]
-        ]
+        ])
 
 @Star_Moviess_Tamil.on_message(filters.command("thunivu") & filters.private & filters.incoming)
 async def thunivu(client, message):
@@ -107,12 +107,12 @@ async def thunivu_page2_f(client, message):
 
 VARISU = "Poster.VARISU"
 
-VARISU_BUTTONS = [
+VARISU_BUTTONS = InlineKeyboardMarkup([
             [
                 InlineKeyboardButton('👨‍💻 Creator', url='https://t.me/Star_Movies_Karthik'),
                 InlineKeyboardButton('📣 Update Channel', url='https://t.me/Star_Moviess_Tamil')
             ]
-        ]
+        ])
 
 @Star_Moviess_Tamil.on_message(filters.command("varisu") & filters.private & filters.incoming)
 async def varisu(client, message):

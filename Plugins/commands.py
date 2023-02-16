@@ -39,9 +39,9 @@ TELETIPS_MAIN_MENU_BUTTONS = [
                 InlineKeyboardButton('👨‍💻 Creator', url='https://t.me/Star_Movies_Karthik')
             ],
             [
-                InlineKeyboardButton('😎 About', callback_data="TUTORIAL_CALLBACK"),
+                InlineKeyboardButton('😁 Help', callback_data="TUTORIAL_CALLBACK"),
                 InlineKeyboardButton('👥 Support', callback_data="GROUP_CALLBACK"),
-                InlineKeyboardButton('😁 Help', callback_data="HELP_CALLBACK")
+                InlineKeyboardButton('😎 About', callback_data="HELP_CALLBACK")
             ],
             [
                 InlineKeyboardButton('📣 Update Channel', url='https://t.me/Star_Moviess_Tamil')
@@ -89,7 +89,7 @@ async def callback_query(client: Client, query: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(TELETIPS_HELP_BUTTONS)
         try:
             await query.edit_message_text(
-                text = Translation.HELP.format(
+                text = Translation.ABOUT.format(
                         mention = query.from_user.mention
                     ),
                 disable_web_page_preview=True,
@@ -131,7 +131,7 @@ async def callback_query(client: Client, query: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(TELETIPS_TUTORIAL_BUTTONS)
         try:
             await query.edit_message_text(
-                text = Translation.ABOUT.format(
+                text = Translation.HELP.format(
                         mention = query.from_user.mention
                     ),
                 disable_web_page_preview=True,
@@ -146,9 +146,9 @@ async def callback_query(client: Client, query: CallbackQuery):
                 InlineKeyboardButton('👨‍💻 Creator', url='https://t.me/Star_Movies_Karthik')
             ],
             [
-                InlineKeyboardButton('😎 About', callback_data="TUTORIAL_CALLBACK"),
+                InlineKeyboardButton('😁 Help', callback_data="TUTORIAL_CALLBACK"),
                 InlineKeyboardButton('👥 Support', callback_data="GROUP_CALLBACK"),
-                InlineKeyboardButton('😁 Help', callback_data="HELP_CALLBACK")
+                InlineKeyboardButton('😎 About', callback_data="HELP_CALLBACK")
             ],
             [
                 InlineKeyboardButton('📣 Update Channel', url='https://t.me/Star_Moviess_Tamil')

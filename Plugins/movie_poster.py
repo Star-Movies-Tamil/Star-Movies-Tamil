@@ -32,20 +32,8 @@ ALIEN_COVENANT_BUTTONS = InlineKeyboardMarkup([
                 InlineKeyboardButton('📣 Update Channel', url='https://t.me/Star_Moviess_Tamil')
             ]
         ])
-
-@Star_Moviess_Tamil.on_message(filters.command("alien_covenant") & filters.private & filters.incoming)
+@Star_Moviess_Tamil.on_message(Alien_Covenant_filter)
 async def alien_covenant(client, message):
-    text = Poster.ALIEN_COVENANT
-    reply_markup = InlineKeyboardMarkup(ALIEN_COVENANT_BUTTONS)
-    await message.reply_photo(
-        caption = Poster.ALIEN_COVENANT.format(
-                mention = message.from_user.mention
-            ),
-        photo="https://telegra.ph/file/206f9013802376b39ad03.jpg",
-        quote=True,reply_markup=ALIEN_COVENANT_BUTTONS
-    )
-@Star_Moviess_Tamil.on_message(alien_covenant_filter)
-async def alien_covenant_f(client, message):
     text = Poster.ALIEN_COVENANT
     reply_markup = InlineKeyboardMarkup(ALIEN_COVENANT_BUTTONS)
     await message.reply_photo(
@@ -67,8 +55,7 @@ THUNIVU_BUTTONS = InlineKeyboardMarkup([
                 InlineKeyboardButton('📣 Update Channel', url='https://t.me/Star_Moviess_Tamil')
             ]
         ])
-
-@Star_Moviess_Tamil.on_message(filters.command("thunivu") & filters.private & filters.incoming)
+@Star_Moviess_Tamil.on_message(Thunivu_filter)
 async def thunivu(client, message):
     text = Poster.THUNIVU
     reply_markup = InlineKeyboardMarkup(THUNIVU_BUTTONS)
@@ -79,19 +66,9 @@ async def thunivu(client, message):
         photo="https://telegra.ph/file/1919c316d8d742d1fa3ab.jpg",
         quote=True,reply_markup=THUNIVU_BUTTONS
     )
-@Star_Moviess_Tamil.on_message(thunivu_filter)
-async def thunivu_f(client, message):
-    text = Poster.THUNIVU
-    reply_markup = InlineKeyboardMarkup(THUNIVU_BUTTONS)
-    await message.reply_photo(
-        caption = Poster.THUNIVU.format(
-                mention = message.from_user.mention
-            ),
-        photo="https://telegra.ph/file/1919c316d8d742d1fa3ab.jpg",
-        quote=True,reply_markup=THUNIVU_BUTTONS
-    )
-@Star_Moviess_Tamil.on_message(thunivu_page2_filter)
-async def thunivu_page2_f(client, message):
+# Thunivu (2023) Page 2
+@Star_Moviess_Tamil.on_message(Thunivu_Page2_filter)
+async def thunivu_page2(client, message):
     text = Poster.THUNIVU_PAGE2
     reply_markup = InlineKeyboardMarkup(THUNIVU_BUTTONS)
     await message.reply_photo(
@@ -113,20 +90,8 @@ VARISU_BUTTONS = InlineKeyboardMarkup([
                 InlineKeyboardButton('📣 Update Channel', url='https://t.me/Star_Moviess_Tamil')
             ]
         ])
-
-@Star_Moviess_Tamil.on_message(filters.command("varisu") & filters.private & filters.incoming)
+@Star_Moviess_Tamil.on_message(Varisu_filter)
 async def varisu(client, message):
-    text = Poster.VARISU
-    reply_markup = InlineKeyboardMarkup(VARISU_BUTTONS)
-    await message.reply_photo(
-        caption = Poster.VARISU.format(
-                mention = message.from_user.mention
-            ),
-        photo="https://telegra.ph/file/76ba5435a2983a6c42c80.jpg",
-        quote=True,reply_markup=VARISU_BUTTONS
-    )
-@Star_Moviess_Tamil.on_message(varisu_filter)
-async def varisu_f(client, message):
     text = Poster.VARISU
     reply_markup = InlineKeyboardMarkup(VARISU_BUTTONS)
     await message.reply_photo(

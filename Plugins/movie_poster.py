@@ -51,8 +51,8 @@ THUNIVU = "Poster.THUNIVU"
 
 THUNIVU_BUTTONS = InlineKeyboardMarkup([
             [
-                InlineKeyboardButton('👨‍💻 Creator', url='https://t.me/Star_Movies_Karthik'),
-                InlineKeyboardButton('📣 Update Channel', url='https://t.me/Star_Moviess_Tamil')
+                InlineKeyboardButton('🎲 Pages 1/2', callback_data="Pages"),
+                InlineKeyboardButton('Next 👉🏻', url='https://t.me/Star_Moviess_Tamil_Bot?start=Thunivu_Page2')
             ]
         ])
 @Star_Moviess_Tamil.on_message(thunivu_filter)
@@ -67,16 +67,25 @@ async def thunivu(client, message):
         quote=True,reply_markup=THUNIVU_BUTTONS
     )
 # Thunivu (2023) Page 2
+
+THUNIVU_PAGE2 = "Poster.THUNIVU_PAGE2"
+
+THUNIVU_PAGE2_BUTTONS = InlineKeyboardMarkup([
+            [
+                InlineKeyboardButton('👈🏻 Back', url='https://t.me/Star_Moviess_Tamil_Bot?start=Thunivu),
+                InlineKeyboardButton('🎲 Pages 2/2', callback_data="Pages")
+            ]
+        ])
 @Star_Moviess_Tamil.on_message(thunivu_page2_filter)
 async def thunivu_page2(client, message):
     text = Poster.THUNIVU_PAGE2
-    reply_markup = InlineKeyboardMarkup(THUNIVU_BUTTONS)
+    reply_markup = InlineKeyboardMarkup(THUNIVU_PAGE2_BUTTONS)
     await message.reply_photo(
         caption = Poster.THUNIVU_PAGE2.format(
                 mention = message.from_user.mention
             ),
         photo="https://telegra.ph/file/1919c316d8d742d1fa3ab.jpg",
-        quote=True,reply_markup=THUNIVU_BUTTONS
+        quote=True,reply_markup=THUNIVU_PAGE2_BUTTONS
     )
 
 ################################################################################################################################################################################################################################################

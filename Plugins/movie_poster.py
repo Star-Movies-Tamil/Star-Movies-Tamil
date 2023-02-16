@@ -42,7 +42,7 @@ async def alien_covenant(client, message):
                 mention = message.from_user.mention
             ),
         photo="https://telegra.ph/file/206f9013802376b39ad03.jpg",
-        quote=True,
+        quote=True,reply_markup=ALIEN_COVENANT_BUTTONS
     )
 @Star_Moviess_Tamil.on_message(alien_covenant_filter)
 async def alien_covenant_f(client, message):
@@ -53,7 +53,7 @@ async def alien_covenant_f(client, message):
                 mention = message.from_user.mention
             ),
         photo="https://telegra.ph/file/206f9013802376b39ad03.jpg",
-        quote=True,
+        quote=True,reply_markup=ALIEN_COVENANT_BUTTONS
     )
 
 ################################################################################################################################################################################################################################################
@@ -77,7 +77,7 @@ async def thunivu(client, message):
                 mention = message.from_user.mention
             ),
         photo="https://telegra.ph/file/1919c316d8d742d1fa3ab.jpg",
-        quote=True,
+        quote=True,reply_markup=THUNIVU_BUTTONS
     )
 @Star_Moviess_Tamil.on_message(thunivu_filter)
 async def thunivu_f(client, message):
@@ -88,7 +88,7 @@ async def thunivu_f(client, message):
                 mention = message.from_user.mention
             ),
         photo="https://telegra.ph/file/1919c316d8d742d1fa3ab.jpg",
-        quote=True,
+        quote=True,reply_markup=THUNIVU_BUTTONS
     )
 @Star_Moviess_Tamil.on_message(thunivu_page2_filter)
 async def thunivu_page2_f(client, message):
@@ -99,7 +99,7 @@ async def thunivu_page2_f(client, message):
                 mention = message.from_user.mention
             ),
         photo="https://telegra.ph/file/1919c316d8d742d1fa3ab.jpg",
-        quote=True,
+        quote=True,reply_markup=THUNIVU_BUTTONS
     )
 
 ################################################################################################################################################################################################################################################
@@ -123,7 +123,7 @@ async def varisu(client, message):
                 mention = message.from_user.mention
             ),
         photo="https://telegra.ph/file/76ba5435a2983a6c42c80.jpg",
-        quote=True,
+        quote=True,reply_markup=VARISU_BUTTONS
     )
 @Star_Moviess_Tamil.on_message(varisu_filter)
 async def varisu_f(client, message):
@@ -134,7 +134,7 @@ async def varisu_f(client, message):
                 mention = message.from_user.mention
             ),
         photo="https://telegra.ph/file/76ba5435a2983a6c42c80.jpg",
-        quote=True,
+        quote=True,reply_markup=VARISU_BUTTONS
     )
 
 ################################################################################################################################################################################################################################################

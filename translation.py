@@ -12,15 +12,9 @@ Maintained By : [Karthik](https://t.me/Star_Movies_Karthik)</b>"""
       # Help Text
       HELP = """<b>Hi 👋🏻 {mention} ♥️,
 
-You Can Get Movies 🎥 with Commends and Our Bot will Support Upto 4GB Files 📂.
+You Can Get Movies 🎥 with Links and Our Bot will Support Upto 4GB Files 📂.
 
-Movie Commends
-♦️ /tamil_movies
-♦️ /hollywood_movies
-♦️ /web_series
-♦️ /movie_collection
-♦️ /cartoon_movies
-♦️ /tv_shows</b>"""
+"""
 
       #About Text
       ABOUT = """
@@ -39,7 +33,15 @@ Movie Commends
       # Get Movies with Links 👇🏻
       START = """<b>Hi 👋🏻 {mention} ♥️,
 
-You Can Get Movies with Links 🔗. Our Bot will Support 4GB Files. But We're Always Not Upload PreDVD Movies and HDRip Movies + HC-ESub Movies. 
+You Can Get Movies with Links 🔗. Our Bot will Support 4GB Files 📂. But We're Always Not Upload PreDVD Movies and HDRip Movies + HC-ESub Movies. Because it Only Lasts for a Few Days. Maybe Because I Upload PreDVD Until Bluray or TRUE WEB-DL Comes out Value for This Movie. So We Will Not Upload this Bot. Don't worry we will upload it on Star Movies Tamil's PreDVD Movies Channel. Similarly, HDRip + HC-ESub Movies and Bluray or TRUE WEB-DL are the Value for This Movie. We Will Upload on Our Star Movies Tamil's Channel like So PreDVD Movies.
+
+🗣️ Explanation :-
+PreDVD :- Theatre Print With HQ Clean Audio.
+HC-ESub (Hard Coded English Subtitle) :- In this Movies, English Subtitle is  Attached to HDRip 🎥 Video and We Can't Remove it
+
+❗Note :- We're Recommend Brave Browser
+
+Request Your Movies 🎥 in Our Admin :- [👨🏻‍✈️ Karthik](https://t.me/Star_Movies_Karthik)"""
 
       #Support Text
       SUPPORT = """<b>Hi 👋🏻 {mention} ♥️,

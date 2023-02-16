@@ -78,96 +78,6 @@ async def start(client, message):
     )
     raise StopPropagation
 
-@Star_Moviess_Tamil.on_callback_query()
-async def callback_query(client: Client, query: CallbackQuery):
-    if query.data=="HELP_CALLBACK":
-        TELETIPS_HELP_BUTTONS = [
-            [
-                InlineKeyboardButton("👈🏻 Back", callback_data="START_CALLBACK")
-            ]
-            ]
-        reply_markup = InlineKeyboardMarkup(TELETIPS_HELP_BUTTONS)
-        try:
-            await query.edit_message_text(
-                text = Translation.ABOUT.format(
-                        mention = query.from_user.mention
-                    ),
-                disable_web_page_preview=True,
-                reply_markup=reply_markup
-            )
-        except MessageNotModified:
-            pass
-
-    elif query.data=="GROUP_CALLBACK":
-        TELETIPS_GROUP_BUTTONS = [
-            [
-                InlineKeyboardButton("Star Movies Feedback", url="https://t.me/Star_Movies_Feedback_Bot")
-            ],
-            [
-                InlineKeyboardButton("👈🏻 Back", callback_data="START_CALLBACK"),
-            ]
-            ]
-        reply_markup = InlineKeyboardMarkup(TELETIPS_GROUP_BUTTONS)
-        try:
-            await query.edit_message_text(
-                text = Translation.SUPPORT.format(
-                        mention = query.from_user.mention
-                    ),
-                disable_web_page_preview=True,
-                reply_markup=reply_markup
-            )
-        except MessageNotModified:
-            pass    
-
-    elif query.data=="TUTORIAL_CALLBACK":
-        TELETIPS_TUTORIAL_BUTTONS = [
-            [
-                InlineKeyboardButton("👨🏻‍✈️ Admin", url="https://t.me/Star_Movies_Karthik")
-            ],
-            [
-                InlineKeyboardButton("👈🏻 Back", callback_data="START_CALLBACK"),
-            ]
-            ]
-        reply_markup = InlineKeyboardMarkup(TELETIPS_TUTORIAL_BUTTONS)
-        try:
-            await query.edit_message_text(
-                text = Translation.HELP.format(
-                        mention = query.from_user.mention
-                    ),
-                disable_web_page_preview=True,
-                reply_markup=reply_markup
-            )
-        except MessageNotModified:
-            pass      
-          
-    elif query.data=="START_CALLBACK":
-        TELETIPS_START_BUTTONS = [
-            [
-                InlineKeyboardButton('👨🏻‍💻 Creator', url='https://t.me/Star_Movies_Karthik')
-            ],
-            [
-                InlineKeyboardButton('😁 Help', callback_data="TUTORIAL_CALLBACK"),
-                InlineKeyboardButton('👥 Support', callback_data="GROUP_CALLBACK"),
-                InlineKeyboardButton('😎 About', callback_data="HELP_CALLBACK")
-            ],
-            [
-                InlineKeyboardButton('📢 Update Channel', url='https://t.me/Star_Moviess_Tamil')
-            ]
-        ]
-
-        reply_markup = InlineKeyboardMarkup(TELETIPS_START_BUTTONS)
-        try:
-            await query.edit_message_text(
-                text = Translation.START.format(
-                        mention = query.from_user.mention
-                    ),
-                disable_web_page_preview=True,
-                reply_markup=reply_markup
-            )
-        except MessageNotModified:
-            pass    
-        return
-
 
 ################################################################################################################################################################################################################################################
 # Help Command
@@ -281,38 +191,6 @@ async def opensettings(bot, cmd):
             ]
         ),
     )
-
-@Star_Moviess_Tamil.on_callback_query()
-async def callback_notify(bot: Client, cb: CallbackQuery):
-    print(0)
-    user_id = cb.from_user.id
-    if cb.data == "notifon":
-        print("1")
-        notif = await db.get_notif(cb.from_user.id)
-        if notif is True:
-            await db.set_notif(user_id, notif=False)
-        else:
-            await db.set_notif(user_id, notif=True)
-        print("2")
-        await cb.edit_message_text(
-            f"**Here You Can Set Your Settings :-\n\nSuccessfully setted Notifications to {await db.get_notif(user_id)}**",
-            reply_markup=InlineKeyboardMarkup(
-                [
-                    [
-                        InlineKeyboardButton(
-                            f"Notification  {'🔔' if ((await db.get_notif(user_id)) is True) else '🔕'}",
-                            callback_data="notifon",
-                        )
-                    ],
-                    [InlineKeyboardButton("🚫 Close", callback_data="closeMeh")],
-                ]
-            ),
-        )
-        await cb.answer(
-            f"**Successfully setted Notifications to {await db.get_notif(user_id)}**"
-        )
-    else:
-        await cb.message.delete(True)
 
 
 ################################################################################################################################################################################################################################################
@@ -448,4 +326,120 @@ async def _banned_usrs(c, m):
     await m.reply_text(reply_text, True)
 
 ################################################################################################################################################################################################################################################
+#Callbackquery
+@Star_Moviess_Tamil.on_callback_query()
+async def callback_query(client: Client, query: CallbackQuery):
+    user_id = query.from_user.id
+    if query.data == "notifon":
+        notif = await db.get_notif(user_id)
+        if notif is True:
+            await db.set_notif(user_id, notif=False)
+        else:
+            await db.set_notif(user_id, notif=True)
+        await query.edit_message_text(
+            f"**Here You Can Set Your Settings :-\n\nSuccessfully setted Notifications to {await db.get_notif(user_id)}**",
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton(
+                            f"Notification  {'🔔' if ((await db.get_notif(user_id)) is True) else '🔕'}",
+                            callback_data="notifon",
+                        )
+                    ],
+                    [InlineKeyboardButton("🚫 Close", callback_data="closeMeh")],
+                ]
+            ),
+        )
+        await query.answer(
+            f"**Successfully setted Notifications to {await db.get_notif(user_id)}**"
+        )
+
+    elif query.data=="HELP_CALLBACK":
+        TELETIPS_HELP_BUTTONS = [
+            [
+                InlineKeyboardButton("👈🏻 Back", callback_data="START_CALLBACK")
+            ]
+            ]
+        reply_markup = InlineKeyboardMarkup(TELETIPS_HELP_BUTTONS)
+        try:
+            await query.edit_message_text(
+                text = Translation.ABOUT.format(
+                        mention = query.from_user.mention
+                    ),
+                disable_web_page_preview=True,
+                reply_markup=reply_markup
+            )
+        except MessageNotModified:
+            pass
+
+    elif query.data=="GROUP_CALLBACK":
+        TELETIPS_GROUP_BUTTONS = [
+            [
+                InlineKeyboardButton("Star Movies Feedback", url="https://t.me/Star_Movies_Feedback_Bot")
+            ],
+            [
+                InlineKeyboardButton("👈🏻 Back", callback_data="START_CALLBACK"),
+            ]
+            ]
+        reply_markup = InlineKeyboardMarkup(TELETIPS_GROUP_BUTTONS)
+        try:
+            await query.edit_message_text(
+                text = Translation.SUPPORT.format(
+                        mention = query.from_user.mention
+                    ),
+                disable_web_page_preview=True,
+                reply_markup=reply_markup
+            )
+        except MessageNotModified:
+            pass    
+
+    elif query.data=="TUTORIAL_CALLBACK":
+        TELETIPS_TUTORIAL_BUTTONS = [
+            [
+                InlineKeyboardButton("👨🏻‍✈️ Admin", url="https://t.me/Star_Movies_Karthik")
+            ],
+            [
+                InlineKeyboardButton("👈🏻 Back", callback_data="START_CALLBACK"),
+            ]
+            ]
+        reply_markup = InlineKeyboardMarkup(TELETIPS_TUTORIAL_BUTTONS)
+        try:
+            await query.edit_message_text(
+                text = Translation.HELP.format(
+                        mention = query.from_user.mention
+                    ),
+                disable_web_page_preview=True,
+                reply_markup=reply_markup
+            )
+        except MessageNotModified:
+            pass      
+          
+    elif query.data=="START_CALLBACK":
+        TELETIPS_START_BUTTONS = [
+            [
+                InlineKeyboardButton('👨🏻‍💻 Creator', url='https://t.me/Star_Movies_Karthik')
+            ],
+            [
+                InlineKeyboardButton('😁 Help', callback_data="TUTORIAL_CALLBACK"),
+                InlineKeyboardButton('👥 Support', callback_data="GROUP_CALLBACK"),
+                InlineKeyboardButton('😎 About', callback_data="HELP_CALLBACK")
+            ],
+            [
+                InlineKeyboardButton('📢 Update Channel', url='https://t.me/Star_Moviess_Tamil')
+            ]
+        ]
+
+        reply_markup = InlineKeyboardMarkup(TELETIPS_START_BUTTONS)
+        try:
+            await query.edit_message_text(
+                text = Translation.START.format(
+                        mention = query.from_user.mention
+                    ),
+                disable_web_page_preview=True,
+                reply_markup=reply_markup
+            )
+        except MessageNotModified:
+            pass    
+        return
+
 

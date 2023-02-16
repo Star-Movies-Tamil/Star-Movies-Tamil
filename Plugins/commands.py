@@ -290,7 +290,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
             await db.set_notif(user_id, notif=False)
         else:
             await db.set_notif(user_id, notif=True)
-        await cb.message.edit(
+        await cb.edit_message_text(
             f"**Here You Can Set Your Settings :-\n\nSuccessfully setted Notifications to {await db.get_notif(user_id)}**",
             reply_markup=InlineKeyboardMarkup(
                 [

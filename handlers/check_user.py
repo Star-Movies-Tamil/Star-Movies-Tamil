@@ -20,7 +20,7 @@ async def handle_user_status(bot, cmd):
         if LOG_CHANNEL:
             await bot.send_message(
                 LOG_CHANNEL,
-                f"**#New_User :- \n\nNew User [{message.from_user.first_name}](tg://user?id={message.from_user.id}) Started @{BOT_USERNAME} !!**",
+                f"**#New_User :- \n\nNew User [{message.from_user.first_name}](tg://user?id={message.from_user.id})\n ID :- {message.from_user.id} Started @{BOT_USERNAME} !!**",
             )
         else:
             logging.info(f"#New_User :- Name : {cmd.from_user.first_name} ID : {cmd.from_user.id}")
@@ -32,6 +32,6 @@ async def handle_user_status(bot, cmd):
         ).days > ban_status["ban_duration"]:
             await db.remove_ban(chat_id)
         else:
-            await cmd.reply_text("You are Banned to Use This Bot ", quote=True)
+            await cmd.reply_text("**You are Banned to Use This Bot**", quote=True)
             return
     await cmd.continue_propagation()

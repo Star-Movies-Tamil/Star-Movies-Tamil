@@ -34,7 +34,7 @@ db = Database(DB_URL, DB_NAME)
 
 START = "Translation.START"
 
-TELETIPS_MAIN_MENU_BUTTONS = [
+MAIN_MENU_BUTTONS = [
             [
                 InlineKeyboardButton('👨🏻‍💻 Creator', url='https://t.me/Star_Movies_Karthik')
             ],
@@ -67,7 +67,7 @@ async def _(bot, cmd):
 
 @Star_Moviess_Tamil.on_message(start_filter)
 async def start(client, message):
-    reply_markup = InlineKeyboardMarkup(TELETIPS_MAIN_MENU_BUTTONS)
+    reply_markup = InlineKeyboardMarkup(MAIN_MENU_BUTTONS)
     await message.reply_text(
         text = Translation.START.format(
                 mention = message.from_user.mention
@@ -361,12 +361,12 @@ async def callback_query(client: Client, query: CallbackQuery):
 # CallBackQuery For Star Message
 
     elif query.data=="HELP_CALLBACK":
-        TELETIPS_HELP_BUTTONS = [
+        HELP_BUTTON = [
             [
                 InlineKeyboardButton("👈🏻 Back", callback_data="START_CALLBACK")
             ]
             ]
-        reply_markup = InlineKeyboardMarkup(TELETIPS_HELP_BUTTONS)
+        reply_markup = InlineKeyboardMarkup(HELP_BUTTON)
         try:
             await query.edit_message_text(
                 text = Translation.ABOUT.format(
@@ -379,7 +379,7 @@ async def callback_query(client: Client, query: CallbackQuery):
             pass
 
     elif query.data=="GROUP_CALLBACK":
-        TELETIPS_GROUP_BUTTONS = [
+        GROUP_BUTTONS = [
             [
                 InlineKeyboardButton("Star Movies Feedback", url="https://t.me/Star_Movies_Feedback_Bot")
             ],
@@ -387,7 +387,7 @@ async def callback_query(client: Client, query: CallbackQuery):
                 InlineKeyboardButton("👈🏻 Back", callback_data="START_CALLBACK"),
             ]
             ]
-        reply_markup = InlineKeyboardMarkup(TELETIPS_GROUP_BUTTONS)
+        reply_markup = InlineKeyboardMarkup(GROUP_BUTTONS)
         try:
             await query.edit_message_text(
                 text = Translation.SUPPORT.format(
@@ -400,7 +400,7 @@ async def callback_query(client: Client, query: CallbackQuery):
             pass    
 
     elif query.data=="TUTORIAL_CALLBACK":
-        TELETIPS_TUTORIAL_BUTTONS = [
+        TUTORIAL_BUTTONS = [
             [
                 InlineKeyboardButton("👨🏻‍✈️ Admin", url="https://t.me/Star_Movies_Karthik")
             ],
@@ -408,7 +408,7 @@ async def callback_query(client: Client, query: CallbackQuery):
                 InlineKeyboardButton("👈🏻 Back", callback_data="START_CALLBACK"),
             ]
             ]
-        reply_markup = InlineKeyboardMarkup(TELETIPS_TUTORIAL_BUTTONS)
+        reply_markup = InlineKeyboardMarkup(TUTORIAL_BUTTONS)
         try:
             await query.edit_message_text(
                 text = Translation.HELP.format(
@@ -421,7 +421,7 @@ async def callback_query(client: Client, query: CallbackQuery):
             pass      
           
     elif query.data=="START_CALLBACK":
-        TELETIPS_START_BUTTONS = [
+        START_BUTTONS = [
             [
                 InlineKeyboardButton('👨🏻‍💻 Creator', url='https://t.me/Star_Movies_Karthik')
             ],
@@ -435,7 +435,7 @@ async def callback_query(client: Client, query: CallbackQuery):
             ]
         ]
 
-        reply_markup = InlineKeyboardMarkup(TELETIPS_START_BUTTONS)
+        reply_markup = InlineKeyboardMarkup(START_BUTTONS)
         try:
             await query.edit_message_text(
                 text = Translation.START.format(

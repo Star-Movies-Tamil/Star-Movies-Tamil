@@ -355,7 +355,7 @@ async def callback_query(client: Client, query: CallbackQuery):
             f"**Successfully setted Notifications to {await db.get_notif(user_id)}**"
         )
     elif query.data == "closeMeh":
-      query.message.delete(True)
+      await query.message.delete(True)
 
 ################################################################################################################################################################################################################################################
 # CallBackQuery For Star Message

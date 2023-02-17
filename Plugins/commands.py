@@ -326,7 +326,8 @@ async def _banned_usrs(c, m):
     await m.reply_text(reply_text, True)
 
 ################################################################################################################################################################################################################################################
-#Callbackquery
+# CallBackQuery For Bot Settings
+
 @Star_Moviess_Tamil.on_callback_query()
 async def callback_query(client: Client, query: CallbackQuery):
     user_id = query.from_user.id
@@ -355,6 +356,10 @@ async def callback_query(client: Client, query: CallbackQuery):
         )
     elif query.data == "closeMeh":
       query.message.delete(True)
+
+################################################################################################################################################################################################################################################
+# CallBackQuery For Star Message
+
     elif query.data=="HELP_CALLBACK":
         TELETIPS_HELP_BUTTONS = [
             [
@@ -443,4 +448,5 @@ async def callback_query(client: Client, query: CallbackQuery):
             pass    
         return
 
+################################################################################################################################################################################################################################################
 

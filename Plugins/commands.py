@@ -60,7 +60,7 @@ async def _(bot, cmd):
         if LOG_CHANNEL:
             await client.send_message(
                 LOG_CHANNEL,
-                f"**#New_User :- \n\nNew User [{message.from_user.first_name}](tg://user?id={message.from_user.id}) started @{BOT_USERNAME} !!**",
+                f"**#New_User :- \n\nNew User [{message.from_user.first_name}](tg://user?id={message.from_user.id})\n ID :- {message.from_user.id} Started @{BOT_USERNAME} !!**",
             )
         else:
             logging.info(f"New User :- Name :- {message.from_user.first_name} ID :- {message.from_user.id}")

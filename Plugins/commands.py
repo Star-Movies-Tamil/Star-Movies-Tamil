@@ -175,7 +175,7 @@ REPLY_ERROR = """<b>Use This Command as a Reply to any Telegram Message Without 
 @Star_Moviess_Tamil.on_message(filters.command("settings"))
 async def opensettings(bot, cmd):
     user_id = cmd.from_user.id
-    print("ksk")
+    print("Successfully Setted Notifications to {await db.get_notif(user_id)}")
     await cmd.reply_text(
         f"**Here You Can Set Your Settings :-\n\nSuccessfully setted Notifications to {await db.get_notif(user_id)}**",
         quote=True,

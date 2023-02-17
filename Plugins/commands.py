@@ -352,7 +352,7 @@ async def callback_query(client: Client, query: CallbackQuery):
             ),
         )
         await query.answer(
-            f"**Successfully setted Notifications to {await db.get_notif(user_id)}**"
+            f"Successfully Setted Notifications to {await db.get_notif(user_id)}"
         )
     elif query.data == "closeMeh":
       await query.message.delete(True)

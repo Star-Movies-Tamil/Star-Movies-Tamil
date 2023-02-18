@@ -1,11 +1,11 @@
-L# Star Movies Tamil
-A Simple telegram bot written in python to forward your files from one channel to other channel when a new post is Available. What you need to do is just deploy this code. 
+# Star Movies Tamil
+A Simple tel5egram Bot Written in Python to Get Movies 🎥 with Links and Our Bot will Support Upto 4GB Files 📂 and Also We Sended 📂 Telegram Files, 🔗 Download Links, 💾 GDrive Links.. What You Need to do is Just Deploy This Code. 
 
 [![Open Source? Yes!](https://badgen.net/badge/Open%20Source%20%3F/Yes%21/blue?icon=github)](https://github.com/HMTD-Links/Star-Movies-Tamil/tree/main)
 [![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://telegram.dog/Star_Movies_Karthik)
 
 ## How to Deploy? 🤔
-You can deploy this code any where you want but we provided heroku and railway deploy methods below
+You can Deploy this Code any where you Want but we Provided Heroku, Koyeb and Railway Deploy Methods Below 👇🏻
 
 - Select one of the methods
      - [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/HMTD-Links/Star-Movies-Bot)
@@ -31,11 +31,11 @@ You can deploy this code any where you want but we provided heroku and railway d
 
 
 ## How to reach Me ?
-<a href="https://telegram.dog/Ns_bot_updates"><img src="https://img.shields.io/badge/Join-Telegram%20Channel-red.svg?logo=Telegram"></a>
-<a href="https://telegram.dog/Ns_Bot_supporters"><img src="https://img.shields.io/badge/Join-Telegram%20Group-blue.svg?logo=telegram"></a>
+<a href="https://telegram.dog/Star_Moviess_Tamil"><img src="https://img.shields.io/badge/Join-Telegram%20Channel-red.svg?logo=Telegram"></a>
+<a href="https://telegram.dog/Star_Movies_Karthik"><img src="https://img.shields.io/badge/Join-Telegram%20Group-blue.svg?logo=telegram"></a>
 
-## COMMANDS
-### AVAILABLE COMMANDS 
+## Commands
+### Available Commands 
 ```
 start - Check if 😊 I'm Alive
 help - How to Use❓
@@ -52,7 +52,7 @@ broadcast - to Broadcast 💌 a Message to All Users
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 
 ## License
-[![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://github.com/Ns-AnoNymouS/TG-CONVERT-BOT/blob/main/LICENSE)
+[![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://github.com/HMTD-Links/Star-Movies-Tamil/blob/main/LICENSE)
 
 ## Status
 [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://github.com/Ns-AnoNymouS/TG-CONVERT-BOT/tree/main)

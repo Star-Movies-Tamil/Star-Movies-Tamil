@@ -11,7 +11,7 @@ import random
 import os
 import asyncio
 import traceback
-from Plugins.link import *
+from Plugins.movie_link import *
 from pyrogram import Client
 from pyrogram import StopPropagation, filters
 from pyrogram.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup

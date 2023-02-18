@@ -1,5 +1,5 @@
 # Star Movies Tamil
-A Simple tel5egram Bot Written in Python to Get Movies 🎥 with Links and Our Bot will Support Upto 4GB Files 📂 and Also We Sended 📂 Telegram Files, 🔗 Download Links, 💾 GDrive Links.. What You Need to do is Just Deploy This Code. 
+A Simple Telegram Bot Written in Python to Get Movies 🎥 with Links and Our Bot will Support Upto 4GB Files 📂 and Also We Sended 📂 Telegram Files, 🔗 Download Links, 💾 GDrive Links.. What You Need to do is Just Deploy This Code. 
 
 [![Open Source? Yes!](https://badgen.net/badge/Open%20Source%20%3F/Yes%21/blue?icon=github)](https://github.com/HMTD-Links/Star-Movies-Tamil/tree/main)
 [![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://telegram.dog/Star_Movies_Karthik)
@@ -8,7 +8,7 @@ A Simple tel5egram Bot Written in Python to Get Movies 🎥 with Links and Our B
 You can Deploy this Code any where you Want but we Provided Heroku, Koyeb and Railway Deploy Methods Below 👇🏻
 
 - Select one of the methods
-     - [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/HMTD-Links/Star-Movies-Bot)
+     - [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Star-Movies-Tamil/Star-Movies-Tamil)
 
      - [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/wEf927)
 

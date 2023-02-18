@@ -11,7 +11,7 @@ import random
 import os
 import asyncio
 import traceback
-from Plugins.Category_link import *
+from Plugins.category_link import *
 from pyrogram import Client
 from pyrogram import StopPropagation, filters
 from pyrogram.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup
@@ -24,7 +24,7 @@ import config
 ################################################################################################################################################################################################################################################
 # Tamil Movies
 
-@Star_Moviess_Tamil.on_message(filters.command("tamil_movies") & filters.private & filters.incoming)
+@Star_Moviess_Tamil.on_message(tamil_movies_filter)
 async def tamil_movies(client, message):
     await message.reply(
         text = Categories.TAMIL_MOVIES.format(
@@ -37,7 +37,7 @@ async def tamil_movies(client, message):
 ################################################################################################################################################################################################################################################
 # Hollywood Movies
 
-@Star_Moviess_Tamil.on_message(filters.command("hollywood_movies") & filters.private & filters.incoming)
+@Star_Moviess_Tamil.on_message(hollywood_movies_filter)
 async def hollywood_movies(client, message):
     await message.reply(
         text = Categories.HOLLYWOOD_MOVIES.format(
@@ -50,7 +50,7 @@ async def hollywood_movies(client, message):
 ################################################################################################################################################################################################################################################
 # Web Series
 
-@Star_Moviess_Tamil.on_message(filters.command("web_series") & filters.private & filters.incoming)
+@Star_Moviess_Tamil.on_message(web_series_filter)
 async def web_series(client, message):
     await message.reply(
         text = Categories.WEB_SERIES.format(
@@ -63,7 +63,7 @@ async def web_series(client, message):
 ################################################################################################################################################################################################################################################
 # Movie Collection
 
-@Star_Moviess_Tamil.on_message(filters.command("movie_collection") & filters.private & filters.incoming)
+@Star_Moviess_Tamil.on_message(movie_collection_filter)
 async def movie_collection(client, message):
     await message.reply(
         text = Categories.MOVIE_COLLECTION.format(
@@ -76,7 +76,7 @@ async def movie_collection(client, message):
 ################################################################################################################################################################################################################################################
 # Cartoon Movies
 
-@Star_Moviess_Tamil.on_message(filters.command("cartoon_movies") & filters.private & filters.incoming)
+@Star_Moviess_Tamil.on_message(cartoon_movies_filter)
 async def cartoon_movies(client, message):
     await message.reply(
         text = Categories.CARTOON_MOVIES.format(
@@ -89,7 +89,7 @@ async def cartoon_movies(client, message):
 ################################################################################################################################################################################################################################################
 # TV Shows
 
-@Star_Moviess_Tamil.on_message(filters.command("tv_shows") & filters.private & filters.incoming)
+@Star_Moviess_Tamil.on_message(tv_shows_filter)
 async def tv_shows(client, message):
     await message.reply(
         text = Categories.TV_SHOWS.format(

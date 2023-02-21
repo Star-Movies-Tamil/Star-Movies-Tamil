@@ -43,18 +43,18 @@ def ns_filter(_,__,message):
 web_series_filter = filters.create(ns_filter)
 
 ################################################################################################################################################################################################################################################
-# Movie Collection
+# Collection Movies
 
 def ns_filter(_,__,message):
    if str(message.text)[1:6] == "start":
-     if str(message.text)[7:].lower() == "movie_collection":
+     if str(message.text)[7:].lower() == "collection_movies":
        return True
      else:
        return False
    else:
       return False
 
-movie_collection_filter = filters.create(ns_filter)
+collection_movies_filter = filters.create(ns_filter)
 
 ################################################################################################################################################################################################################################################
 # Cartoon Movies

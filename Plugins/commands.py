@@ -329,18 +329,18 @@ async def _banned_usrs(c, m):
 # Send Message to Spacific User 🆔
 
 @Star_Moviess_Tamil.on_message(filters.command("send_msg") & filters.private & filters.incoming)
-async def send_msg(event, m):
+async def send_msg(bot, m):
     if m.from_user.id not in AUTH_USERS:
         await m.delete()
         return
-    msg = await event.get_reply_message()
-    if not msg:
-        await event.reply("**Reply to the message you want to send!**")
-    user = event.pattern_match.group(1)
+    ok = await m.get_reply_message()
+    if not ok:
+        await m.reply("**Reply to the message you want to send!**")
+    user = m.pattern_match.group(1)
     if not user:
-        await event.reply("**Give the user id you want me to send message.**")
+        await m.reply("**Give the user id you want me to send message.**")
     await Star_Moviess_Tamil.send_message(int(user) , ok )
-    await event.reply("**Messsage sent.**")
+    await m.reply("**Messsage sent.**")
 
 ################################################################################################################################################################################################################################################
 # CallBackQuery For Bot Settings

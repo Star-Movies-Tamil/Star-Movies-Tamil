@@ -326,6 +326,20 @@ async def _banned_usrs(c, m):
     await m.reply_text(reply_text, True)
 
 ################################################################################################################################################################################################################################################
+# Send Message to Spacific User 🆔
+
+@Star_Moviess_Tamil.on(events.NewMessage(incoming=True, from_users=AUTH_USERS, pattern="^/msg (.*)"))
+async def msg(event):
+    ok = await event.get_reply_message()
+    if not ok:
+        await event.reply("**Reply to the message you want to send!**")
+    user = event.pattern_match.group(1)
+    if not user:
+        await event.reply("**Give the user id you want me to send message.**")
+    await Star_Moviess_Tamil.send_message(int(user) , ok )
+    await event.reply("**Messsage sent.**")
+
+################################################################################################################################################################################################################################################
 # CallBackQuery For Bot Settings
 
 @Star_Moviess_Tamil.on_callback_query()

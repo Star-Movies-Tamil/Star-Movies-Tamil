@@ -329,7 +329,7 @@ async def _banned_usrs(c, m):
 # Send Message to Spacific User 🆔
 
 @Star_Moviess_Tamil.on_message(filters.command("send_msg") & filters.private & filters.incoming)
-async def send_msg(event, bot):
+async def send_msg(event, m):
     if m.from_user.id not in AUTH_USERS:
         await m.delete()
         return

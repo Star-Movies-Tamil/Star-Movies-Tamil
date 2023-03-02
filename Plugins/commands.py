@@ -328,8 +328,11 @@ async def _banned_usrs(c, m):
 ################################################################################################################################################################################################################################################
 # Send Message to Spacific User 🆔
 
-@Star_Moviess_Tamil.on(events.NewMessage(incoming=True, from_users=AUTH_USERS, pattern="^/msg (.*)"))
+@Star_Moviess_Tamil.on_message(filters.command("msg") & filters.private & filters.incoming)
 async def msg(event):
+    if m.from_user.id not in AUTH_USERS:
+        await m.delete()
+        return
     ok = await event.get_reply_message()
     if not ok:
         await event.reply("**Reply to the message you want to send!**")

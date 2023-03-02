@@ -63,7 +63,7 @@ async def web_series(client, message):
 ################################################################################################################################################################################################################################################
 # Movie Collection
 
-@Star_Moviess_Tamil.on_message(movie_collection_filter)
+@Star_Moviess_Tamil.on_message(collection_movies_filter)
 async def movie_collection(client, message):
     await message.reply(
         text = Categories.MOVIE_COLLECTION.format(

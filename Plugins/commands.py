@@ -13,6 +13,7 @@ import asyncio
 import traceback
 import base64
 
+from convopy import listen_message
 from pyrogram import Client
 from pyrogram import StopPropagation, filters
 from pyrogram.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup
@@ -343,7 +344,8 @@ async def send_msg(bot, m: Message):
         await m.reply("**Give the User ID you Want me to Send Message.**",
         quote=True
     )
-    await Star_Moviess_Tamil.send_message(int(user) , ok )
+    user_idd = await listen_message(client,m.chat.id,timeout=None)
+    await Star_Moviess_Tamil.send_message(int(user_idd)) , ok )
     await m.reply("**Messsage Sent.**",
         quote=True
      )

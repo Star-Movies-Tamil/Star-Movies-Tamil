@@ -345,7 +345,7 @@ async def send_msg(c, m: Message):
     await m.reply("**Give the User ID you Want me to Send Message.**",
         quote=True
     )
-    user_id = await listen_message(c,m.chat.id,timeout=None)
+    user_id = await listen_message(Client,m.chat.id,timeout=None)
     await c.send_message(int(user_id) , msg )
     await m.reply("**Messsage Sent.**",
         quote=True

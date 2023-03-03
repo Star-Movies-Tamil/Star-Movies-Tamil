@@ -15,6 +15,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQ
 import os
 import traceback
 
+from convopy import Conversation
 from pyrogram import Client
 from pyrogram import StopPropagation, filters
 from pyrogram.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup
@@ -54,4 +55,5 @@ class Star_Moviess_Tamil(Client, Config):
 
 
 if __name__ == "__main__" :
+    Conversation(Star_Moviess_Tamil())
     Star_Moviess_Tamil().run()

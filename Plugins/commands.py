@@ -345,7 +345,7 @@ async def send_msg(bot, m: Message):
         quote=True
     )
     user_idd = await listen_message(client,m.chat.id,timeout=None)
-    await Star_Moviess_Tamil.send_message(int(user_idd)) , ok )
+    await Star_Moviess_Tamil.send_message(int(user_idd) , ok )
     await m.reply("**Messsage Sent.**",
         quote=True
      )

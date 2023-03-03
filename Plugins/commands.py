@@ -340,7 +340,8 @@ async def send_msg(c, m: Message):
         await m.reply("**Reply to the Message you Want to Send!**",
         quote=True
     )
-    msg = (c.get_messages(m.chat.id , ok)).text
+    msg = await c.get_messages(m.chat.id,ok)
+    msg = msg.text
     await m.reply("**Give the User ID you Want me to Send Message.**",
         quote=True
     )

@@ -333,17 +333,18 @@ async def send_msg(bot, m: Message):
     if m.from_user.id not in AUTH_USERS:
         await m.delete()
         return
-    if m.reply_to_message() is None:
-        await m.reply("**Reply to the message you want to send!**",
+    ok = await m.get_reply_message()
+    if not ok:
+        await m.reply("**Reply to the Message you Want to Send!**",
         quote=True
     )
     user = m.pattern_match.group(1)
     if not user:
-        await m.reply("**Give the user id you want me to send message.**",
+        await m.reply("**Give the User ID you Want me to Send Message.**",
         quote=True
     )
     await Star_Moviess_Tamil.send_message(int(user) , ok )
-    await m.reply("**Messsage sent.**",
+    await m.reply("**Messsage Sent.**",
         quote=True
      )
 

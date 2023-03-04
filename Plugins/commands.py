@@ -14,7 +14,6 @@ import traceback
 import base64
 
 from convopyro import listen_message
-from pyrogram import Client
 from pyrogram import StopPropagation, filters
 from pyrogram.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup
 
@@ -49,7 +48,7 @@ MAIN_MENU_BUTTONS = [
             ]
         ]
 
-@Star_Moviess_Tamil.on_message(filters.private)
+@Client.on_message(filters.private)
 async def _(bot, cmd):
     await handle_user_status(bot, cmd)
 
@@ -66,7 +65,7 @@ async def _(bot, cmd):
         else:
             logging.info(f"New User :- Name :- {message.from_user.first_name} ID :- {message.from_user.id}")
 
-@Star_Moviess_Tamil.on_message(start_filter)
+@Client.on_message(start_filter)
 async def start(client, message):
     reply_markup = InlineKeyboardMarkup(MAIN_MENU_BUTTONS)
     await message.reply_text(
@@ -92,7 +91,7 @@ HELP_BUTTONS = [
             ]
         ]
 
-@Star_Moviess_Tamil.on_message(filters.command("help") & filters.private & filters.incoming)
+@Client.on_message(filters.command("help") & filters.private & filters.incoming)
 async def help(client, message):
     text = Translation.HELP
     reply_markup = InlineKeyboardMarkup(HELP_BUTTONS)
@@ -117,7 +116,7 @@ ABOUT_BUTTONS = [
             ]
         ]
 
-@Star_Moviess_Tamil.on_message(filters.command("about") & filters.private & filters.incoming)
+@Client.on_message(filters.command("about") & filters.private & filters.incoming)
 async def about(client, message):
     text = Translation.ABOUT
     reply_markup = InlineKeyboardMarkup(ABOUT_BUTTONS)
@@ -153,7 +152,7 @@ MOVIES_BUTTONS = [
             ]
         ]
 
-@Star_Moviess_Tamil.on_message(filters.command("movies") & filters.private & filters.incoming)
+@Client.on_message(filters.command("movies") & filters.private & filters.incoming)
 async def movies(client, message):
     text = Translation.MOVIES
     reply_markup = InlineKeyboardMarkup(MOVIES_BUTTONS)
@@ -173,7 +172,7 @@ REPLY_ERROR = """<b>Use This Command as a Reply to any Telegram Message Without 
 ################################################################################################################################################################################################################################################
 # Bot Settings
 
-@Star_Moviess_Tamil.on_message(filters.command("settings"))
+@Client.on_message(filters.command("settings"))
 async def opensettings(bot, cmd):
     user_id = cmd.from_user.id
     print("Successfully Setted Notifications to {await db.get_notif(user_id)}")
@@ -197,7 +196,7 @@ async def opensettings(bot, cmd):
 ################################################################################################################################################################################################################################################
 # Broadcast Message 
 
-@Star_Moviess_Tamil.on_message(filters.private & filters.command("broadcast"))
+@Client.on_message(filters.private & filters.command("broadcast"))
 async def broadcast_handler_open(_, m):
     if m.from_user.id not in AUTH_USERS:
         await m.delete()
@@ -210,7 +209,7 @@ async def broadcast_handler_open(_, m):
 ################################################################################################################################################################################################################################################
 # Total Users in Database 📂
 
-@Star_Moviess_Tamil.on_message(filters.private & filters.command("stats"))
+@Client.on_message(filters.private & filters.command("stats"))
 async def sts(c, m):
     if m.from_user.id not in AUTH_USERS:
         await m.delete()
@@ -223,7 +222,7 @@ async def sts(c, m):
 ################################################################################################################################################################################################################################################
 # Ban The User
 
-@Star_Moviess_Tamil.on_message(filters.private & filters.command("ban_user"))
+@Client.on_message(filters.private & filters.command("ban_user"))
 async def ban(c, m):
     if m.from_user.id not in AUTH_USERS:
         await m.delete()
@@ -265,7 +264,7 @@ async def ban(c, m):
 ################################################################################################################################################################################################################################################
 # Unban User
 
-@Star_Moviess_Tamil.on_message(filters.private & filters.command("unban_user"))
+@Client.on_message(filters.private & filters.command("unban_user"))
 async def unban(c, m):
     if m.from_user.id not in AUTH_USERS:
         await m.delete()
@@ -302,7 +301,7 @@ async def unban(c, m):
 ################################################################################################################################################################################################################################################
 # Banned Users
 
-@Star_Moviess_Tamil.on_message(filters.private & filters.command("banned_users"))
+@Client.on_message(filters.private & filters.command("banned_users"))
 async def _banned_usrs(c, m):
     if m.from_user.id not in AUTH_USERS:
         await m.delete()
@@ -329,7 +328,7 @@ async def _banned_usrs(c, m):
 ################################################################################################################################################################################################################################################
 # Send Message to Spacific User 🆔
 
-@Star_Moviess_Tamil.on_message(filters.command("send_msg") & filters.private & filters.incoming)
+@Client.on_message(filters.command("send_msg") & filters.private & filters.incoming)
 async def send_msg(c:Client, m: Message):
     if m.from_user.id not in AUTH_USERS:
         #await m.delete()
@@ -354,7 +353,7 @@ async def send_msg(c:Client, m: Message):
 ################################################################################################################################################################################################################################################
 # CallBackQuery For Bot Settings
 
-@Star_Moviess_Tamil.on_callback_query()
+@Client.on_callback_query()
 async def callback_query(client: Client, query: CallbackQuery):
     user_id = query.from_user.id
     if query.data == "notifon":

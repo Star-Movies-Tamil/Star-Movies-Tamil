@@ -54,5 +54,5 @@ class Star_Moviess_Tamil(Client, Config):
         print("Bot Stopped. Bye!!")
 
 
- Conversation(Star_Moviess_Tamil())
- Star_Moviess_Tamil().run()
+Conversation(Star_Moviess_Tamil())
+Star_Moviess_Tamil().run()

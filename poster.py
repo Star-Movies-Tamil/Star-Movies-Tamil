@@ -208,7 +208,7 @@ Click here to Download 👇
 
 ❗Note :- We're Recommend Brave Browser
 
-✨ You Can Get This Movie in This Command /varisu
+✨ You Can Get This Movie in This Link [Varisu](https://t.me/Star_Moviess_Tamil_Bot?start=Varisu)
 
 📢 Updates Channel :- [Star Movies Tamil](https://t.me/Star_Moviess_Tamil)</b>"""
 

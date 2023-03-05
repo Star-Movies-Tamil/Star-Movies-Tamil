@@ -331,8 +331,8 @@ async def _banned_usrs(c, m):
 @Star_Moviess_Tamil.on_message(filters.command("send_msg") & filters.private & filters.incoming)
 async def send_msg(c:Client, m: Message):
     if m.from_user.id not in AUTH_USERS:
-        #await m.delete()
-        #return
+        await m.delete()
+        return
         pass
     ok = m.reply_to_message_id
     if not ok:

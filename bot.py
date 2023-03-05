@@ -54,4 +54,6 @@ class Star_Moviess_Tamil(Client, Config):
 
 
 Conversation(Star_Moviess_Tamil())
-Star_Moviess_Tamil().run()
+
+if __name__ == "__main__" :
+    Star_Moviess_Tamil().run()

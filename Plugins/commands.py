@@ -328,28 +328,31 @@ async def _banned_usrs(c, m):
 ################################################################################################################################################################################################################################################
 # Send Message to Spacific User 🆔
 
-@Star_Moviess_Tamil.on_message(filters.command("send_msg") & filters.private & filters.incoming)
-async def send_msg(c:Client, m: Message):
-    if m.from_user.id not in AUTH_USERS:
-        await m.delete()
-        return
-        pass
-    ok = m.reply_to_message_id
-    if not ok:
-        await m.reply("**Reply to the Message you Want to Send!**",
-        quote=True
-    )
-    msg = await c.get_messages(m.chat.id,ok)
-    msg = msg.text
-    await m.reply("**Give the User ID you Want me to Send Message.**",
-        quote=True
-    )
-    user_id = await listen_message(c,m.chat.id,timeout=None)
-    return await Star_Moviess_Tamil.listen.Message(filters.chat(chat_id), timeout=timeout)
-    await Star_Moviess_Tamil.send_message(int(user_id) , msg )
-    await m.reply("**Messsage Sent.**",
-        quote=True
-     )
+@Star_Moviess_Tamil.on_message(filters.command("send") & filters.user(ADMINS))
+async def send_msg(bot, message):
+    if message.reply_to_message:
+        target_id = message.text.split(" ", 1)[1]
+        out = "Users Saved In DB Are:\n\n"
+        success = False
+        try:
+            user = await bot.get_users(target_id)
+            users = await db.get_all_users()
+            async for usr in users:
+                out += f"{usr['id']}"
+                out += '\n'
+            if str(user.id) in str(out):
+                await message.reply_to_message.copy(int(user.id))
+                success = True
+            else:
+                success = False
+            if success:
+                await message.reply_text(f"<b>Your message has been successfully send to {user.mention}.</b>")
+            else:
+                await message.reply_text("<b>This user didn't started this bot yet !</b>")
+        except Exception as e:
+            await message.reply_text(f"<b>Error: {e}</b>")
+    else:
+        await message.reply_text("<b>Use this command as a reply to any message using the target chat id. For eg: /send userid</b>")
 
 ################################################################################################################################################################################################################################################
 # CallBackQuery For Bot Settings
